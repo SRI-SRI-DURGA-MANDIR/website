@@ -1,0 +1,659 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>যোগাযোগ | শ্রী শ্রী দুর্গা বাড়ি</title>
+
+<meta name="description" content="Contact Sri Sri Durga Bari, Malakar Patty, Silchar, Assam.">
+<meta name="theme-color" content="#922D00">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+    --orange: #F06418;
+    --deep: #922D00;
+    --dark: #451600;
+    --gold: #FFBD35;
+    --cream: #FFF4E5;
+    --white: #FFFFFF;
+    --text: #421D0A;
+    --border: #F3C9A3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    background: var(--cream);
+    color: var(--text);
+    font-family: 'Hind', sans-serif;
+    line-height: 1.7;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--deep);
+    padding: 15px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.18);
+}
+
+.logo {
+    color: var(--gold);
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--gold);
+}
+
+/* HERO SECTION */
+
+.page-header {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(239,91,15,.93),
+            rgba(105,29,0,.96)
+        ),
+        url("images/temple-main.jpg") center/cover no-repeat;
+
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 65px 20px;
+}
+
+.om {
+    color: var(--gold);
+    font-size: 50px;
+}
+
+.page-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(35px, 6vw, 58px);
+    margin: 10px 0;
+}
+
+/* CONTACT SECTION */
+
+.contact-section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 70px 22px;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--orange);
+    font-size: clamp(28px, 4vw, 38px);
+    margin-bottom: 12px;
+}
+
+.section-description {
+    max-width: 750px;
+    text-align: center;
+    margin: 0 auto 40px;
+}
+
+/* CONTACT GRID */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* CONTACT INFORMATION */
+
+.contact-info {
+    background: var(--deep);
+    color: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(80,30,0,.12);
+}
+
+.contact-info h2 {
+    color: var(--gold);
+    margin-bottom: 18px;
+    font-size: 25px;
+}
+
+.info-item {
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255,255,255,.2);
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-item h3 {
+    color: var(--gold);
+    margin-bottom: 7px;
+}
+
+.info-item p {
+    line-height: 1.9;
+}
+
+/* CONTACT FORM */
+
+.contact-form {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-top: 5px solid var(--orange);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(80,30,0,.08);
+}
+
+.contact-form h2 {
+    color: var(--deep);
+    margin-bottom: 20px;
+}
+
+form {
+    display: grid;
+    gap: 15px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 15px;
+    background: #FFFCF8;
+    color: var(--text);
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--orange);
+    outline-offset: 2px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* HIDDEN SPAM FIELD */
+
+.hp {
+    position: absolute !important;
+    left: -10000px !important;
+    width: 1px !important;
+    height: 1px !important;
+}
+
+/* SUBMIT BUTTON */
+
+.submit-btn {
+    background: var(--orange);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.submit-btn:hover {
+    background: var(--deep);
+}
+
+.submit-btn:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+}
+
+/* STATUS MESSAGE */
+
+#formStatus {
+    min-height: 26px;
+    text-align: center;
+    color: var(--orange);
+    overflow-wrap: anywhere;
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--deep);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer h3 {
+    color: var(--gold);
+    margin-bottom: 8px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width: 650px) {
+
+    .navbar {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-section {
+        padding: 45px 16px;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 23px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav class="navbar">
+
+    <a href="index.html" class="logo">
+        শ্রী শ্রী দুর্গা বাড়ি
+    </a>
+
+    <div class="nav-links">
+
+        <a href="index.html">প্রচ্ছদ</a>
+        <a href="video.html">ভিডিও</a>
+        <a href="gallery.html">আলোকচিত্র</a>
+        <a href="tribute.html">শ্রদ্ধাঞ্জলি</a>
+        <a href="about.html">আমাদের সম্পর্কে</a>
+        <a href="contact.html" class="active">যোগাযোগ</a>
+
+    </div>
+
+</nav>
+
+<!-- PAGE HEADER -->
+
+<header class="page-header">
+
+    <div>
+
+        <div class="om">ॐ</div>
+
+        <h1>যোগাযোগ করুন</h1>
+
+        <p>
+            শ্রী শ্রী দুর্গা বাড়ি
+            <br>
+            মালাকার পট্টি, শিলচর, অসম
+        </p>
+
+    </div>
+
+</header>
+
+<!-- CONTACT SECTION -->
+
+<section class="contact-section">
+
+    <h2 class="section-title">
+        আমাদের সঙ্গে যোগাযোগ
+    </h2>
+
+    <p class="section-description">
+        আপনার মতামত, পরামর্শ ও শুভেচ্ছা আমাদের কাছে মূল্যবান।
+        আমাদের কাছে আপনার বার্তা পাঠান।
+    </p>
+
+    <div class="contact-grid">
+
+        <!-- CONTACT INFORMATION -->
+
+        <div class="contact-info">
+
+            <h2>শ্রী শ্রী দুর্গা বাড়ি</h2>
+
+            <p>
+                ভক্তি, ঐক্য ও ঐতিহ্যের এক পবিত্র মিলনস্থল।
+                আপনাদের সকলকে আন্তরিক স্বাগত।
+            </p>
+
+            <div class="info-item">
+
+                <h3>📍 ঠিকানা</h3>
+
+                <p>
+                    মালাকার পট্টি,
+                    শিলচর, কাছাড়,
+                    অসম, ভারত।
+                </p>
+
+            </div>
+
+            <div class="info-item">
+
+                <h3>🙏 আমাদের উদ্দেশ্য</h3>
+
+                <p>
+                    মাতৃ আরাধনা, সামাজিক ঐক্য
+                    ও সাংস্কৃতিক ঐতিহ্য রক্ষা।
+                </p>
+
+            </div>
+
+            <div class="info-item">
+
+                <h3>✉️ বার্তা পাঠান</h3>
+
+                <p>
+                    আপনার প্রশ্ন বা মতামত
+                    যোগাযোগ ফর্মের মাধ্যমে পাঠান।
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- CONTACT FORM -->
+
+        <div class="contact-form">
+
+            <h2>বার্তা পাঠান</h2>
+
+            <form id="contactForm">
+
+                <div>
+
+                    <label for="name">আপনার নাম</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="আপনার নাম লিখুন"
+                        maxlength="100"
+                        autocomplete="name"
+                        required
+                    >
+
+                </div>
+
+                <div>
+
+                    <label for="email">ইমেল ঠিকানা</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="আপনার ইমেল লিখুন"
+                        maxlength="254"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+                <div>
+
+                    <label for="message">আপনার বার্তা</label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="এখানে আপনার বার্তা লিখুন..."
+                        maxlength="5000"
+                        required
+                    ></textarea>
+
+                </div>
+
+                <!-- HIDDEN SPAM TRAP -->
+
+                <input
+                    class="hp"
+                    type="text"
+                    id="website"
+                    name="website"
+                    tabindex="-1"
+                    autocomplete="off"
+                    aria-hidden="true"
+                >
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                >
+                    বার্তা পাঠান
+                </button>
+
+                <p
+                    id="formStatus"
+                    role="status"
+                    aria-live="polite"
+                ></p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>শ্রী শ্রী দুর্গা বাড়ি</h3>
+
+    <p>মালাকার পট্টি, শিলচর, অসম</p>
+
+    <p>© 2026 Sri Sri Durga Bari. All Rights Reserved.</p>
+
+    <p>জয় মা দুর্গা 🙏</p>
+
+</footer>
+
+<!-- CLOUDFLARE BACKEND JAVASCRIPT -->
+
+<script>
+
+"use strict";
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const API_URL =
+        "https://mybackend.b3882657.workers.dev/api/contact";
+
+    const form = document.getElementById("contactForm");
+    const status = document.getElementById("formStatus");
+    const button = form.querySelector('button[type="submit"]');
+
+    form.addEventListener("submit", async (event) => {
+
+        event.preventDefault();
+
+        if (button.disabled || !form.reportValidity()) {
+            return;
+        }
+
+        const name =
+            document.getElementById("name").value.trim();
+
+        const email =
+            document.getElementById("email").value.trim();
+
+        const message =
+            document.getElementById("message").value.trim();
+
+        const website =
+            document.getElementById("website").value.trim();
+
+        if (!name || !email || !message) {
+            status.textContent = "সব তথ্য পূরণ করুন।";
+            return;
+        }
+
+        if (
+            name.length > 100 ||
+            email.length > 254 ||
+            message.length > 5000
+        ) {
+            status.textContent =
+                "আপনার দেওয়া তথ্যের দৈর্ঘ্য বেশি।";
+            return;
+        }
+
+        button.disabled = true;
+        status.textContent = "বার্তা পাঠানো হচ্ছে...";
+
+        const controller = new AbortController();
+
+        const timeout = setTimeout(() => {
+            controller.abort();
+        }, 15000);
+
+        try {
+
+            const response = await fetch(API_URL, {
+
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify({
+                    name,
+                    email,
+                    message,
+                    website
+                }),
+
+                signal: controller.signal
+
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(
+                    data.message || data.error || "Request failed."
+                );
+            }
+
+            if (data.status === "success") {
+
+                status.textContent =
+                    "ধন্যবাদ! আপনার বার্তা সফলভাবে জমা হয়েছে।";
+
+                form.reset();
+
+            } else if (data.status === "saved") {
+
+                status.textContent =
+                    "আপনার বার্তা সংরক্ষিত হয়েছে, কিন্তু ইমেল পাঠানো যায়নি।";
+
+            } else {
+
+                throw new Error("Unexpected server response.");
+
+            }
+
+        } catch (error) {
+
+            console.error("Contact form error:", error);
+
+            status.textContent =
+                error.name === "AbortError"
+                ? "সার্ভারের উত্তর পেতে দেরি হচ্ছে। আবার চেষ্টা করুন।"
+                : "দুঃখিত, বার্তা পাঠানো যায়নি। আবার চেষ্টা করুন।";
+
+        } finally {
+
+            clearTimeout(timeout);
+            button.disabled = false;
+
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
