@@ -1,0 +1,543 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>শ্রদ্ধাঞ্জলি | Sri Sri Durga Bari</title>
+
+<meta name="description" content="A humble tribute to the departed members and contributors of Sri Sri Durga Bari, Malakar Patty, Silchar.">
+
+<meta name="theme-color" content="#922D00">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+    --orange: #F06418;
+    --deep: #922D00;
+    --dark: #451600;
+    --gold: #FFBD35;
+    --cream: #FFF4E5;
+    --white: #FFFFFF;
+    --text: #421D0A;
+    --border: #F3C9A3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    background: var(--cream);
+    color: var(--text);
+    font-family: 'Hind', sans-serif;
+    line-height: 1.7;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--deep);
+    padding: 15px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.18);
+}
+
+.logo {
+    color: var(--gold);
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--gold);
+}
+
+/* PAGE HEADER */
+
+.page-header {
+    background: linear-gradient(
+        135deg,
+        #783000,
+        #3D1608
+    );
+    color: white;
+    text-align: center;
+    padding: 75px 20px;
+}
+
+.om {
+    color: var(--gold);
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.page-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(35px, 6vw, 55px);
+    margin-bottom: 12px;
+}
+
+.page-header p {
+    font-size: 17px;
+}
+
+/* GENERAL SECTION */
+
+section {
+    padding: 65px 7%;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--deep);
+    font-size: clamp(27px, 4vw, 36px);
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    max-width: 750px;
+    text-align: center;
+    margin: 0 auto 35px;
+}
+
+/* PRAYER */
+
+.prayer-section {
+    background: #FFE8CD;
+}
+
+.prayer-card {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    background: white;
+    border-top: 5px solid var(--orange);
+    border-radius: 14px;
+    padding: 35px 25px;
+    box-shadow: 0 5px 18px rgba(80,30,0,.08);
+}
+
+.prayer-card h2 {
+    color: var(--orange);
+    margin-bottom: 18px;
+}
+
+.mantra {
+    font-size: clamp(18px, 3vw, 25px);
+    line-height: 2;
+    color: var(--deep);
+    font-weight: 600;
+}
+
+.prayer-note {
+    margin-top: 18px;
+    line-height: 1.9;
+}
+
+/* TRIBUTE INTRODUCTION */
+
+.tribute-intro {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.tribute-intro p {
+    font-size: 17px;
+    line-height: 2;
+}
+
+/* NAMES SECTION */
+
+.names-section {
+    background: #FFE8CD;
+}
+
+.names-grid {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.name-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--orange);
+    border-radius: 10px;
+    padding: 17px 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(80,30,0,.05);
+}
+
+.name-card p {
+    color: var(--deep);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* FAMILY PRAYER */
+
+.family-prayer {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.family-prayer h2 {
+    color: var(--orange);
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+
+.family-prayer p {
+    font-size: 17px;
+    line-height: 2;
+}
+
+/* FINAL MESSAGE */
+
+.final-message {
+    background: linear-gradient(135deg, #783000, #3D1608);
+    color: white;
+    text-align: center;
+}
+
+.final-message h2 {
+    color: var(--gold);
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.final-message p {
+    font-size: 20px;
+    line-height: 2;
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--deep);
+    color: white;
+    text-align: center;
+    padding: 32px 20px;
+}
+
+footer h3 {
+    color: var(--gold);
+    margin-bottom: 8px;
+}
+
+/* MOBILE */
+
+@media(max-width: 650px) {
+
+    .navbar {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 13px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    section {
+        padding: 48px 18px;
+    }
+
+    .prayer-card {
+        padding: 25px 17px;
+    }
+
+    .names-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav class="navbar">
+
+    <a href="index.html" class="logo">
+        শ্রী শ্রী দুর্গা বাড়ি
+    </a>
+
+    <div class="nav-links">
+
+        <a href="index.html">Home</a>
+        <a href="slokas.html">MANTRA</a>
+
+        <a href="video.html">Video</a>
+
+        <a href="gallery.html">Gallery</a>
+
+        <a href="tribute.html" >Tribute</a>
+
+        <a href="about.html">About</a>
+
+        <a href="contact.html">Contact</a>
+
+    </div>
+
+</nav>
+
+<!-- PAGE HEADER -->
+
+<header class="page-header">
+
+    <div class="om">ॐ</div>
+
+    <h1>বিনম্র শ্রদ্ধাঞ্জলি</h1>
+
+    <p>
+        স্মৃতিতে, শ্রদ্ধায় ও ভালোবাসায়
+    </p>
+
+</header>
+
+<!-- PRAYER SECTION -->
+
+<section class="prayer-section">
+
+    <div class="prayer-card">
+
+        <h2>মায়ের চরণে প্রার্থনা</h2>
+
+        <p class="mantra">
+            ওঁ সর্বমঙ্গল মাঙ্গল্যে
+            শিবে সর্বার্থসাধিকে।
+            <br>
+            শরণ্যে ত্র্যম্বকে গৌরি
+            নারায়ণী নমোস্তুতে॥
+        </p>
+
+        <p class="prayer-note">
+            মা দুর্গার চরণে আমাদের বিনম্র প্রণাম
+            এবং সকল বিদেহী আত্মার চিরশান্তি কামনা করি।
+        </p>
+
+    </div>
+
+</section>
+
+<!-- TRIBUTE INTRODUCTION -->
+
+<section>
+
+    <div class="tribute-intro">
+
+        <h2 class="section-title">
+            চিরস্মরণীয় ব্যক্তিবর্গ
+        </h2>
+
+        <p>
+            শ্রী শ্রী দুর্গা বাড়ির ঐতিহ্য, মাতৃ আরাধনা,
+            সামাজিক ঐক্য ও সম্প্রীতির সঙ্গে যাঁদের স্মৃতি
+            জড়িয়ে রয়েছে, তাঁদের প্রতি আমাদের বিনম্র
+            শ্রদ্ধা ও প্রণাম।
+
+            তাঁদের ভালোবাসা, অবদান ও স্মৃতি
+            আমাদের হৃদয়ে চিরকাল অমলিন হয়ে থাকবে।
+        </p>
+
+    </div>
+
+</section>
+
+<!-- DEPARTED MEMBERS -->
+
+<section class="names-section">
+
+    <h2 class="section-title">
+        শ্রদ্ধার্ঘ্য
+    </h2>
+
+    <p class="section-subtitle">
+        যাঁদের স্মৃতি আমাদের হৃদয়ে চিরকাল অমলিন।
+    </p>
+
+    <div class="names-grid">
+
+        <div class="name-card">
+            <p>স্বর্গীয় অমূল্য কুমার মালাকার</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় কৃপেশ চন্দ্র মালাকার</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় বনমালী মালাকার</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় অনিল মালাকার</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় অনিল সেন</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় মায়া সেন</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় দিনেশ মালাকার</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় নেন্দোই মালাকার</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয়া অবন্তী মালাকার</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় নিপেন্দ্র মালাকার</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় বিপুল মালাকার</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় বীরেন্দ্র মালাকার</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় ব্রজেন্দ্র মালাকার</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় গৌতম মালাকার</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় প্রসেনজিৎ মালাকার</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় মানিক মালাকার</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় চাবুল মালাকার</p>
+            </div>
+            <div class="name-card">
+                
+            <p>স্বর্গীয় পরিতোষ মালাকার</p>
+            
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PRAYER FOR FAMILIES -->
+
+<section>
+
+    <div class="family-prayer">
+
+        <h2>শোকসন্তপ্ত পরিবারের প্রতি সমবেদনা</h2>
+
+        <p>
+            এই কঠিন শোকের সময়ে মা দুর্গার কাছে আমাদের
+            আন্তরিক প্রার্থনা, তিনি যেন শোকসন্তপ্ত পরিবারের
+            সকল সদস্যকে এই দুঃখ সহ্য করার শক্তি,
+            সাহস ও মানসিক স্থিরতা প্রদান করেন।
+        </p>
+
+        <p style="margin-top:15px;">
+            তাঁদের পরিবার ও আপনজনদের জীবনে শান্তি
+            ও আশীর্বাদ বর্ষিত হোক।
+        </p>
+
+    </div>
+
+</section>
+
+<!-- FINAL MESSAGE -->
+
+<section class="final-message">
+
+    <h2>চিরশান্তি লাভ করুন</h2>
+
+    <p>
+        আপনাদের স্মৃতি আমাদের হৃদয়ে অমর হয়ে থাকবে।
+        <br>
+        বিনম্র শ্রদ্ধা ও গভীর প্রণাম।
+        <br> বিনীত,</BR>
+
+        উদ্যোক্তা ও সদস্যবৃন্দ,
+মালাকা দুর্গা পূজা কমিটি
+ 🙏
+    </p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>শ্রী শ্রী দুর্গা বাড়ি</h3>
+
+    <p>মালাকার পট্টি, শিলচর, অসম</p>
+
+    <p>© 2026 Sri Sri Durga Bari. All Rights Reserved.</p>
+
+    <p>জয় মা দুর্গা 🙏</p>
+
+</footer>
+
+</body>
+</html>
