@@ -1,1086 +1,228 @@
 
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Sri Sri Durga Bari | Malakar Patty, Silchar</title>
-
-<meta name="description" content="শ্রী শ্রী দুর্গা বাড়ি, মালাকার পট্টি, শিলচর, অসম। মন্দিরের ইতিহাস, ঐতিহ্য, দুর্গাপূজা, ছবি ও ভিডিও সম্পর্কে জানুন।">
-
-<meta name="robots" content="index, follow">
-<meta name="referrer" content="strict-origin-when-cross-origin">
-
-<!-- CANONICAL URL -->
 <link rel="canonical" href="https://sri-sri-durga-mandir.github.io/website/">
+<title>শ্রী শ্রী দুর্গা বাড়ি | Sri Sri Durga Bari</title>
 
-<!-- OPEN GRAPH SEO -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Sri Sri Durga Bari | Malakar Patty, Silchar">
-<meta property="og:description" content="Discover the history, heritage and Durga Puja traditions of Sri Sri Durga Bari, Malakar Patty, Silchar, Assam.">
-<meta property="og:url" content="https://sri-sri-durga-mandir.github.io/website/">
-<meta property="og:locale" content="bn_IN">
+<meta name="description" content="Sri Sri Durga Bari, Malakar Patty, Silchar, Assam.">
 
-<meta name="theme-color" content="#E8590C">
+<meta name="theme-color" content="#E85D04">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Hind:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+/* GENERAL SETTINGS */
+
 :root {
-  --saffron:#E8590C;
-  --deep:#9C2F00;
-  --marigold:#FFB703;
-  --sand:#FFF3E3;
-  --ink:#3B1A08;
-  --card:#fff;
-  --line:#F3C9A3;
+    --orange: #E85D04;
+    --white: #FFFFFF;
 }
 
 * {
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior:smooth;
-  scroll-padding-top:75px;
+    scroll-behavior: smooth;
 }
 
 body {
-  background:var(--sand);
-  color:var(--ink);
-  font-family:'Hind',sans-serif;
-  line-height:1.7;
+    font-family: 'Hind', sans-serif;
+    background: var(--white);
 }
 
-h1,h2,h3 {
-  font-family:'Playfair Display',serif;
+/* NAVIGATION */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--orange);
+    padding: 15px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.18);
 }
 
-nav {
-  position:sticky;
-  top:0;
-  z-index:10;
-  background:var(--deep);
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:1.5rem;
-  padding:15px;
+.logo {
+    color: white;
+    font-size: 23px;
+    font-weight: 700;
+    text-decoration: none;
 }
 
-nav a {
-  color:#FFE2C2;
-  text-decoration:none;
-  font-weight:600;
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
 }
 
-nav a:hover {
-  color:var(--marigold);
+.nav-links a {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .3s;
 }
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+/* MAIN HERO SECTION */
 
 .hero {
-  background:
-    linear-gradient(160deg,rgba(232,89,12,.85),rgba(120,35,0,.92)),
-    url('images/temple-main.jpg') center/cover;
-  color:white;
-  text-align:center;
-  padding:110px 20px;
+    min-height: calc(100vh - 65px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(75, 25, 0, .25),
+            rgba(75, 25, 0, .45)
+        ),
+        url("images/durga%20maa.jpeg")
+        center center / cover no-repeat;
 }
 
-.om {
-  color:var(--marigold);
-  font-size:55px;
+.hero-content {
+    width: 100%;
+    max-width: 1000px;
 }
 
 .hero h1 {
-  font-size:clamp(35px,7vw,65px);
-  margin:10px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 7vw, 76px);
+    font-weight: 800;
+    line-height: 1.3;
+    text-shadow: 2px 3px 12px rgba(0,0,0,.65);
+    margin-bottom: 18px;
 }
 
 .hero p {
-  max-width:650px;
-  margin:15px auto 25px;
+    font-size: clamp(17px, 3vw, 25px);
+    font-weight: 600;
+    text-shadow: 2px 2px 8px rgba(0,0,0,.8);
 }
 
-.btn {
-  display:inline-block;
-  background:var(--marigold);
-  color:var(--ink);
-  padding:12px 28px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:600;
-}
-
-section {
-  max-width:1100px;
-  margin:auto;
-  padding:70px 20px;
-}
-
-h2 {
-  font-size:35px;
-  color:var(--saffron);
-  text-align:center;
-  margin-bottom:12px;
-}
-
-.sub {
-  text-align:center;
-  max-width:750px;
-  margin:0 auto 35px;
-}
-
-.grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  gap:22px;
-}
-
-.card {
-  background:var(--card);
-  border:1px solid var(--line);
-  border-top:5px solid var(--saffron);
-  border-radius:12px;
-  padding:22px;
-}
-
-.card h3 {
-  color:var(--deep);
-  margin-bottom:8px;
-}
-
-/* PHOTO GALLERY */
-
-.gallery {
-  background:#FFE8CD;
-  max-width:none;
-}
-
-.gallery-inner {
-  max-width:1100px;
-  margin:auto;
-}
-
-.gallery-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
-
-.photo {
-  position:relative;
-  overflow:hidden;
-  border-radius:14px;
-  height:260px;
-  background:#e8c49e;
-  box-shadow:0 5px 15px rgba(80,30,0,.12);
-}
-
-.photo img {
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  transition:transform .5s ease;
-}
-
-.photo:hover img {
-  transform:scale(1.08);
-}
-
-.photo-caption {
-  position:absolute;
-  bottom:0;
-  left:0;
-  right:0;
-  padding:35px 15px 15px;
-  color:white;
-  font-weight:600;
-  background:linear-gradient(transparent,rgba(0,0,0,.8));
-}
-
-/* MEMORIAL GALLERY */
-
-.memory-section {
-  background:#FFF8EE;
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-}
-
-.memory-section h2 {
-  color:var(--deep);
-}
-
-.memory-intro {
-  text-align:center;
-  max-width:750px;
-  margin:0 auto 35px;
-}
-
-.memory-photos {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:22px;
-}
-
-.memory-card {
-  background:var(--card);
-  padding:12px;
-  border:1px solid var(--line);
-  border-radius:12px;
-  text-align:center;
-  box-shadow:0 5px 15px rgba(80,30,0,.08);
-}
-
-.memory-card img {
-  width:100%;
-  height:260px;
-  object-fit:cover;
-  border-radius:8px;
-  display:block;
-}
-
-.memory-card h3 {
-  color:var(--deep);
-  margin-top:10px;
-}
-
-/* YOUTUBE VIDEO GALLERY */
-
-.video-gallery {
-  background:var(--sand);
-  max-width:none;
-}
-
-.video-gallery-inner {
-  max-width:1100px;
-  margin:auto;
-}
-
-.video-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:22px;
-}
-
-.video-card {
-  background:white;
-  border:1px solid var(--line);
-  border-radius:14px;
-  overflow:hidden;
-  cursor:pointer;
-  box-shadow:0 5px 15px rgba(80,30,0,.10);
-  transition:transform .3s ease, box-shadow .3s ease;
-}
-
-.video-card:hover {
-  transform:translateY(-5px);
-  box-shadow:0 9px 22px rgba(80,30,0,.18);
-}
-
-.video-card:focus-visible {
-  outline:3px solid var(--saffron);
-  outline-offset:4px;
-}
-
-.video-thumbnail {
-  position:relative;
-  width:100%;
-  aspect-ratio:16/9;
-  background:#3B1A08;
-  overflow:hidden;
-}
-
-.video-thumbnail img {
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
-
-.video-play {
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  width:65px;
-  height:65px;
-  border-radius:50%;
-  background:rgba(232,89,12,.95);
-  color:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:26px;
-  padding-left:4px;
-  box-shadow:0 3px 15px rgba(0,0,0,.3);
-  transition:background .3s ease,transform .3s ease;
-}
-
-.video-card:hover .video-play {
-  background:var(--deep);
-  transform:translate(-50%,-50%) scale(1.12);
-}
-
-.video-details {
-  padding:17px;
-}
-
-.video-details h3 {
-  color:var(--deep);
-  margin-bottom:5px;
-  font-size:19px;
-}
-
-.video-details p {
-  color:#79543c;
-  font-size:14px;
-}
-
-.video-invalid {
-  cursor:not-allowed;
-  opacity:.7;
-}
-
-/* VIDEO POPUP */
-
-.video-modal {
-  display:none;
-  position:fixed;
-  inset:0;
-  z-index:1000;
-  background:rgba(0,0,0,.92);
-  align-items:center;
-  justify-content:center;
-  padding:20px;
-}
-
-.video-modal.active {
-  display:flex;
-}
-
-.video-modal-content {
-  width:100%;
-  max-width:900px;
-  position:relative;
-}
-
-.video-modal iframe {
-  width:100%;
-  aspect-ratio:16/9;
-  height:auto;
-  border:0;
-  display:block;
-  border-radius:10px;
-  background:#000;
-}
-
-.video-close {
-  position:absolute;
-  right:0;
-  bottom:calc(100% + 12px);
-  background:var(--saffron);
-  color:white;
-  width:42px;
-  height:42px;
-  border-radius:50%;
-  font-size:25px;
-  line-height:1;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.video-close:hover {
-  background:var(--deep);
-}
-
-/* EVENTS */
-
-.time {
-  color:var(--saffron);
-  font-weight:600;
-}
-
-/* CONTACT FORM */
-
-form {
-  max-width:500px;
-  margin:auto;
-  display:grid;
-  gap:12px;
-}
-
-input,textarea {
-  width:100%;
-  padding:13px;
-  border:1px solid var(--line);
-  border-radius:8px;
-  font:inherit;
-  background:white;
-}
-
-input:focus,textarea:focus {
-  outline:2px solid var(--saffron);
-  outline-offset:2px;
-}
-
-textarea {
-  resize:vertical;
-}
-
-button {
-  border:0;
-  cursor:pointer;
-  font:inherit;
-}
-
-button:disabled {
-  opacity:.6;
-  cursor:not-allowed;
-}
-
-#msg,
-#formStatus {
-  text-align:center;
-  color:var(--saffron);
-  overflow-wrap:anywhere;
-}
-
-#contact form {
-  max-width:650px;
-}
-
-#contact input,
-#contact textarea {
-  width:100%;
-  padding:14px;
-  border:1px solid var(--line);
-  border-radius:8px;
-  font:inherit;
-  background:white;
-  color:var(--ink);
-}
-
-#contact button {
-  border:0;
-  cursor:pointer;
-}
+/* FOOTER */
 
 footer {
-  background:var(--deep);
-  color:#FFE2C2;
-  text-align:center;
-  padding:30px 15px;
+    background: var(--orange);
+    text-align: center;
+    color: white;
+    padding: 18px 15px;
+    font-size: 15px;
 }
 
-@media(max-width:600px) {
-  nav {
-    gap:12px;
-  }
+/* MOBILE RESPONSIVE */
 
-  nav a {
-    font-size:14px;
-  }
+@media(max-width: 650px) {
 
-  .hero {
-    padding:85px 15px;
-  }
+    .navbar {
+        justify-content: center;
+        text-align: center;
+        padding: 13px 10px;
+        text-align: center;
+    }
 
-  section {
-    padding:50px 18px;
-  }
+    .logo {
+        font-size: 21px;
+    }
 
-  h2 {
-    font-size:29px;
-  }
+    .nav-links {
+        justify-content: center;
+        gap: 13px;
+        text-align: right;
+    }
 
-  .photo {
-    height:230px;
-  }
+    .nav-links a {
+        font-size: 13px;
+    }
 
-  .video-grid {
-    grid-template-columns:1fr;
-  }
+    .hero {
+        min-height: calc(100vh - 110px);
+        background-position: center center;
+    }
 
-  .video-modal {
-    padding:12px;
-  }
 }
+
 </style>
+
 </head>
 
 <body>
 
 <!-- NAVIGATION -->
 
-<nav>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#gallery">Gallery</a>
-  <a href="#memories">Memories</a>
-  <a href="#videos">Videos</a>
-  <a href="#events">Events</a>
-  <a href="#aarti">Aarti</a>
-  <a href="#contact">Contact</a>
+<nav class="navbar">
+<a href="index.html" class="logo">
+        শ্রী শ্রী দুর্গা বাড়ি
+    </a>
+
+    <div class="nav-links">
+
+        <a href="index.html">Home</a>
+        <a href="mantra.html">MANTRA</a>
+
+        <a href="video.html">Video</a>
+
+        <a href="gallery.html">Gallery</a>
+
+        <a href="tribute.html">Tribute</a>
+
+        <a href="about.html">About</a>
+
+        <a href="contact.html">Contact</a>
+
+    </div>
+
 </nav>
 
-<!-- HOMEPAGE HERO -->
+<!-- MAIN HOME PAGE -->
 
 <header class="hero" id="home">
-  <div class="om">ॐ</div>
-  <h1>শ্রী শ্রী দুর্গা বাড়ি</h1>
-  <p>মালাকার পট্টি, শিলচর, অসম</p>
-  <a href="#gallery" class="btn">Explore Our Gallery</a>
+
+    <div class="hero-content">
+
+        <h1>শ্রী শ্রী দুর্গা বাড়ি</h1>
+
+        <p>
+            মালাকার পট্টি, শিলচর, অসম
+        </p>
+
+    </div>
+
 </header>
-
-<!-- ABOUT -->
-
-<section id="about">
-  <h2>আমাদের সম্পর্কে</h2>
-
-  <p class="sub">
-    শ্রী শ্রী দুর্গা বাড়ি হলো ভক্তি, ঐক্য ও ঐতিহ্যের এক পবিত্র
-    মিলনস্থল। ১৩৩৭ বঙ্গাব্দ সালে মালাকার সম্প্রদায়ের একদল মানুষের
-    উদ্যোগে এই পবিত্র স্থানের প্রতিষ্ঠা হয়। মাতৃ আরাধনা ও
-    সামাজিক ঐক্য প্রতিষ্ঠাই ছিল তাঁদের মূল উদ্দেশ্য।
-    আজও এই মন্দিরে প্রতিবছর নিষ্ঠা ও ভক্তির সঙ্গে
-    শ্রী শ্রী দুর্গাপূজা উদযাপিত হয়।
-  </p>
-
-  <div class="grid">
-    <div class="card">
-      <h3>চড়ক পূজা</h3>
-      <p>প্রতিবছর মাতৃ আরাধনা অনুষ্ঠিত হয়।</p>
-    </div>
-
-    <div class="card">
-      <h3>দুর্গাপূজা</h3>
-      <p>ভক্তি, আনন্দ ও ঐতিহ্যের সঙ্গে প্রতিবছর দুর্গাপূজা উদযাপিত হয়।</p>
-    </div>
-  </div>
-</section>
-
-<!-- PHOTO GALLERY -->
-
-<section class="gallery" id="gallery">
-  <div class="gallery-inner">
-    <h2>আমাদের আলোকচিত্র</h2>
-
-    <div class="gallery-grid">
-
-      <div class="photo">
-        <img src="images/temple-main.jpg" alt="Sri Sri Durga Bari temple" loading="lazy">
-        <div class="photo-caption">শ্রী শ্রী দুর্গা বাড়ি</div>
-      </div>
-
-      <div class="photo">
-        <img src="images/maa-durga.jpg" alt="Maa Durga" loading="lazy">
-        <div class="photo-caption">মা দুর্গা</div>
-      </div>
-
-      <div class="photo">
-        <img src="images/durga-puja.jpg" alt="Durga Puja celebration" loading="lazy">
-        <div class="photo-caption">দুর্গাপূজা</div>
-      </div>
-
-      <div class="photo">
-        <img src="images/sandhi-puja.jpg" alt="Sandhi Puja" loading="lazy">
-        <div class="photo-caption">সন্ধিপূজা</div>
-      </div>
-
-      <div class="photo">
-        <img src="images/dashami.jpg" alt="Bijoya Dashami" loading="lazy">
-        <div class="photo-caption">বিজয়া দশমী</div>
-      </div>
-
-      <div class="photo">
-        <img src="images/community.jpg" alt="Community celebrations" loading="lazy">
-        <div class="photo-caption">আমাদের ঐতিহ্য ও ঐক্য</div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- MEMORIAL GALLERY -->
-
-<section class="memory-section" id="memories">
-  <h2>স্মৃতির পাতায়</h2>
-
-  <p class="memory-intro">
-    যাঁদের ভালোবাসা, নিষ্ঠা ও অবদান আমাদের পথচলাকে সমৃদ্ধ করেছে,
-    তাঁদের স্মৃতি আমাদের হৃদয়ে চিরকাল অমলিন হয়ে থাকবে।
-  </p>
-
-  <div class="memory-photos">
-
-    <div class="memory-card">
-      <img src="images/tribute1.jpg" alt="স্মৃতির ছবি ১" loading="lazy">
-      <h3>স্বর্গীয় নাম</h3>
-    </div>
-
-    <div class="memory-card">
-      <img src="images/tribute2.jpg" alt="স্মৃতির ছবি ২" loading="lazy">
-      <h3>স্বর্গীয় নাম</h3>
-    </div>
-
-    <div class="memory-card">
-      <img src="images/tribute3.jpg" alt="স্মৃতির ছবি ৩" loading="lazy">
-      <h3>স্বর্গীয় নাম</h3>
-    </div>
-
-  </div>
-</section>
-
-<!-- YOUTUBE VIDEO GALLERY -->
-
-<section class="video-gallery" id="videos">
-  <div class="video-gallery-inner">
-
-    <h2>ভিডিও গ্যালারি</h2>
-
-    <p class="sub">
-      শ্রী শ্রী দুর্গা বাড়ির পূজা, অনুষ্ঠান ও ঐতিহ্যের
-      বিশেষ মুহূর্তগুলি ভিডিওর মাধ্যমে দেখুন।
-    </p>
-
-    <div class="video-grid">
-
-      <div class="video-card"
-           data-video="https://youtu.be/kSwgghPSNmA?si=v9qMt85Iuz3FY9ly"
-           role="button"
-           tabindex="0"
-           aria-label="দুর্গাপূজার ভিডিও দেখুন">
-
-        <div class="video-thumbnail">
-          <img src="" alt="Durga Puja video thumbnail" loading="lazy">
-          <div class="video-play">▶</div>
-        </div>
-
-        <div class="video-details">
-          <h3>চড়ক পূজা উদযাপন</h3>
-          <p>শ্রী শ্রী দুর্গা বাড়ি, শিলচর</p>
-        </div>
-      </div>
-
-      <div class="video-card"
-           data-video="https://www.youtube.com/watch?v=YOUR_SECOND_VIDEO_ID"
-           role="button"
-           tabindex="0"
-           aria-label="দুর্গাপূজার বিশেষ মুহূর্ত দেখুন">
-
-        <div class="video-thumbnail">
-          <img src="" alt="Durga Puja special moments thumbnail" loading="lazy">
-          <div class="video-play">▶</div>
-        </div>
-
-        <div class="video-details">
-          <h3>পূজার বিশেষ মুহূর্ত</h3>
-          <p>মালাকার পট্টি, শিলচর</p>
-        </div>
-      </div>
-
-      <div class="video-card"
-           data-video="https://www.youtube.com/watch?v=YOUR_THIRD_VIDEO_ID"
-           role="button"
-           tabindex="0"
-           aria-label="মহাষ্টমীর ভিডিও দেখুন">
-
-        <div class="video-thumbnail">
-          <img src="" alt="Maha Ashtami video thumbnail" loading="lazy">
-          <div class="video-play">▶</div>
-        </div>
-
-        <div class="video-details">
-          <h3>মহাষ্টমী অনুষ্ঠান</h3>
-          <p>শ্রী শ্রী দুর্গা বাড়ি</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- VIDEO POPUP -->
-
-<div class="video-modal"
-     id="videoModal"
-     role="dialog"
-     aria-modal="true"
-     aria-label="YouTube video player"
-     aria-hidden="true">
-
-  <div class="video-modal-content">
-
-    <button class="video-close"
-            id="videoClose"
-            type="button"
-            aria-label="Close video">×</button>
-
-    <iframe
-      id="youtubePlayer"
-      src=""
-      title="Sri Sri Durga Bari Video"
-      allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-      allowfullscreen>
-    </iframe>
-
-  </div>
-</div>
-
-<!-- EVENTS -->
-
-<section id="events">
-  <h2>অনুষ্ঠানসমূহ</h2>
-  <p class="sub">আমাদের দুর্গাপূজার পবিত্র অনুষ্ঠানসূচি।</p>
-
-  <div class="grid">
-
-    <div class="card">
-      <p class="time">মহালয়া</p>
-      <h3>দেবীর আবাহন</h3>
-      <p>ভোরবেলার প্রার্থনা ও মন্ত্রোচ্চারণ।</p>
-    </div>
-
-    <div class="card">
-      <p class="time">ষষ্ঠী</p>
-      <h3>মায়ের বোধন</h3>
-      <p>দেবীর বোধন ও পূজার সূচনা।</p>
-    </div>
-
-    <div class="card">
-      <p class="time">সপ্তমী</p>
-      <h3>নবপত্রিকা স্নান</h3>
-      <p>নবপত্রিকা স্থাপন ও পূজা।</p>
-    </div>
-
-    <div class="card">
-      <p class="time">মহাষ্টমী</p>
-      <h3>অঞ্জলি ও সন্ধিপূজা</h3>
-      <p>পুষ্পাঞ্জলি ও বিশেষ পূজা।</p>
-    </div>
-
-    <div class="card">
-      <p class="time">মহানবমী</p>
-      <h3>অঞ্জলি ও যজ্ঞ</h3>
-      <p>নবমী পূজা ও হোমযজ্ঞ।</p>
-    </div>
-
-    <div class="card">
-      <p class="time">বিজয়া দশমী</p>
-      <h3>সিঁদুর খেলা</h3>
-      <p>মায়ের বিদায় ও বিসর্জন।</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- AARTI -->
-
-<section id="aarti">
-  <h2>আরতির সময়সূচি</h2>
-
-  <p class="sub">
-    ভক্তদের নির্ধারিত সময়ের দশ মিনিট আগে উপস্থিত থাকার অনুরোধ জানানো হচ্ছে।
-  </p>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>Morning Aarti</h3>
-      <p class="time">6:00 AM</p>
-    </div>
-
-    <div class="card">
-      <h3>Noon Bhog</h3>
-      <p class="time">12:30 PM</p>
-    </div>
-
-    <div class="card">
-      <h3>Evening Aarti</h3>
-      <p class="time">6:30 PM</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact">
-  <h2>যোগাযোগ</h2>
-
-  <p class="sub">
-    শ্রী শ্রী দুর্গা বাড়ি, মালাকার পট্টি, শিলচর, অসম।
-  </p>
-
-  <form id="contactForm">
-
-    <input
-      id="name"
-      name="name"
-      type="text"
-      placeholder="আপনার নাম"
-      maxlength="100"
-      autocomplete="name"
-      required
-    >
-
-    <input
-      id="email"
-      name="email"
-      type="email"
-      placeholder="আপনার ইমেল ঠিকানা"
-      maxlength="254"
-      autocomplete="email"
-      required
-    >
-
-    <textarea
-      id="message"
-      name="message"
-      rows="5"
-      placeholder="আপনার বার্তা লিখুন"
-      maxlength="5000"
-      required
-    ></textarea>
-
-    <button class="btn" type="submit">বার্তা পাঠান</button>
-
-    <div id="formStatus" role="status" aria-live="polite"></div>
-
-  </form>
-</section>
 
 <!-- FOOTER -->
 
 <footer>
-  <h3>শ্রী শ্রী দুর্গা বাড়ি</h3>
-  <p>Malakar Patty, Silchar, Assam</p>
-  <p>© 2026 Sri Sri Durga Bari. All Rights Reserved.</p>
-  <p>জয় মা দুর্গা 🙏</p>
+
+    শ্রী শ্রী দুর্গা বাড়ি |
+    মালাকার পট্টি, শিলচর, অসম
+
 </footer>
-
-<script>
-"use strict";
-
-/* YOUTUBE VIDEO GALLERY */
-
-(() => {
-  const modal = document.getElementById("videoModal");
-  const player = document.getElementById("youtubePlayer");
-  const closeButton = document.getElementById("videoClose");
-  const videoCards = document.querySelectorAll(".video-card");
-
-  function getYouTubeID(url) {
-    try {
-      const parsed = new URL(url);
-      let id = null;
-      const host = parsed.hostname.replace(/^www\./, "");
-
-      if (host === "youtu.be") {
-        id = parsed.pathname.split("/").filter(Boolean)[0];
-      } else if (
-        host === "youtube.com" ||
-        host === "m.youtube.com" ||
-        host === "youtube-nocookie.com"
-      ) {
-        if (parsed.pathname === "/watch") {
-          id = parsed.searchParams.get("v");
-        } else {
-          const match = parsed.pathname.match(
-            /^\/(?:embed|shorts|live)\/([a-zA-Z0-9_-]{11})/
-          );
-          id = match ? match[1] : null;
-        }
-      }
-
-      return /^[a-zA-Z0-9_-]{11}$/.test(id || "") ? id : null;
-
-    } catch (error) {
-      return null;
-    }
-  }
-
-  function openVideo(videoID) {
-    if (!videoID) return;
-
-    player.src =
-      "https://www.youtube-nocookie.com/embed/" +
-      encodeURIComponent(videoID) +
-      "?autoplay=1&rel=0";
-
-    modal.classList.add("active");
-    modal.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
-    closeButton.focus();
-  }
-
-  function closeVideo() {
-    modal.classList.remove("active");
-    modal.setAttribute("aria-hidden", "true");
-    player.src = "";
-    document.body.style.overflow = "";
-  }
-
-  videoCards.forEach(card => {
-    const videoID = getYouTubeID(card.dataset.video || "");
-    const thumbnail = card.querySelector(".video-thumbnail img");
-
-    if (videoID) {
-
-      thumbnail.src =
-        "https://img.youtube.com/vi/" +
-        videoID +
-        "/hqdefault.jpg";
-
-      thumbnail.onerror = () => {
-        thumbnail.onerror = null;
-        thumbnail.src =
-          "https://img.youtube.com/vi/" +
-          videoID +
-          "/mqdefault.jpg";
-      };
-
-      card.addEventListener("click", () => openVideo(videoID));
-
-      card.addEventListener("keydown", event => {
-        if (event.key === "Enter" || event.key === " ") {
-          event.preventDefault();
-          openVideo(videoID);
-        }
-      });
-
-    } else {
-      card.classList.add("video-invalid");
-      card.setAttribute("aria-disabled", "true");
-    }
-  });
-
-  closeButton.addEventListener("click", closeVideo);
-
-  modal.addEventListener("click", event => {
-    if (event.target === modal) closeVideo();
-  });
-
-  document.addEventListener("keydown", event => {
-    if (
-      event.key === "Escape" &&
-      modal.classList.contains("active")
-    ) {
-      closeVideo();
-    }
-  });
-
-})();
-
-/* CONTACT FORM - CLOUDFLARE WORKER BACKEND */
-
-(() => {
-
-  const API_URL =
-    "https://mybackend.b3882657.workers.dev/api/contact";
-
-  const form = document.getElementById("contactForm");
-  const status = document.getElementById("formStatus");
-  const button = form.querySelector('button[type="submit"]');
-
-  form.addEventListener("submit", async event => {
-
-    event.preventDefault();
-
-    if (button.disabled || !form.reportValidity()) return;
-
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
-
-    if (!name || !email || !message) {
-      status.textContent = "অনুগ্রহ করে সব তথ্য পূরণ করুন।";
-      return;
-    }
-
-    button.disabled = true;
-    status.textContent = "বার্তা পাঠানো হচ্ছে...";
-
-    const controller = new AbortController();
-    const timeout = setTimeout(
-      () => controller.abort(),
-      15000
-    );
-
-    try {
-
-      const response = await fetch(API_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          name,
-          email,
-          message
-        }),
-        signal: controller.signal
-      });
-
-      let data = {};
-
-      try {
-        data = await response.json();
-      } catch (error) {}
-
-      if (!response.ok) {
-        throw new Error(
-          data.message || data.error || "Request failed"
-        );
-      }
-
-      if (data.status === "success") {
-
-        status.textContent =
-          "ধন্যবাদ, " + name +
-          "। আপনার বার্তা সফলভাবে পাঠানো হয়েছে।";
-
-        form.reset();
-
-      } else if (data.status === "saved") {
-
-        status.textContent =
-          "আপনার বার্তা সংরক্ষিত হয়েছে, কিন্তু ইমেল পাঠানো যায়নি।";
-
-      } else {
-
-        throw new Error(
-          data.message || "Unexpected server response"
-        );
-
-      }
-
-    } catch (error) {
-
-      console.error("Contact form error:", error);
-
-      status.textContent =
-        error.name === "AbortError"
-          ? "সার্ভারের উত্তর পেতে দেরি হচ্ছে। পরে আবার চেষ্টা করুন।"
-          : "দুঃখিত, বার্তা পাঠানো যায়নি। অনুগ্রহ করে আবার চেষ্টা করুন।";
-
-    } finally {
-
-      clearTimeout(timeout);
-      button.disabled = false;
-
-    }
-
-  });
-
-})();
-</script>
 
 </body>
 </html>
