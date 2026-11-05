@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>শ্রী শ্রী দুর্গা বাড়ি | Sri Sri Durga Bari</title>
+
+<meta name="description" content="Sri Sri Durga Bari, Malakar Patty, Silchar, Assam.">
+
+<meta name="theme-color" content="#E85D04">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* GENERAL SETTINGS */
+
+:root {
+    --orange: #E85D04;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Hind', sans-serif;
+    background: var(--white);
+}
+
+/* NAVIGATION */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--orange);
+    padding: 15px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.18);
+}
+
+.logo {
+    color: white;
+    font-size: 23px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+/* MAIN HERO SECTION */
+
+.hero {
+    min-height: calc(100vh - 65px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(75, 25, 0, .25),
+            rgba(75, 25, 0, .45)
+        ),
+        url("images/durga%20maa.jpeg")
+        center center / cover no-repeat;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 7vw, 76px);
+    font-weight: 800;
+    line-height: 1.3;
+    text-shadow: 2px 3px 12px rgba(0,0,0,.65);
+    margin-bottom: 18px;
+}
+
+.hero p {
+    font-size: clamp(17px, 3vw, 25px);
+    font-weight: 600;
+    text-shadow: 2px 2px 8px rgba(0,0,0,.8);
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--orange);
+    text-align: center;
+    color: white;
+    padding: 18px 15px;
+    font-size: 15px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width: 650px) {
+
+    .navbar {
+        justify-content: center;
+        text-align: center;
+        padding: 13px 10px;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 13px;
+        text-align: right;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: calc(100vh - 110px);
+        background-position: center center;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav class="navbar">
+<a href="index.html" class="logo">
+        শ্রী শ্রী দুর্গা বাড়ি
+    </a>
+
+    <div class="nav-links">
+
+        <a href="index.html">Home</a>
+        <a href="mantra.html">MANTRA</a>
+
+        <a href="video.html">Video</a>
+
+        <a href="gallery.html">Gallery</a>
+
+        <a href="tribute.html">Tribute</a>
+
+        <a href="about.html">About</a>
+
+        <a href="contact.html">Contact</a>
+
+    </div>
+
+</nav>
+
+<!-- MAIN HOME PAGE -->
+
+<header class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>শ্রী শ্রী দুর্গা বাড়ি</h1>
+
+        <p>
+            মালাকার পট্টি, শিলচর, অসম
+        </p>
+
+    </div>
+
+</header>
+
+<!-- FOOTER -->
+
+<footer>
+
+    শ্রী শ্রী দুর্গা বাড়ি |
+    মালাকার পট্টি, শিলচর, অসম
+
+</footer>
+
+</body>
+</html>

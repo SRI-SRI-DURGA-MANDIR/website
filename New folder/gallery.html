@@ -1,0 +1,889 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Gallery | Sri Sri Durga Bari</title>
+
+<meta name="description" content="Explore photographs of Sri Sri Durga Bari, Malakar Patty, Silchar, Assam.">
+<meta name="theme-color" content="#922D00">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+    --orange: #F06418;
+    --deep: #922D00;
+    --gold: #FFBD35;
+    --cream: #FFF4E5;
+    --text: #421D0A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    background: var(--cream);
+    color: var(--text);
+    font-family: 'Hind', sans-serif;
+    line-height: 1.7;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--deep);
+    padding: 15px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.18);
+}
+
+.logo {
+    color: var(--gold);
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color .3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--gold);
+}
+
+/* PAGE HEADER */
+
+.page-header {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(239,91,15,.92),
+            rgba(105,29,0,.96)
+        ),
+        url("images/temple-main.jpg") center/cover no-repeat;
+
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 65px 20px;
+}
+
+.page-header .om {
+    color: var(--gold);
+    font-size: 50px;
+}
+
+.page-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(35px, 6vw, 58px);
+    margin: 10px 0;
+}
+
+.page-header p {
+    font-size: 18px;
+}
+
+/* GALLERY SECTION */
+
+.gallery-section {
+    max-width: 1150px;
+    margin: auto;
+    padding: 65px 22px;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--orange);
+    font-size: clamp(28px, 4vw, 38px);
+    margin-bottom: 12px;
+}
+
+.section-subtitle {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 35px;
+}
+
+/* SLIDER */
+
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #E8C49E;
+    box-shadow: 0 8px 25px rgba(80,30,0,.18);
+    touch-action: pan-y;
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    transition: transform .45s ease;
+    will-change: transform;
+}
+
+.slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    cursor: zoom-in;
+}
+
+/* SLIDER BUTTONS */
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(146,45,0,.90);
+    color: white;
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .3s, transform .3s;
+}
+
+.slider-btn:hover {
+    background: var(--orange);
+}
+
+.slider-btn:active {
+    transform: translateY(-50%) scale(.92);
+}
+
+.slider-btn:focus-visible,
+.slider-dots button:focus-visible,
+.close-lightbox:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+/* SLIDER DOTS */
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 11px;
+    padding: 22px 10px;
+}
+
+.slider-dots button {
+    width: 12px;
+    height: 12px;
+    flex: 0 0 12px;
+    border-radius: 50%;
+    border: none;
+    background: #D9B18C;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.slider-dots button.active {
+    background: var(--orange);
+    transform: scale(1.3);
+}
+
+/* SLIDE COUNTER */
+
+.slide-counter {
+    text-align: center;
+    color: var(--deep);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* LIGHTBOX */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background: rgba(0,0,0,.95);
+}
+
+.lightbox.open {
+    display: flex;
+}
+
+.lightbox-content {
+    max-width: 1100px;
+    width: 100%;
+    text-align: center;
+}
+
+.lightbox img {
+    max-width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: white;
+    background: transparent;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* LIGHTBOX NAVIGATION */
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(240,100,24,.9);
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--deep);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer h3 {
+    color: var(--gold);
+    margin-bottom: 8px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width: 650px) {
+
+    .navbar {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 13px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .gallery-section {
+        padding: 45px 16px;
+    }
+
+    .slide {
+        height: 280px;
+    }
+
+    .slider-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 20px;
+    }
+
+    .prev {
+        left: 9px;
+    }
+
+    .next {
+        right: 9px;
+    }
+
+    .lightbox {
+        padding: 12px;
+    }
+
+    .lightbox-prev {
+        left: 8px;
+    }
+
+    .lightbox-next {
+        right: 8px;
+    }
+
+    .lightbox-nav {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+}
+
+@media(prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .slides {
+        transition: none;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav class="navbar">
+
+    <a href="index.html" class="logo">
+        শ্রী শ্রী দুর্গা বাড়ি
+    </a>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="slokas.html">mantra</a>
+        <a href="video.html">Video</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="tribute.html">Tribute</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+</nav>
+
+<!-- PAGE HEADER -->
+
+<header class="page-header">
+
+    <div>
+        <div class="om">ॐ</div>
+
+        <h1>আমাদের আলোকচিত্র</h1>
+
+        <p>
+            শ্রী শ্রী দুর্গা বাড়ি
+            <br>
+            মালাকার পট্টি, শিলচর, অসম
+        </p>
+    </div>
+
+</header>
+
+<!-- GALLERY SECTION -->
+
+<section class="gallery-section">
+
+    <h2 class="section-title">
+        ফটো গ্যালারি
+    </h2>
+
+    <p class="section-subtitle">
+        আমাদের মন্দির, মাতৃ আরাধনা, দুর্গোৎসব
+        ও স্মরণীয় মুহূর্তের কিছু আলোকচিত্র।
+    </p>
+
+    <!-- IMAGE COUNTER -->
+
+    <p class="slide-counter" id="slideCounter" aria-live="polite">
+        1 / 20
+    </p>
+
+    <!-- IMAGE SLIDER -->
+
+    <div class="slider" id="slider">
+
+        <div class="slides" id="slides">
+            <!-- Images are added automatically using JavaScript -->
+        </div>
+
+        <!-- PREVIOUS BUTTON -->
+
+        <button
+            type="button"
+            class="slider-btn prev"
+            id="prev"
+            aria-label="Previous image">
+            &#10094;
+        </button>
+
+        <!-- NEXT BUTTON -->
+
+        <button
+            type="button"
+            class="slider-btn next"
+            id="next"
+            aria-label="Next image">
+            &#10095;
+        </button>
+
+    </div>
+
+    <!-- NAVIGATION DOTS -->
+
+    <div
+        class="slider-dots"
+        id="sliderDots"
+        aria-label="Choose gallery image">
+    </div>
+
+</section>
+
+<!-- IMAGE LIGHTBOX -->
+
+<div
+    class="lightbox"
+    id="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Enlarged photograph"
+    aria-hidden="true">
+
+    <button
+        type="button"
+        class="close-lightbox"
+        id="closeLightbox"
+        aria-label="Close image">
+        &times;
+    </button>
+
+    <button
+        type="button"
+        class="lightbox-nav lightbox-prev"
+        id="lightboxPrev"
+        aria-label="Previous photograph">
+        &#10094;
+    </button>
+
+    <div class="lightbox-content">
+        <img src="" alt="" id="lightboxImage">
+    </div>
+
+    <button
+        type="button"
+        class="lightbox-nav lightbox-next"
+        id="lightboxNext"
+        aria-label="Next photograph">
+        &#10095;
+    </button>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>শ্রী শ্রী দুর্গা বাড়ি</h3>
+
+    <p>মালাকার পট্টি, শিলচর, অসম</p>
+
+    <p>© 2026 Sri Sri Durga Bari. All Rights Reserved.</p>
+
+    <p>জয় মা দুর্গা 🙏</p>
+
+</footer>
+
+<!-- GALLERY JAVASCRIPT -->
+
+<script>
+
+"use strict";
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const slides = document.getElementById("slides");
+    const slider = document.getElementById("slider");
+    const dotsContainer = document.getElementById("sliderDots");
+    const counter = document.getElementById("slideCounter");
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+
+    const closeButton = document.getElementById("closeLightbox");
+
+    const lightboxPrev = document.getElementById("lightboxPrev");
+    const lightboxNext = document.getElementById("lightboxNext");
+
+    /* ALL 20 IMAGE FILENAMES */
+
+    const imageLetters = [
+        "a", "b", "c", "d", "e",
+        "f", "g", "h", "i", "j",
+        "k", "l", "m", "n", "o",
+        "p", "q", "r", "s", "t"
+    ];
+
+    const totalSlides = imageLetters.length;
+
+    let currentSlide = 0;
+    let autoSlide = null;
+    let lightboxOpen = false;
+    let previousFocus = null;
+
+    const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    /* CREATE ALL 20 SLIDES */
+
+    imageLetters.forEach((letter, index) => {
+
+        const slide = document.createElement("div");
+        slide.className = "slide";
+
+        const image = document.createElement("img");
+
+        image.src = `images/${letter}.jpeg`;
+        image.alt = `Sri Sri Durga Bari photograph ${index + 1}`;
+
+        image.decoding = "async";
+
+        if (index === 0) {
+            image.fetchPriority = "high";
+        } else {
+            image.loading = "lazy";
+        }
+
+        image.addEventListener("click", () => {
+            openLightbox(index);
+        });
+
+        slide.appendChild(image);
+        slides.appendChild(slide);
+
+    });
+
+    /* CREATE NAVIGATION DOTS */
+
+    imageLetters.forEach((letter, index) => {
+
+        const dot = document.createElement("button");
+
+        dot.type = "button";
+
+        dot.setAttribute(
+            "aria-label",
+            `Show image ${index + 1}`
+        );
+
+        dot.addEventListener("click", () => {
+            showSlide(index);
+            restartAutoSlide();
+        });
+
+        dotsContainer.appendChild(dot);
+
+    });
+
+    const images = Array.from(
+        slides.querySelectorAll(".slide img")
+    );
+
+    const dots = Array.from(
+        dotsContainer.querySelectorAll("button")
+    );
+
+    /* DISPLAY SLIDE */
+
+    function showSlide(index) {
+
+        currentSlide =
+            (index + totalSlides) % totalSlides;
+
+        slides.style.transform =
+            `translateX(-${currentSlide * 100}%)`;
+
+        dots.forEach((dot, i) => {
+
+            dot.classList.toggle(
+                "active",
+                i === currentSlide
+            );
+
+            if (i === currentSlide) {
+                dot.setAttribute("aria-current", "true");
+            } else {
+                dot.removeAttribute("aria-current");
+            }
+
+        });
+
+        counter.textContent =
+            `${currentSlide + 1} / ${totalSlides}`;
+
+        if (lightboxOpen) {
+            updateLightboxImage();
+        }
+
+    }
+
+    /* NEXT AND PREVIOUS */
+
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
+
+    function previousSlide() {
+        showSlide(currentSlide - 1);
+    }
+
+    document.getElementById("next")
+        .addEventListener("click", () => {
+            nextSlide();
+            restartAutoSlide();
+        });
+
+    document.getElementById("prev")
+        .addEventListener("click", () => {
+            previousSlide();
+            restartAutoSlide();
+        });
+
+    /* AUTOMATIC SLIDER */
+
+    function stopAutoSlide() {
+
+        if (autoSlide !== null) {
+            clearInterval(autoSlide);
+            autoSlide = null;
+        }
+
+    }
+
+    function startAutoSlide() {
+
+        stopAutoSlide();
+
+        if (
+            reducedMotion ||
+            totalSlides < 2 ||
+            document.hidden ||
+            lightboxOpen
+        ) {
+            return;
+        }
+
+        autoSlide = setInterval(nextSlide, 4000);
+
+    }
+
+    function restartAutoSlide() {
+        startAutoSlide();
+    }
+
+    /* PAUSE ON HOVER */
+
+    slider.addEventListener("mouseenter", stopAutoSlide);
+    slider.addEventListener("mouseleave", startAutoSlide);
+
+    /* PAUSE ON KEYBOARD FOCUS */
+
+    slider.addEventListener("focusin", stopAutoSlide);
+
+    slider.addEventListener("focusout", event => {
+
+        if (!slider.contains(event.relatedTarget)) {
+            startAutoSlide();
+        }
+
+    });
+
+    /* PAUSE WHEN TAB IS INACTIVE */
+
+    document.addEventListener("visibilitychange", () => {
+
+        if (document.hidden) {
+            stopAutoSlide();
+        } else {
+            startAutoSlide();
+        }
+
+    });
+
+    /* LIGHTBOX IMAGE */
+
+    function updateLightboxImage() {
+
+        lightboxImage.src =
+            images[currentSlide].currentSrc ||
+            images[currentSlide].src;
+
+        lightboxImage.alt = images[currentSlide].alt;
+
+    }
+
+    /* OPEN LIGHTBOX */
+
+    function openLightbox(index) {
+
+        stopAutoSlide();
+
+        previousFocus = document.activeElement;
+        lightboxOpen = true;
+
+        showSlide(index);
+        updateLightboxImage();
+
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
+
+        document.body.style.overflow = "hidden";
+
+        closeButton.focus();
+
+    }
+
+    /* CLOSE LIGHTBOX */
+
+    function closeLightbox() {
+
+        lightbox.classList.remove("open");
+        lightbox.setAttribute("aria-hidden", "true");
+
+        lightboxImage.removeAttribute("src");
+
+        document.body.style.overflow = "";
+
+        lightboxOpen = false;
+
+        if (previousFocus) {
+            previousFocus.focus();
+        }
+
+        startAutoSlide();
+
+    }
+
+    closeButton.addEventListener("click", closeLightbox);
+
+    /* LIGHTBOX NEXT AND PREVIOUS */
+
+    lightboxNext.addEventListener("click", () => {
+        nextSlide();
+    });
+
+    lightboxPrev.addEventListener("click", () => {
+        previousSlide();
+    });
+
+    /* CLOSE WHEN CLICKING OUTSIDE IMAGE */
+
+    lightbox.addEventListener("click", event => {
+
+        if (event.target === lightbox) {
+            closeLightbox();
+        }
+
+    });
+
+    /* KEYBOARD NAVIGATION */
+
+    document.addEventListener("keydown", event => {
+
+        if (lightboxOpen) {
+
+            if (event.key === "Escape") {
+                closeLightbox();
+            }
+
+            if (event.key === "ArrowRight") {
+                nextSlide();
+            }
+
+            if (event.key === "ArrowLeft") {
+                previousSlide();
+            }
+
+        }
+
+    });
+
+    /* INITIALIZE SLIDER */
+
+    showSlide(0);
+    startAutoSlide();
+
+});
+
+</script>
+
+</body>
+</html>
