@@ -1,20 +1,33 @@
 
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Website Under Maintenance | Sri Sri Durga Bari</title>
+<title>Website Under Maintenance | শ্রী শ্রী দুর্গা বাড়ি</title>
 
-<meta name="description" content="Sri Sri Durga Bari website is currently under maintenance. We will be back soon.">
+<meta name="description" content="শ্রী শ্রী দুর্গা বাড়ি, মালাকার পট্টি, শিলচর ওয়েবসাইটটি বর্তমানে রক্ষণাবেক্ষণের অধীনে রয়েছে।">
+
+<meta name="theme-color" content="#E85D04">
 
 <meta name="robots" content="noindex, nofollow">
 
+<link rel="canonical" href="https://sri-sri-durga-mandir.github.io/website/">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+:root {
+    --orange: #E85D04;
+    --white: #FFFFFF;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -22,51 +35,52 @@
 }
 
 body {
-    font-family: 'Noto Sans Bengali', sans-serif;
-    background: linear-gradient(135deg, #fffaf2, #ffffff);
-    color: #333;
+    font-family: 'Hind', sans-serif;
+    background: var(--white);
     min-height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
+    flex-direction: column;
 }
 
-.container {
-    max-width: 650px;
+/* HEADER */
+
+header {
+    background: var(--orange);
+    padding: 22px 15px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 3px 12px rgba(0,0,0,.15);
+}
+
+header h2 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+/* MAIN SECTION */
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.maintenance-box {
     width: 100%;
+    max-width: 750px;
     padding: 45px 25px;
-    background: white;
+    border: 1px solid #f2d3b9;
     border-radius: 18px;
-    border: 1px solid #f3dfc2;
-    box-shadow: 0 10px 35px rgba(120, 70, 0, 0.10);
+    box-shadow: 0 8px 30px rgba(0,0,0,.07);
 }
 
 .om {
-    font-size: 35px;
-    color: #e87516;
+    font-size: 48px;
+    color: var(--orange);
     margin-bottom: 15px;
-}
-
-h1 {
-    color: #c85b08;
-    font-size: 30px;
-    margin-bottom: 12px;
-}
-
-.bengali {
-    font-size: 21px;
-    font-weight: 600;
-    color: #a94b08;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 15px;
-    line-height: 1.9;
-    color: #666;
-    margin-bottom: 12px;
 }
 
 .maintenance-icon {
@@ -74,104 +88,155 @@ p {
     margin: 20px 0;
 }
 
+h1 {
+    font-family: 'Playfair Display', serif;
+    color: var(--orange);
+    font-size: clamp(27px, 5vw, 42px);
+    margin-bottom: 15px;
+}
+
+.bengali-title {
+    font-size: clamp(18px, 4vw, 25px);
+    font-weight: 700;
+    color: #9e4100;
+    margin-bottom: 22px;
+}
+
 .status {
     display: inline-block;
-    background: #fff0dc;
-    color: #c85b08;
+    background: #fff0e3;
+    color: var(--orange);
     padding: 10px 22px;
     border-radius: 30px;
-    font-size: 14px;
     font-weight: 600;
-    margin: 15px 0;
+    margin: 15px 0 25px;
+}
+
+.description {
+    color: #555;
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 15px;
 }
 
 .divider {
-    width: 80px;
+    width: 75px;
     height: 3px;
-    background: #e87516;
+    background: var(--orange);
     margin: 25px auto;
     border-radius: 5px;
 }
 
-.footer {
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
-    font-size: 13px;
-    color: #999;
+.temple-name {
+    color: var(--orange);
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 8px;
 }
 
-.footer strong {
-    color: #c85b08;
+.location {
+    color: #666;
+    font-size: 16px;
 }
 
-@media(max-width: 480px) {
-    h1 {
-        font-size: 25px;
-    }
+/* FOOTER */
 
-    .bengali {
-        font-size: 18px;
-    }
+footer {
+    background: var(--orange);
+    color: white;
+    text-align: center;
+    padding: 18px 12px;
+    font-size: 14px;
+    line-height: 1.8;
+}
 
-    .container {
+/* MOBILE */
+
+@media(max-width: 600px) {
+
+    .maintenance-box {
         padding: 35px 18px;
     }
+
+    header h2 {
+        font-size: 21px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
 }
+
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<header>
+    <h2>শ্রী শ্রী দুর্গা বাড়ি</h2>
+</header>
 
-    <div class="om">ॐ</div>
+<main>
 
-    <h1>Website Under Maintenance</h1>
+    <section class="maintenance-box">
 
-    <div class="bengali">
-        ওয়েবসাইটটি বর্তমানে রক্ষণাবেক্ষণের অধীনে রয়েছে
-    </div>
+        <div class="om">ॐ</div>
 
-    <div class="maintenance-icon">🛠️</div>
+        <h1>Website Under Maintenance</h1>
 
-    <div class="status">
-        ● Currently Under Maintenance
-    </div>
+        <div class="bengali-title">
+            ওয়েবসাইটটি বর্তমানে রক্ষণাবেক্ষণের অধীনে রয়েছে
+        </div>
 
-    <div class="divider"></div>
+        <div class="maintenance-icon">🛠️</div>
 
-    <p>
-        We are currently working to improve our website
-        and bring you a better experience.
-    </p>
+        <div class="status">
+            ● Currently Under Maintenance
+        </div>
 
-    <p>
-        Our website will be back online soon.
-        Thank you for your patience and understanding.
-    </p>
+        <div class="divider"></div>
 
-    <p>
-        আপনাদের সহযোগিতা ও ধৈর্যের জন্য
-        আন্তরিক ধন্যবাদ।
-    </p>
+        <p class="description">
+            We are currently working to improve our website
+            and provide you with a better experience.
+        </p>
 
-    <div class="divider"></div>
+        <p class="description">
+            Our website will be back soon.
+            Thank you for your patience and understanding.
+        </p>
 
-    <h2 style="color:#c85b08; font-size:21px;">
-        শ্রী শ্রী দুর্গা বাড়ি
-    </h2>
+        <p class="description">
+            আমাদের ওয়েবসাইটের উন্নয়ন ও রক্ষণাবেক্ষণের কাজ চলছে।
+            খুব শীঘ্রই আমরা আবার ফিরে আসব।
+            আপনাদের সহযোগিতার জন্য আন্তরিক ধন্যবাদ।
+        </p>
 
-    <p>
-        মালাকার পট্টি, শিলচর, অসম
-    </p>
+        <div class="divider"></div>
 
-    <div class="footer">
-        © 2026 <strong>Sri Sri Durga Bari</strong><br>
-        All Rights Reserved.
-    </div>
+        <div class="temple-name">
+            শ্রী শ্রী দুর্গা বাড়ি
+        </div>
 
-</div>
+        <div class="location">
+            মালাকার পট্টি, শিলচর, অসম
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+
+    শ্রী শ্রী দুর্গা বাড়ি |
+    মালাকার পট্টি, শিলচর, অসম
+
+    <br>
+
+    © 2026 All Rights Reserved.
+
+</footer>
 
 </body>
 </html>
