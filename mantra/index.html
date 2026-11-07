@@ -1,24 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="bn">
-
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="canonical" href="https://sri-sri-durga-mandir.github.io/website/">
+<title>দুর্গা মন্ত্র | শ্রী শ্রী দুর্গা মন্দির</title>
 
-<title>Under Maintenance | শ্রী শ্রী দুর্গা বাড়ি</title>
+<link rel="canonical" href="https://sri-sri-durga-mandir.github.io/website/mantra/">
 
-<meta name="description" content="Sri Sri Durga Bari website is currently under maintenance. Please visit again shortly.">
-<meta name="theme-color" content="#E85D04">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Hind:wght@400;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="মা দুর্গার পবিত্র সংস্কৃত মন্ত্র, বাংলা উচ্চারণ, অর্থ ও প্রার্থনা।">
 
 <style>
-
 * {
     margin: 0;
     padding: 0;
@@ -26,96 +19,352 @@
 }
 
 body {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 30px 20px;
-    font-family: 'Hind', sans-serif;
+    font-family: Georgia, serif;
+    background: #250b08;
     color: white;
-    background:
-        linear-gradient(rgba(75, 25, 0, .55), rgba(75, 25, 0, .75)),
-        url("/website/images/durga%20maa.jpeg") center center / cover no-repeat;
-    background-color: #922D00;
 }
 
-.box {
-    width: 100%;
-    max-width: 680px;
-    background: rgba(0, 0, 0, .35);
-    border: 1px solid rgba(255, 255, 255, .25);
-    border-radius: 16px;
-    padding: 45px 30px;
+.hero {
+    min-height: 100vh;
+    background:
+    linear-gradient(rgba(25,0,0,.85),rgba(20,0,0,.92)),
+    url("../images/temple.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 5%;
+    background: rgba(0,0,0,.65);
+}
+
+.logo {
+    color: #ffd36a;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #ffd36a;
+}
+
+.header {
+    text-align: center;
+    padding: 65px 20px 35px;
 }
 
 .om {
-    font-size: 52px;
-    color: #FFBD35;
-    margin-bottom: 10px;
+    font-size: 65px;
+    color: #ffd36a;
 }
 
 h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(30px, 6vw, 46px);
+    color: #ffda80;
+    font-size: clamp(32px,5vw,52px);
+    margin: 15px 0;
+}
+
+.header p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.container {
+    width: 90%;
+    max-width: 950px;
+    margin: auto;
+    padding-bottom: 60px;
+}
+
+.mantra-card {
+    background: rgba(0,0,0,.55);
+    border: 1px solid #d99a36;
+    border-radius: 15px;
+    padding: 28px;
+    margin: 25px 0;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,.3);
+}
+
+.mantra-card h2 {
+    color: #ffd36a;
+    font-size: 25px;
     margin-bottom: 20px;
 }
 
-.status {
-    display: inline-block;
-    background: #FFBD35;
-    color: #451600;
-    font-weight: 700;
-    font-size: 15px;
-    padding: 6px 18px;
-    border-radius: 30px;
-    margin-bottom: 22px;
+.sanskrit {
+    font-size: 25px;
+    line-height: 2;
+    color: #ffdc91;
+    margin: 15px 0;
 }
 
-p {
-    font-size: 18px;
+.bengali {
+    font-size: 19px;
     line-height: 1.9;
-    margin-bottom: 12px;
+    color: #fff;
+    margin: 15px 0;
 }
 
-.small {
-    font-size: 15px;
-    opacity: .9;
-    margin-top: 22px;
+.meaning {
+    color: #ffcf85;
+    font-size: 17px;
+    line-height: 1.9;
+    border-top: 1px solid #b98536;
+    padding-top: 15px;
+    margin-top: 15px;
 }
 
-@media (max-width: 650px) {
-    .box { padding: 35px 20px; }
-    p { font-size: 16px; }
+footer {
+    text-align: center;
+    padding: 25px;
+    background: rgba(0,0,0,.8);
+    color: #ffd36a;
 }
 
+@media(max-width:750px) {
+    nav {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 13px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .mantra-card {
+        padding: 20px 12px;
+    }
+
+    .sanskrit {
+        font-size: 21px;
+    }
+
+    .bengali {
+        font-size: 17px;
+    }
+}
 </style>
 </head>
 
 <body>
 
-<div class="box">
+<div class="hero">
+
+<nav>
+    <div class="logo">🕉 শ্রী শ্রী দুর্গা মন্দির</div>
+
+    <div class="nav-links">
+        <a href="/website/">প্রচ্ছদ</a>
+        <a href="/website/mantra/">মন্ত্র</a>
+        <a href="/website/gallery/">গ্যালারি</a>
+        <a href="/website/about/">আমাদের সম্পর্কে</a>
+        <a href="/website/video/">ভিডিও</a>
+        <a href="/website/tribute/">শ্রদ্ধাঞ্জলি</a>
+        <a href="/website/contact/">যোগাযোগ</a>
+    </div>
+</nav>
+
+<header class="header">
 
     <div class="om">ॐ</div>
 
-    <h1>শ্রী শ্রী দুর্গা বাড়ি</h1>
-
-    <div class="status">Under Maintenance</div>
+    <h1>মা দুর্গার পবিত্র মন্ত্র</h1>
 
     <p>
-        ওয়েবসাইটটি বর্তমানে রক্ষণাবেক্ষণের কাজে রয়েছে।<br>
-        অনুগ্রহ করে কিছুক্ষণ পরে আবার দেখুন।
+        জয় মা দুর্গা | জয় জগজ্জননী
+        <br>
+        ভক্তি, শক্তি ও শান্তির জন্য মা দুর্গার চরণে প্রার্থনা।
     </p>
 
-    <p>
-        Our website is currently under maintenance.<br>
-        Please visit again shortly.
-    </p>
+</header>
 
-    <p class="small">
-        মালাকার পট্টি, শিলচর, অসম<br>
-        জয় মা দুর্গা 🙏
-    </p>
+<main class="container">
+
+    <!-- MANTRA 1 -->
+
+    <section class="mantra-card">
+
+        <h2>১. দুর্গা বীজ মন্ত্র</h2>
+
+        <div class="sanskrit">
+            ॐ दुं दुर्गायै नमः ॥
+        </div>
+
+        <div class="bengali">
+            বাংলা উচ্চারণ:
+            <br>
+            ওঁ দুং দুর্গায়ৈ নমঃ।
+        </div>
+
+        <div class="meaning">
+            অর্থ:
+            <br>
+            মা দুর্গাকে প্রণাম জানাই।
+            তিনি আমাদের শক্তি, সাহস ও মঙ্গল দান করুন।
+        </div>
+
+    </section>
+
+
+    <!-- MANTRA 2 -->
+
+    <section class="mantra-card">
+
+        <h2>২. সর্বমঙ্গল মঙ্গল্যে মন্ত্র</h2>
+
+        <div class="sanskrit">
+            सर्वमङ्गलमाङ्गल्ये शिवे सर्वार्थसाधिके।
+            <br>
+            शरण्ये त्र्यम्बके गौरि नारायणि नमोऽस्तु ते॥
+        </div>
+
+        <div class="bengali">
+            বাংলা উচ্চারণ:
+            <br>
+            সর্বমঙ্গল মাঙ্গল্যে শিবে সর্বার্থসাধিকে।
+            <br>
+            শরণ্যে ত্র্যম্বকে গৌরী নারায়ণী নমোস্তুতে॥
+        </div>
+
+        <div class="meaning">
+            অর্থ:
+            <br>
+            হে মা, আপনি সকল মঙ্গলের উৎস।
+            আপনি সকল ইচ্ছা পূরণকারী, আশ্রয়দাত্রী
+            এবং জগতের কল্যাণময়ী দেবী।
+            আপনাকে প্রণাম জানাই।
+        </div>
+
+    </section>
+
+
+    <!-- MANTRA 3 -->
+
+    <section class="mantra-card">
+
+        <h2>৩. শরণাগত দীন মন্ত্র</h2>
+
+        <div class="sanskrit">
+            शरणागतदीनार्तपरित्राणपरायणे।
+            <br>
+            सर्वस्यार्तिहरे देवि नारायणि नमोऽस्तु ते॥
+        </div>
+
+        <div class="bengali">
+            বাংলা উচ্চারণ:
+            <br>
+            শরণাগত দীনাত পরিত্রাণ পরায়ণে।
+            <br>
+            সর্বস্যার্তিহরে দেবী নারায়ণী নমোস্তুতে॥
+        </div>
+
+        <div class="meaning">
+            অর্থ:
+            <br>
+            হে দেবী, যাঁরা আপনার শরণে আসেন,
+            তাঁদের দুঃখ ও বিপদ থেকে রক্ষা করাই আপনার করুণা।
+            হে নারায়ণী, আপনাকে প্রণাম।
+        </div>
+
+    </section>
+
+
+    <!-- MANTRA 4 -->
+
+    <section class="mantra-card">
+
+        <h2>৪. দুর্গা গায়ত্রী মন্ত্র</h2>
+
+        <div class="sanskrit">
+            ॐ कात्यायन्यै विद्महे
+            <br>
+            कन्याकुमारि धीमहि।
+            <br>
+            तन्नो दुर्गिः प्रचोदयात्॥
+        </div>
+
+        <div class="bengali">
+            বাংলা উচ্চারণ:
+            <br>
+            ওঁ কাত্যায়ন্যৈ বিদ্মহে,
+            <br>
+            কন্যাকুমারী ধীমহি।
+            <br>
+            তন্নো দুর্গিঃ প্রচোদয়াৎ॥
+        </div>
+
+        <div class="meaning">
+            অর্থ:
+            <br>
+            আমরা দেবী কাত্যায়নীর মহিমা উপলব্ধি করি।
+            কন্যাকুমারী দেবীর ধ্যান করি।
+            দেবী দুর্গা আমাদের সৎবুদ্ধি ও সঠিক পথের প্রেরণা দিন।
+        </div>
+
+    </section>
+
+
+    <!-- PRAYER -->
+
+    <section class="mantra-card">
+
+        <h2>৫. মা দুর্গার কাছে প্রার্থনা</h2>
+
+        <div class="sanskrit">
+            या देवी सर्वभूतेषु शक्तिरूपेण संस्थिता।
+            <br>
+            नमस्तस्यै नमस्तस्यै नमस्तस्यै नमो नमः॥
+        </div>
+
+        <div class="bengali">
+            বাংলা উচ্চারণ:
+            <br>
+            যা দেবী সর্বভূতেষু শক্তিরূপেণ সংস্থিতা।
+            <br>
+            নমস্তস্যৈ নমস্তস্যৈ নমস্তস্যৈ নমো নমঃ॥
+        </div>
+
+        <div class="meaning">
+            অর্থ:
+            <br>
+            যিনি সমস্ত জীবের মধ্যে শক্তিরূপে বিরাজমান,
+            সেই দেবীকে বারবার প্রণাম জানাই।
+            হে মা দুর্গা, আমাদের সকলের জীবনে শক্তি ও মঙ্গল দান করুন।
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+
+    © ২০২৬ শ্রী শ্রী দুর্গা মন্দির
+    <br><br>
+    🙏 জয় মা দুর্গা | জয় মাতাদি 🙏
+
+</footer>
 
 </div>
 
