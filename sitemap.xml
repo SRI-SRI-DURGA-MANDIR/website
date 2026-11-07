@@ -1,3 +1,4 @@
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
@@ -6,28 +7,28 @@
     </url>
 
     <url>
-        <loc>https://sri-sri-durga-mandir.github.io/website/mantra.html</loc>
+        <loc>https://sri-sri-durga-mandir.github.io/website/mantra/</loc>
     </url>
 
     <url>
-        <loc>https://sri-sri-durga-mandir.github.io/website/gallery.html</loc>
+        <loc>https://sri-sri-durga-mandir.github.io/website/gallery/</loc>
     </url>
 
     <url>
-        <loc>https://sri-sri-durga-mandir.github.io/website/about.html</loc>
+        <loc>https://sri-sri-durga-mandir.github.io/website/about/</loc>
     </url>
 
     <url>
-        <loc>https://sri-sri-durga-mandir.github.io/website/contact.html</loc>
+        <loc>https://sri-sri-durga-mandir.github.io/website/contact/</loc>
     </url>
 
     <url>
-        <loc>https://sri-sri-durga-mandir.github.io/website/video.htm</loc>
+        <loc>https://sri-sri-durga-mandir.github.io/website/video/</loc>
     </url>
 
     <url>
-        <loc>https://sri-sri-durga-mandir.github.io/website/tribute.html</loc>
+        <loc>https://sri-sri-durga-mandir.github.io/website/tribute/</loc>
     </url>
 
 </urlset>
-
+```
