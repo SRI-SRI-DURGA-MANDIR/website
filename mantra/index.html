@@ -4,25 +4,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
 
-<title>দেবী মন্ত্র ও স্তোত্র | শ্রী শ্রী দুর্গা বাড়ি</title>
-<link rel="canonical" href="https://sri-sri-durga-mandir.github.io/website/mantra/">
-<meta name="description" content="শ্রী শ্রী দুর্গা বাড়ির পক্ষ থেকে দেবী দুর্গার প্রণাম মন্ত্র, ধ্যান মন্ত্র এবং পবিত্র স্তোত্র।">
+<link rel="canonical" href="https://sri-sri-durga-mandir.github.io/website/">
+
+<title>Under Maintenance | শ্রী শ্রী দুর্গা বাড়ি</title>
+
+<meta name="description" content="Sri Sri Durga Bari website is currently under maintenance. Please visit again shortly.">
 <meta name="theme-color" content="#E85D04">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Hind:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
-:root {
-    --orange: #E85D04;
-    --deep: #922D00;
-    --gold: #FFBD35;
-    --cream: #FFF4E5;
-    --text: #421D0A;
-}
 
 * {
     margin: 0;
@@ -30,197 +25,68 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    font-family: 'Hind', 'Noto Sans Bengali', sans-serif;
-    background: var(--cream);
-    color: var(--text);
-    line-height: 1.8;
-}
-
-/* NAVIGATION */
-
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: var(--orange);
-    padding: 15px 6%;
+    min-height: 100vh;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    box-shadow: 0 3px 12px rgba(0,0,0,.18);
-}
-
-.logo {
-    color: white;
-    font-size: 23px;
-    font-weight: 700;
-    text-decoration: none;
-}
-
-.nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 22px;
-}
-
-.nav-links a {
-    color: white;
-    font-size: 15px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: .3s;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-    color: white;
-    text-decoration: underline;
-    text-underline-offset: 6px;
-}
-
-/* PAGE HEADER */
-
-.page-header {
-    background: linear-gradient(135deg, #783000, #3D1608);
-    color: white;
+    justify-content: center;
     text-align: center;
-    padding: 70px 20px;
+    padding: 30px 20px;
+    font-family: 'Hind', sans-serif;
+    color: white;
+    background:
+        linear-gradient(rgba(75, 25, 0, .55), rgba(75, 25, 0, .75)),
+        url("/website/images/durga%20maa.jpeg") center center / cover no-repeat;
+    background-color: #922D00;
+}
+
+.box {
+    width: 100%;
+    max-width: 680px;
+    background: rgba(0, 0, 0, .35);
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 16px;
+    padding: 45px 30px;
 }
 
 .om {
-    color: var(--gold);
-    font-size: 48px;
+    font-size: 52px;
+    color: #FFBD35;
     margin-bottom: 10px;
 }
 
-.page-header h1 {
-    font-family: 'Playfair Display', 'Noto Sans Bengali', serif;
-    font-size: clamp(32px, 6vw, 50px);
-    margin-bottom: 10px;
-}
-
-.page-header p {
-    font-size: 17px;
-}
-
-/* CONTENT */
-
-.container {
-    width: 90%;
-    max-width: 1050px;
-    margin: 50px auto 0;
-}
-
-/* MANTRA CARDS */
-
-.mantra-card {
-    background: white;
-    border: 1px solid #F3C9A3;
-    border-top: 5px solid var(--orange);
-    border-radius: 14px;
-    padding: 30px 25px;
-    margin-bottom: 28px;
-    box-shadow: 0 5px 18px rgba(120, 65, 15, 0.08);
-}
-
-.mantra-card h2 {
-    color: var(--deep);
-    text-align: center;
-    font-size: 23px;
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 6vw, 46px);
     margin-bottom: 20px;
-    border-bottom: 2px solid #F4C18F;
-    padding-bottom: 12px;
 }
 
-/* SANSKRIT TEXT */
-
-.sanskrit {
-    font-family: 'Noto Serif Devanagari', serif;
-    font-size: 23px;
-    line-height: 2.1;
-    text-align: center;
-    color: #55280d;
-    margin: 15px 0;
-}
-
-.meaning {
-    background: #FFF4E8;
-    border-left: 4px solid var(--orange);
-    padding: 15px;
-    margin-top: 20px;
-    border-radius: 5px;
-}
-
-.meaning h3 {
-    color: var(--deep);
-    margin-bottom: 7px;
-    font-size: 17px;
-}
-
-.meaning p {
+.status {
+    display: inline-block;
+    background: #FFBD35;
+    color: #451600;
+    font-weight: 700;
     font-size: 15px;
+    padding: 6px 18px;
+    border-radius: 30px;
+    margin-bottom: 22px;
 }
 
-/* FOOTER */
-
-footer {
-    background: var(--orange);
-    color: white;
-    text-align: center;
-    padding: 28px 15px;
-    margin-top: 50px;
+p {
+    font-size: 18px;
+    line-height: 1.9;
+    margin-bottom: 12px;
 }
 
-footer p {
-    margin: 4px 0;
+.small {
+    font-size: 15px;
+    opacity: .9;
+    margin-top: 22px;
 }
-
-/* MOBILE */
 
 @media (max-width: 650px) {
-
-    .navbar {
-        justify-content: center;
-        text-align: center;
-        padding: 13px 10px;
-    }
-
-    .logo {
-        font-size: 21px;
-    }
-
-    .nav-links {
-        justify-content: center;
-        gap: 13px;
-    }
-
-    .nav-links a {
-        font-size: 13px;
-    }
-
-    .page-header {
-        padding: 50px 20px;
-    }
-
-    .mantra-card {
-        padding: 22px 15px;
-    }
-
-    .mantra-card h2 {
-        font-size: 20px;
-    }
-
-    .sanskrit {
-        font-size: 19px;
-    }
-
+    .box { padding: 35px 20px; }
+    p { font-size: 16px; }
 }
 
 </style>
@@ -228,242 +94,30 @@ footer p {
 
 <body>
 
-<!-- NAVIGATION -->
-
-<nav class="navbar">
-
-    <a href="/website/" class="logo">শ্রী শ্রী দুর্গা বাড়ি</a>
-
-    <div class="nav-links">
-        <a href="/website/">Home</a>
-        <a href="/website/mantra/" class="active">MANTRA</a>
-        <a href="/website/video/">Video</a>
-        <a href="/website/gallery/">Gallery</a>
-        <a href="/website/tribute/">Tribute</a>
-        <a href="/website/about/">About</a>
-        <a href="/website/contact/">Contact</a>
-    </div>
-
-</nav>
-
-<!-- PAGE HEADER -->
-
-<header class="page-header">
+<div class="box">
 
     <div class="om">ॐ</div>
 
-    <h1>শ্রী শ্রী দেবী দুর্গা</h1>
+    <h1>শ্রী শ্রী দুর্গা বাড়ি</h1>
 
-    <p>প্রণাম মন্ত্র • ধ্যান মন্ত্র • দেবী স্তোত্র</p>
+    <div class="status">Under Maintenance</div>
 
-</header>
+    <p>
+        ওয়েবসাইটটি বর্তমানে রক্ষণাবেক্ষণের কাজে রয়েছে।<br>
+        অনুগ্রহ করে কিছুক্ষণ পরে আবার দেখুন।
+    </p>
 
+    <p>
+        Our website is currently under maintenance.<br>
+        Please visit again shortly.
+    </p>
 
-<main class="container">
+    <p class="small">
+        মালাকার পট্টি, শিলচর, অসম<br>
+        জয় মা দুর্গা 🙏
+    </p>
 
-    <!-- DEVI PRANAM MANTRA -->
-
-    <section class="mantra-card">
-
-        <h2>দেবী প্রণাম মন্ত্র</h2>
-
-        <div class="sanskrit">
-
-            सर्वमङ्गलमाङ्गल्ये शिवे सर्वार्थसाधिके ।<br>
-            शरण्ये त्र्यम्बके गौरि नारायणि नमोऽस्तु ते ॥
-
-        </div>
-
-        <div class="meaning">
-
-            <h3>বাংলা অর্থ</h3>
-
-            <p>
-                হে দেবী নারায়ণী, আপনি সকল মঙ্গলের মঙ্গলময়ী,
-                কল্যাণস্বরূপা এবং সকল উদ্দেশ্য পূরণকারিণী।
-                হে শরণদাত্রী, ত্রিনয়নী গৌরী, আপনাকে প্রণাম।
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- DEVI DHYAN MANTRA -->
-
-    <section class="mantra-card">
-
-        <h2>শ্রী চণ্ডিকা ধ্যান মন্ত্র</h2>
-
-        <div class="sanskrit">
-
-            ॐ बन्धूककुसुमाभासां पञ्चमुण्डाधिवासिनीम् ।<br>
-            स्फुरच्चन्द्रकलारत्नमुकुटां मुण्डमालिनीम् ॥<br><br>
-
-            त्रिनेत्रां रक्तवसनां पीनोन्नतघटस्तनीम् ।<br>
-            पुस्तकं चाक्षमालां च वरं चाभयकं क्रमात् ॥<br><br>
-
-            दधतीं संस्मरेन्नित्यमुत्तराम्नायमानिताम् ॥
-
-        </div>
-
-        <div class="meaning">
-
-            <h3>বাংলা ভাবার্থ</h3>
-
-            <p>
-                দেবী চণ্ডিকার রক্তবর্ণ আভাময় রূপ, ত্রিনয়ন,
-                রক্তবস্ত্র, চন্দ্রকলাশোভিত মুকুট এবং
-                বিভিন্ন দিব্য অলংকারে সুশোভিত রূপের ধ্যান
-                করার কথা এই ধ্যানশ্লোকে বর্ণিত হয়েছে।
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- DEVI STUTI -->
-
-    <section class="mantra-card">
-
-        <h2>দেবী বন্দনা</h2>
-
-        <div class="sanskrit">
-
-            नमो देव्यै महादेव्यै शिवायै सततं नमः ।<br>
-            नमः प्रकृत्यै भद्रायै नियताः प्रणताः स्म ताम् ॥
-
-        </div>
-
-        <div class="meaning">
-
-            <h3>বাংলা অর্থ</h3>
-
-            <p>
-                দেবীকে, মহাদেবীকে এবং কল্যাণময়ী দেবীকে
-                সর্বদা প্রণাম। প্রকৃতিস্বরূপা ও মঙ্গলময়ী
-                দেবীর চরণে আমরা ভক্তিভরে প্রণত হই।
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- YA DEVI SARVABHUTESHU -->
-
-    <section class="mantra-card">
-
-        <h2>যা দেবী সর্বভূতেষু</h2>
-
-        <div class="sanskrit">
-
-            या देवी सर्वभूतेषु शक्तिरूपेण संस्थिता ।<br>
-            नमस्तस्यै नमस्तस्यै नमस्तस्यै नमो नमः ॥
-
-            <br><br>
-
-            या देवी सर्वभूतेषु मातृरूपेण संस्थिता ।<br>
-            नमस्तस्यै नमस्तस्यै नमस्तस्यै नमो नमः ॥
-
-            <br><br>
-
-            या देवी सर्वभूतेषु शान्तिरूपेण संस्थिता ।<br>
-            नमस्तस्यै नमस्तस्यै नमस्तस्यै नमो नमः ॥
-
-        </div>
-
-        <div class="meaning">
-
-            <h3>বাংলা অর্থ</h3>
-
-            <p>
-                যিনি সকল জীবের মধ্যে শক্তিরূপে বিরাজিতা,
-                যিনি সকল জীবের মধ্যে মাতৃরূপে বিরাজিতা
-                এবং যিনি সকল জীবের মধ্যে শান্তিরূপে বিরাজিতা,
-                সেই দেবীকে বারবার প্রণাম।
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- ARGALA STOTRAM -->
-
-    <section class="mantra-card">
-
-        <h2>শ্রী অর্গলা স্তোত্র</h2>
-
-        <div class="sanskrit">
-
-            ॐ जय त्वं देवि चामुण्डे जय भूतापहारिणि ।<br>
-            जय सर्वगते देवि कालरात्रि नमोऽस्तु ते ॥<br><br>
-
-            जयन्ती मङ्गला काली भद्रकाली कपालिनी ।<br>
-            दुर्गा शिवा क्षमा धात्री स्वाहा स्वधा नमोऽस्तु ते ॥
-
-        </div>
-
-        <div class="meaning">
-
-            <h3>বাংলা ভাবার্থ</h3>
-
-            <p>
-                হে দেবী চামুণ্ডা, আপনাকে জয় প্রণাম।
-                হে সকলের মধ্যে বিরাজমান দেবী,
-                হে কালরাত্রি, আপনাকে নমস্কার।
-                জয়ন্তী, মঙ্গলা, কালী, ভদ্রকালী,
-                কপালিনী, দুর্গা, শিবা, ক্ষমা ও ধাত্রী—
-                আপনাকে বারবার প্রণাম।
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- CLOSING PRAYER -->
-
-    <section class="mantra-card">
-
-        <h2>দেবীর চরণে প্রার্থনা</h2>
-
-        <div class="sanskrit">
-
-            सर्वमङ्गलमाङ्गल्ये शिवे सर्वार्थसाधिके ।<br>
-            शरण्ये त्र्यम्बके गौरि नारायणि नमोऽस्तु ते ॥
-
-        </div>
-
-        <div class="meaning">
-
-            <p>
-                মা দুর্গার চরণে আমাদের ভক্তিপূর্ণ প্রণাম।
-                সকলের জীবনে শান্তি, মঙ্গল ও কল্যাণ প্রতিষ্ঠিত হোক।
-            </p>
-
-        </div>
-
-    </section>
-
-</main>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-    <p>শ্রী শ্রী দুর্গা বাড়ি</p>
-
-    <p>মালাকার পট্টি, শিলচর, অসম</p>
-
-    <p>© 2026 Sri Sri Durga Bari. All Rights Reserved.</p>
-
-    <p>জয় মা দুর্গা 🙏</p>
-
-</footer>
+</div>
 
 </body>
 </html>
