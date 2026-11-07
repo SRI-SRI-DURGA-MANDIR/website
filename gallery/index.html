@@ -1,21 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="bn">
-
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="canonical" href="https://sri-sri-durga-mandir.github.io/website/">
+<title>ছবির গ্যালারি | শ্রী শ্রী দুর্গা মন্দির</title>
 
-<title>Under Maintenance | শ্রী শ্রী দুর্গা বাড়ি</title>
+<link rel="canonical" href="https://sri-sri-durga-mandir.github.io/website/gallery/">
 
-<meta name="description" content="Sri Sri Durga Bari website is currently under maintenance. Please visit again shortly.">
-<meta name="theme-color" content="#E85D04">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Hind:wght@400;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="শ্রী শ্রী দুর্গা মন্দিরের ছবি, মা দুর্গার প্রতিমা, পূজা, আরতি ও উৎসবের স্মৃতি।">
 
 <style>
 
@@ -26,67 +20,185 @@
 }
 
 body {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 30px 20px;
-    font-family: 'Hind', sans-serif;
+    font-family: Georgia, serif;
+    background: #250b08;
     color: white;
-    background:
-        linear-gradient(rgba(75, 25, 0, .55), rgba(75, 25, 0, .75)),
-        url("/website/images/durga%20maa.jpeg") center center / cover no-repeat;
-    background-color: #922D00;
 }
 
-.box {
-    width: 100%;
-    max-width: 680px;
-    background: rgba(0, 0, 0, .35);
-    border: 1px solid rgba(255, 255, 255, .25);
-    border-radius: 16px;
-    padding: 45px 30px;
+.hero {
+    min-height: 100vh;
+    background:
+    linear-gradient(rgba(25,0,0,.85),rgba(20,0,0,.92)),
+    url("../images/temple.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 5%;
+    background: rgba(0,0,0,.65);
+}
+
+.logo {
+    color: #ffd36a;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #ffd36a;
+}
+
+.header {
+    text-align: center;
+    padding: 65px 20px 35px;
 }
 
 .om {
-    font-size: 52px;
-    color: #FFBD35;
-    margin-bottom: 10px;
+    font-size: 60px;
+    color: #ffd36a;
 }
 
 h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(30px, 6vw, 46px);
-    margin-bottom: 20px;
+    color: #ffda80;
+    font-size: clamp(32px,5vw,50px);
+    margin: 15px 0;
 }
 
-.status {
-    display: inline-block;
-    background: #FFBD35;
-    color: #451600;
-    font-weight: 700;
-    font-size: 15px;
-    padding: 6px 18px;
-    border-radius: 30px;
-    margin-bottom: 22px;
-}
-
-p {
+.header p {
     font-size: 18px;
-    line-height: 1.9;
-    margin-bottom: 12px;
+    line-height: 1.8;
 }
 
-.small {
-    font-size: 15px;
-    opacity: .9;
-    margin-top: 22px;
+.gallery-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 25px 0 70px;
 }
 
-@media (max-width: 650px) {
-    .box { padding: 35px 20px; }
-    p { font-size: 16px; }
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.gallery-item {
+    background: rgba(0,0,0,.65);
+    border: 1px solid #d99a36;
+    border-radius: 13px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px #d99a3655;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+}
+
+.gallery-item h3 {
+    text-align: center;
+    color: #ffd36a;
+    padding: 15px;
+    font-size: 19px;
+}
+
+.gallery-item p {
+    text-align: center;
+    padding: 0 12px 15px;
+    color: #eee;
+    font-size: 14px;
+}
+
+/* Image popup */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    inset: 0;
+    background: rgba(0,0,0,.95);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.lightbox img {
+    max-width: 95%;
+    max-height: 85vh;
+    object-fit: contain;
+    border: 2px solid #ffd36a;
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: rgba(0,0,0,.8);
+    color: #ffd36a;
+}
+
+@media(max-width:850px) {
+    .gallery {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:550px) {
+    nav {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 13px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: 230px;
+    }
 }
 
 </style>
@@ -94,30 +206,118 @@ p {
 
 <body>
 
-<div class="box">
+<div class="hero">
+
+<nav>
+
+    <div class="logo">🕉 শ্রী শ্রী দুর্গা মন্দির</div>
+
+    <div class="nav-links">
+        <a href="/website/">প্রচ্ছদ</a>
+        <a href="/website/mantra/">মন্ত্র</a>
+        <a href="/website/gallery/">গ্যালারি</a>
+        <a href="/website/about/">আমাদের সম্পর্কে</a>
+        <a href="/website/video/">ভিডিও</a>
+        <a href="/website/tribute/">শ্রদ্ধাঞ্জলি</a>
+        <a href="/website/contact/">যোগাযোগ</a>
+    </div>
+
+</nav>
+
+<header class="header">
 
     <div class="om">ॐ</div>
 
-    <h1>শ্রী শ্রী দুর্গা বাড়ি</h1>
-
-    <div class="status">Under Maintenance</div>
+    <h1>মন্দিরের ছবির গ্যালারি</h1>
 
     <p>
-        ওয়েবসাইটটি বর্তমানে রক্ষণাবেক্ষণের কাজে রয়েছে।<br>
-        অনুগ্রহ করে কিছুক্ষণ পরে আবার দেখুন।
+        মা দুর্গার অপার মহিমা ও মন্দিরের
+        পবিত্র মুহূর্তগুলির কিছু স্মৃতি।
+        <br>
+        🙏 জয় মা দুর্গা 🙏
     </p>
 
-    <p>
-        Our website is currently under maintenance.<br>
-        Please visit again shortly.
-    </p>
+</header>
 
-    <p class="small">
-        মালাকার পট্টি, শিলচর, অসম<br>
-        জয় মা দুর্গা 🙏
-    </p>
+<main class="gallery-container">
+
+<div class="gallery">
+
+    <div class="gallery-item">
+        <img src="/website/images/temple.jpg"
+        alt="দুর্গা মন্দির"
+        onclick="openImage(this.src)">
+        <h3>আমাদের মন্দির</h3>
+        <p>শ্রী শ্রী দুর্গা মন্দিরের ছবি</p>
+    </div>
+
+    <div class="gallery-item">
+        <img src="/website/images/maa-durga.jpg"
+        alt="মা দুর্গার প্রতিমা"
+        onclick="openImage(this.src)">
+        <h3>মা দুর্গার প্রতিমা</h3>
+        <p>জগজ্জননী মা দুর্গার অপরূপ রূপ</p>
+    </div>
+
+    <div class="gallery-item">
+        <img src="/website/images/puja.jpg"
+        alt="দুর্গাপূজা"
+        onclick="openImage(this.src)">
+        <h3>দুর্গাপূজা</h3>
+        <p>পূজার পবিত্র মুহূর্ত</p>
+    </div>
+
+    <div class="gallery-item">
+        <img src="/website/images/arti.jpg"
+        alt="মায়ের আরতি"
+        onclick="openImage(this.src)">
+        <h3>মায়ের আরতি</h3>
+        <p>ভক্তি ও প্রার্থনার মুহূর্ত</p>
+    </div>
+
+    <div class="gallery-item">
+        <img src="/website/images/festival.jpg"
+        alt="উৎসব"
+        onclick="openImage(this.src)">
+        <h3>উৎসবের মুহূর্ত</h3>
+        <p>আনন্দ ও ভক্তির উৎসব</p>
+    </div>
+
+    <div class="gallery-item">
+        <img src="/website/images/mandir.jpg"
+        alt="মন্দিরের দৃশ্য"
+        onclick="openImage(this.src)">
+        <h3>মন্দিরের সৌন্দর্য</h3>
+        <p>আমাদের পবিত্র মন্দির প্রাঙ্গণ</p>
+    </div>
 
 </div>
+
+</main>
+
+<div class="lightbox" id="lightbox" onclick="closeImage()">
+    <span class="close">&times;</span>
+    <img id="lightboxImage" src="" alt="বড় ছবি">
+</div>
+
+<footer>
+    © ২০২৬ শ্রী শ্রী দুর্গা মন্দির
+    <br><br>
+    🙏 জয় মা দুর্গা | জয় মাতাদি 🙏
+</footer>
+
+</div>
+
+<script>
+function openImage(src) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightboxImage").src = src;
+}
+
+function closeImage() {
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
 
 </body>
 </html>
