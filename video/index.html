@@ -1,372 +1,351 @@
-
 <!DOCTYPE html>
 <html lang="bn">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>ভিডিও গ্যালারি | শ্রী শ্রী দুর্গাবাড়ি</title>
+<script src="/website/maintenance.js"></script>
 
-    <style>
+<link rel="canonical" href="https://sri-sri-durga-mandir.github.io/website/video/">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<title>ভিডিও গ্যালারি | Sri Sri Durga Bari</title>
 
-        body {
-            font-family: "Noto Sans Bengali", Arial, sans-serif;
-            background: #fff3e0;
-            color: #542500;
-        }
+<meta name="description" content="Video gallery of Sri Sri Durga Bari, Malakar Patty, Silchar. পূজা-পার্বণ ও ঐতিহ্যের স্মরণীয় মুহূর্ত।">
+<meta name="theme-color" content="#E85D04">
 
-        /* HEADER */
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-        header {
-            background: linear-gradient(135deg, #ff6d00, #e65100);
-            color: white;
-            text-align: center;
-            padding: 35px 15px;
-        }
+<style>
 
-        header h1 {
-            font-size: 32px;
-            margin-bottom: 10px;
-        }
+:root {
+    --orange: #E85D04;
+    --deep: #922D00;
+    --gold: #FFBD35;
+    --cream: #FFF4E5;
+    --text: #421D0A;
+    --white: #FFFFFF;
+}
 
-        /* NAVIGATION */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        nav {
-            background: #8d3200;
-            padding: 15px;
-            text-align: center;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 12px;
-            font-weight: bold;
-            font-size: 16px;
-        }
+body {
+    font-family: 'Hind', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+}
 
-        nav a:hover {
-            color: #ffd180;
-        }
+/* NAVIGATION */
 
-        /* MAIN SECTION */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--orange);
+    padding: 15px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.18);
+}
 
-        .container {
-            max-width: 1100px;
-            margin: 35px auto;
-            padding: 20px;
-        }
+.logo {
+    color: white;
+    font-size: 23px;
+    font-weight: 700;
+    text-decoration: none;
+}
 
-        .section-title {
-            text-align: center;
-            color: #d84315;
-            font-size: 30px;
-            margin-bottom: 12px;
-        }
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
 
-        .description {
-            text-align: center;
-            margin-bottom: 35px;
-            font-size: 17px;
-        }
+.nav-links a {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .3s;
+}
 
-        /* VIDEO GRID */
+.nav-links a:hover,
+.nav-links a.active {
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
 
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(
-                auto-fit,
-                minmax(280px, 1fr)
-            );
-            gap: 25px;
-        }
+/* PAGE HEADER */
 
-        .video-card {
-            background: white;
-            border-radius: 14px;
-            overflow: hidden;
-            box-shadow: 0 5px 18px rgba(100, 45, 0, 0.15);
-            transition: transform 0.3s;
-        }
+.page-header {
+    background: linear-gradient(135deg, #783000, #3D1608);
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
 
-        .video-card:hover {
-            transform: translateY(-5px);
-        }
+.om {
+    color: var(--gold);
+    font-size: 48px;
+    margin-bottom: 10px;
+}
 
-        /* THUMBNAIL */
+.page-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(35px, 6vw, 55px);
+    margin-bottom: 12px;
+}
 
-        .thumbnail {
-            display: block;
-            position: relative;
-            text-decoration: none;
-            overflow: hidden;
-            aspect-ratio: 16 / 9;
-            background: #222;
-        }
+.page-header p {
+    font-size: 17px;
+}
 
-        .thumbnail img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.3s;
-        }
+/* VIDEO SECTION */
 
-        .video-card:hover .thumbnail img {
-            transform: scale(1.05);
-        }
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
 
-        /* PLAY BUTTON */
+.description {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 17px;
+}
 
-        .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 65px;
-            height: 45px;
-            background: red;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
 
-        .play-button::after {
-            content: "";
-            border-top: 10px solid transparent;
-            border-bottom: 10px solid transparent;
-            border-left: 16px solid white;
-            margin-left: 4px;
-        }
+.video-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    border-top: 4px solid var(--orange);
+    box-shadow: 0 5px 18px rgba(100, 45, 0, 0.15);
+    transition: transform 0.3s;
+}
 
-        /* VIDEO DETAILS */
+.video-card:hover {
+    transform: translateY(-5px);
+}
 
-        .video-info {
-            padding: 20px;
-        }
+.thumbnail {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    background: #222;
+}
 
-        .video-info h2 {
-            color: #bf360c;
-            font-size: 21px;
-            margin-bottom: 10px;
-        }
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+}
 
-        .video-info p {
-            color: #795548;
-            font-size: 15px;
-            line-height: 1.6;
-        }
+.video-card:hover .thumbnail img {
+    transform: scale(1.05);
+}
 
-        .watch-text {
-            display: inline-block;
-            margin-top: 15px;
-            background: #e65100;
-            color: white;
-            padding: 9px 18px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 14px;
-        }
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65px;
+    height: 45px;
+    background: red;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        .watch-text:hover {
-            background: #bf360c;
-        }
+.play-button::after {
+    content: "";
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 16px solid white;
+    margin-left: 4px;
+}
 
-        /* FOOTER */
+.video-info {
+    padding: 20px;
+}
 
-        footer {
-            background: #8d3200;
-            color: white;
-            text-align: center;
-            padding: 25px;
-            margin-top: 45px;
-            line-height: 1.8;
-        }
+.video-info h2 {
+    color: var(--deep);
+    font-size: 21px;
+    margin-bottom: 10px;
+}
 
-        /* MOBILE */
+.video-info p {
+    color: #795548;
+    font-size: 15px;
+    line-height: 1.6;
+}
 
-        @media(max-width: 600px) {
+.watch-text {
+    display: inline-block;
+    margin-top: 15px;
+    background: var(--orange);
+    color: white;
+    padding: 9px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
 
-            header h1 {
-                font-size: 25px;
-            }
+.watch-text:hover {
+    background: var(--deep);
+}
 
-            nav a {
-                display: inline-block;
-                margin: 7px;
-                font-size: 14px;
-            }
+/* FOOTER */
 
-            .section-title {
-                font-size: 24px;
-            }
+footer {
+    background: var(--orange);
+    color: white;
+    text-align: center;
+    padding: 28px 20px;
+    line-height: 1.8;
+}
 
-            .container {
-                padding: 15px;
-            }
-        }
+/* MOBILE */
 
-    </style>
+@media(max-width: 650px) {
 
+    .navbar {
+        justify-content: center;
+        text-align: center;
+        padding: 13px 10px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 13px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .page-header {
+        padding: 50px 20px;
+    }
+
+    .container {
+        padding: 40px 15px;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
-    <!-- HEADER -->
+<!-- NAVIGATION -->
 
-    <header>
+<nav class="navbar">
 
-        <h1>শ্রী শ্রী দুর্গাবাড়ি</h1>
+    <a href="/website/" class="logo">শ্রী শ্রী দুর্গা বাড়ি</a>
 
-        <p>মালাকার পট্টি, শিলচর, অসম</p>
+    <div class="nav-links">
+        <a href="/website/">Home</a>
+        <a href="/website/mantra/">MANTRA</a>
+        <a href="/website/video/" class="active">Video</a>
+        <a href="/website/gallery/">Gallery</a>
+        <a href="/website/tribute/">Tribute</a>
+        <a href="/website/about/">About</a>
+        <a href="/website/contact/">Contact</a>
+    </div>
 
-    </header>
+</nav>
 
+<!-- PAGE HEADER -->
 
-    <!-- NAVIGATION -->
+<header class="page-header">
+    <div class="om">ॐ</div>
+    <h1>ভিডিও গ্যালারি</h1>
+    <p>মালাকার পট্টি, শিলচর, অসম</p>
+</header>
 
-    <nav>
+<!-- VIDEO GALLERY -->
 
-        <a href="index.html">Home</a>
-        <a href="slokas.html"class="active">Mantra</a>
+<main class="container">
 
-        <a href="video.html">video</a>
+    <p class="description">আমাদের পূজা-পার্বণ ও ঐতিহ্যের স্মরণীয় মুহূর্ত।</p>
 
-        <a href="tribute.html">tribute</a>
+    <div class="video-grid">
 
-        <a href="about.html">About</a>
+        <!-- VIDEO 1 -->
+        <div class="video-card">
 
-        <a href="contact.html">contact</a>
+            <a class="thumbnail" href="https://www.youtube.com/watch?v=kSwgghPSNmA" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.youtube.com/vi/kSwgghPSNmA/hqdefault.jpg" alt="চড়ক পূজা ২০২৬" loading="lazy">
+                <span class="play-button"></span>
+            </a>
 
-    </nav>
-
-
-    <!-- VIDEO GALLERY -->
-
-    <main class="container">
-
-        <h2 class="section-title">ভিডিও গ্যালারি</h2>
-
-        <p class="description">
-
-            আমাদের পূজা-পার্বণ ও ঐতিহ্যের
-            স্মরণীয় মুহূর্ত।
-
-        </p>
-
-
-        <div class="video-grid">
-
-
-            <!-- VIDEO 1 -->
-
-            <div class="video-card">
-
-                <a class="thumbnail"
-                   href="https://www.youtube.com/watch?v=kSwgghPSNmA"
-                   target="_blank"
-                   rel="noopener noreferrer">
-
-                    <img
-                        src="https://img.youtube.com/vi/kSwgghPSNmA/hqdefault.jpg"
-                        alt="চড়ক পূজা ২০২৬">
-
-                    <span class="play-button"></span>
-
-                </a>
-
-
-                <div class="video-info">
-
-                    <h2>চড়ক পূজা ২০২৬</h2>
-
-                    <p>
-                        চড়ক পূজার বিশেষ মুহূর্ত।
-                    </p>
-
-                    <a class="watch-text"
-                       href="https://www.youtube.com/watch?v=kSwgghPSNmA"
-                       target="_blank"
-                       rel="noopener noreferrer">
-
-                        ইউটিউবে দেখুন
-
-                    </a>
-
-                </div>
-
+            <div class="video-info">
+                <h2>চড়ক পূজা ২০২৬</h2>
+                <p>চড়ক পূজার বিশেষ মুহূর্ত।</p>
+                <a class="watch-text" href="https://www.youtube.com/watch?v=kSwgghPSNmA" target="_blank" rel="noopener noreferrer">ইউটিউবে দেখুন</a>
             </div>
-
-
-
-            <!-- VIDEO 2 -->
-
-            <div class="video-card">
-
-                <a class="thumbnail"
-                   href="https://www.youtube.com/watch?v=z-3uVLF0s4k"
-                   target="_blank"
-                   rel="noopener noreferrer">
-
-                    <img
-                        src="https://img.youtube.com/vi/z-3uVLF0s4k/hqdefault.jpg"
-                        alt="চড়ক পূজা ২০২৬">
-
-                    <span class="play-button"></span>
-
-                </a>
-
-
-                <div class="video-info">
-
-                    <h2> পূজা ২০২8
-        
-                    </h2>
-
-                    <p>
-                         পূজার আরও কিছু স্মরণীয় মুহূর্ত।
-                    </p>
-
-                    <a class="watch-text"
-                       href="https://www.youtube.com/watch?v=z-3uVLF0s4k"
-                       target="_blank"
-                       rel="noopener noreferrer">
-
-                        ইউটিউবে দেখুন
-
-                    </a>
-
-                </div>
-
-            </div>
-
 
         </div>
 
-    </main>
+        <!-- VIDEO 2 -->
+        <div class="video-card">
 
+            <a class="thumbnail" href="https://www.youtube.com/watch?v=z-3uVLF0s4k" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.youtube.com/vi/z-3uVLF0s4k/hqdefault.jpg" alt="পূজা ২০২৮" loading="lazy">
+                <span class="play-button"></span>
+            </a>
 
-    <!-- FOOTER -->
+            <div class="video-info">
+                <h2>পূজা ২০২৮</h2>
+                <p>পূজার আরও কিছু স্মরণীয় মুহূর্ত।</p>
+                <a class="watch-text" href="https://www.youtube.com/watch?v=z-3uVLF0s4k" target="_blank" rel="noopener noreferrer">ইউটিউবে দেখুন</a>
+            </div>
 
-    <footer>
+        </div>
 
-        <p>© ২০২৬ শ্রী শ্রী দুর্গাবাড়ি</p>
+    </div>
 
-        <p>ঐতিহ্য • ভক্তি • একতা</p>
+</main>
 
-        <p>জয় মা দুর্গা</p>
+<!-- FOOTER -->
 
-    </footer>
-
+<footer>
+    <p>শ্রী শ্রী দুর্গা বাড়ি | মালাকার পট্টি, শিলচর, অসম</p>
+    <p>© ২০২৬ শ্রী শ্রী দুর্গা বাড়ি | জয় মা দুর্গা 🙏</p>
+</footer>
 
 </body>
-
 </html>
