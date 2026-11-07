@@ -1,25 +1,23 @@
+```html
 <!DOCTYPE html>
 <html lang="bn">
 
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="canonical" href="https://sri-sri-durga-mandir.github.io/website/tribute/">
 
 <title>শ্রদ্ধাঞ্জলি | Sri Sri Durga Bari</title>
 
 <meta name="description" content="A humble tribute to the departed members and contributors of Sri Sri Durga Bari, Malakar Patty, Silchar.">
 
-<meta name="theme-color" content="#E85D04">
+<meta name="theme-color" content="#922D00">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
 :root {
-    --orange: #E85D04;
+    --orange: #F06418;
     --deep: #922D00;
     --dark: #451600;
     --gold: #FFBD35;
@@ -37,6 +35,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 85px;
 }
 
 body {
@@ -52,7 +51,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: var(--orange);
+    background: var(--deep);
     padding: 15px 6%;
     display: flex;
     justify-content: space-between;
@@ -63,8 +62,8 @@ body {
 }
 
 .logo {
-    color: white;
-    font-size: 23px;
+    color: var(--gold);
+    font-size: 22px;
     font-weight: 700;
     text-decoration: none;
 }
@@ -77,23 +76,25 @@ body {
 
 .nav-links a {
     color: white;
+    text-decoration: none;
     font-size: 15px;
     font-weight: 600;
-    text-decoration: none;
     transition: .3s;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: white;
-    text-decoration: underline;
-    text-underline-offset: 6px;
+    color: var(--gold);
 }
 
 /* PAGE HEADER */
 
 .page-header {
-    background: linear-gradient(135deg, #783000, #3D1608);
+    background: linear-gradient(
+        135deg,
+        #783000,
+        #3D1608
+    );
     color: white;
     text-align: center;
     padding: 75px 20px;
@@ -252,13 +253,14 @@ section {
 /* FOOTER */
 
 footer {
-    background: var(--orange);
+    background: var(--deep);
     color: white;
     text-align: center;
-    padding: 28px 20px;
+    padding: 32px 20px;
 }
 
 footer h3 {
+    color: var(--gold);
     margin-bottom: 8px;
 }
 
@@ -269,11 +271,6 @@ footer h3 {
     .navbar {
         justify-content: center;
         text-align: center;
-        padding: 13px 10px;
-    }
-
-    .logo {
-        font-size: 21px;
     }
 
     .nav-links {
@@ -308,16 +305,26 @@ footer h3 {
 
 <nav class="navbar">
 
-    <a href="/website/" class="logo">শ্রী শ্রী দুর্গা বাড়ি</a>
+    <a href="/website/" class="logo">
+        শ্রী শ্রী দুর্গা বাড়ি
+    </a>
 
     <div class="nav-links">
+
         <a href="/website/">Home</a>
+
         <a href="/website/mantra/">MANTRA</a>
+
         <a href="/website/video/">Video</a>
+
         <a href="/website/gallery/">Gallery</a>
+
         <a href="/website/tribute/" class="active">Tribute</a>
+
         <a href="/website/about/">About</a>
+
         <a href="/website/contact/">Contact</a>
+
     </div>
 
 </nav>
@@ -330,7 +337,9 @@ footer h3 {
 
     <h1>বিনম্র শ্রদ্ধাঞ্জলি</h1>
 
-    <p>স্মৃতিতে, শ্রদ্ধায় ও ভালোবাসায়</p>
+    <p>
+        স্মৃতিতে, শ্রদ্ধায় ও ভালোবাসায়
+    </p>
 
 </header>
 
@@ -365,7 +374,9 @@ footer h3 {
 
     <div class="tribute-intro">
 
-        <h2 class="section-title">চিরস্মরণীয় ব্যক্তিবর্গ</h2>
+        <h2 class="section-title">
+            চিরস্মরণীয় ব্যক্তিবর্গ
+        </h2>
 
         <p>
             শ্রী শ্রী দুর্গা বাড়ির ঐতিহ্য, মাতৃ আরাধনা,
@@ -385,7 +396,9 @@ footer h3 {
 
 <section class="names-section">
 
-    <h2 class="section-title">শ্রদ্ধার্ঘ্য</h2>
+    <h2 class="section-title">
+        শ্রদ্ধার্ঘ্য
+    </h2>
 
     <p class="section-subtitle">
         যাঁদের স্মৃতি আমাদের হৃদয়ে চিরকাল অমলিন।
@@ -393,24 +406,77 @@ footer h3 {
 
     <div class="names-grid">
 
-        <div class="name-card"><p>স্বর্গীয় অমূল্য কুমার মালাকার</p></div>
-        <div class="name-card"><p>স্বর্গীয় কৃপেশ চন্দ্র মালাকার</p></div>
-        <div class="name-card"><p>স্বর্গীয় বনমালী মালাকার</p></div>
-        <div class="name-card"><p>স্বর্গীয় অনিল মালাকার</p></div>
-        <div class="name-card"><p>স্বর্গীয় অনিল সেন</p></div>
-        <div class="name-card"><p>স্বর্গীয় মায়া সেন</p></div>
-        <div class="name-card"><p>স্বর্গীয় দিনেশ মালাকার</p></div>
-        <div class="name-card"><p>স্বর্গীয় নেন্দোই মালাকার</p></div>
-        <div class="name-card"><p>স্বর্গীয়া অবন্তী মালাকার</p></div>
-        <div class="name-card"><p>স্বর্গীয় নিপেন্দ্র মালাকার</p></div>
-        <div class="name-card"><p>স্বর্গীয় বিপুল মালাকার</p></div>
-        <div class="name-card"><p>স্বর্গীয় বীরেন্দ্র মালাকার</p></div>
-        <div class="name-card"><p>স্বর্গীয় ব্রজেন্দ্র মালাকার</p></div>
-        <div class="name-card"><p>স্বর্গীয় গৌতম মালাকার</p></div>
-        <div class="name-card"><p>স্বর্গীয় প্রসেনজিৎ মালাকার</p></div>
-        <div class="name-card"><p>স্বর্গীয় মানিক মালাকার</p></div>
-        <div class="name-card"><p>স্বর্গীয় চাবুল মালাকার</p></div>
-        <div class="name-card"><p>স্বর্গীয় পরিতোষ মালাকার</p></div>
+        <div class="name-card">
+            <p>স্বর্গীয় অমূল্য কুমার মালাকার</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় কৃপেশ চন্দ্র মালাকার</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় বনমালী মালাকার</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় অনিল মালাকার</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় অনিল সেন</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় মায়া সেন</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় দিনেশ মালাকার</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় নেন্দোই মালাকার</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয়া অবন্তী মালাকার</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় নিপেন্দ্র মালাকার</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় বিপুল মালাকার</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় বীরেন্দ্র মালাকার</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় ব্রজেন্দ্র মালাকার</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় গৌতম মালাকার</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় প্রসেনজিৎ মালাকার</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় মানিক মালাকার</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় চাবুল মালাকার</p>
+        </div>
+
+        <div class="name-card">
+            <p>স্বর্গীয় পরিতোষ মালাকার</p>
+        </div>
 
     </div>
 
@@ -455,7 +521,7 @@ footer h3 {
         <br>
         উদ্যোক্তা ও সদস্যবৃন্দ,
         <br>
-        মালাকার দুর্গা পূজা কমিটি 🙏
+        মালাকা দুর্গা পূজা কমিটি 🙏
     </p>
 
 </section>
@@ -476,3 +542,4 @@ footer h3 {
 
 </body>
 </html>
+```
