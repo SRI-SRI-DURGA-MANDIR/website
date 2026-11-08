@@ -1,15 +1,25 @@
+```html
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>আমাদের সম্পর্কে | শ্রী শ্রী দুর্গা মন্দির</title>
+
 <meta name="description" content="শ্রী শ্রী দুর্গা মন্দিরের ইতিহাস, প্রতিষ্ঠার কথা এবং মন্দির পরিচালনা কমিটি সম্পর্কে জানুন।">
 
 <link rel="canonical" href="https://sri-sri-durga-mandir.github.io/website/about/">
 
+<meta name="robots" content="index, follow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
+
 * {
     margin: 0;
     padding: 0;
@@ -22,6 +32,8 @@ body {
     background: #180b08;
     line-height: 1.8;
 }
+
+/* HEADER */
 
 header {
     background: rgba(30, 10, 5, 0.96);
@@ -54,6 +66,8 @@ nav a:hover {
     color: #ffcf70;
 }
 
+/* HERO */
+
 .hero {
     min-height: 280px;
     background:
@@ -71,8 +85,10 @@ nav a:hover {
     font-size: 38px;
 }
 
+/* MAIN CONTENT */
+
 .container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: auto;
     padding: 45px 20px;
 }
@@ -99,30 +115,79 @@ p {
     text-align: justify;
 }
 
+/* COMMITTEE */
+
 .committee {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 18px;
-    margin-top: 20px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 25px;
 }
 
 .member {
     background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 195, 95, 0.3);
-    border-radius: 10px;
-    padding: 20px;
+    border: 1px solid rgba(255, 195, 95, 0.35);
+    border-radius: 14px;
+    padding: 18px;
     text-align: center;
+    transition: 0.3s ease;
+    overflow: hidden;
+}
+
+.member:hover {
+    transform: translateY(-5px);
+    border-color: #ffcf70;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.member img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    border: 2px solid #d99a32;
+    margin-bottom: 12px;
+    display: block;
 }
 
 .member h3 {
     color: #ffd27c;
+    font-size: 20px;
     margin-bottom: 8px;
 }
 
 .member p {
+    color: #fff;
+    font-size: 14px;
     text-align: center;
-    font-size: 15px;
+    overflow-wrap: anywhere;
+    margin-bottom: 0;
 }
+
+/* GROUP PHOTO */
+
+.group-photo {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.group-photo h3 {
+    color: #ffd27c;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.group-photo img {
+    width: 100%;
+    max-width: 750px;
+    max-height: 420px;
+    object-fit: cover;
+    border: 2px solid #d99a32;
+    border-radius: 12px;
+}
+
+/* FOOTER */
 
 footer {
     background: #100603;
@@ -132,7 +197,40 @@ footer {
     color: #f5d9a5;
 }
 
+footer p {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+
+    .committee {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .member {
+        padding: 12px;
+    }
+
+    .member img {
+        height: 190px;
+    }
+
+    .member h3 {
+        font-size: 17px;
+    }
+
+    .member p {
+        font-size: 12px;
+    }
+
+}
+
 @media (max-width: 600px) {
+
     .hero h1 {
         font-size: 29px;
     }
@@ -148,13 +246,30 @@ footer {
     .section {
         padding: 20px;
     }
+
 }
+
+@media (max-width: 360px) {
+
+    .committee {
+        grid-template-columns: 1fr;
+    }
+
+    .member img {
+        height: 240px;
+    }
+
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
+
     <div class="logo">🕉 শ্রী শ্রী দুর্গা মন্দির</div>
 
     <nav>
@@ -166,15 +281,23 @@ footer {
         <a href="/website/tribute/">শ্রদ্ধাঞ্জলি</a>
         <a href="/website/contact/">যোগাযোগ</a>
     </nav>
+
 </header>
+
+<!-- HERO -->
 
 <section class="hero">
     <h1>আমাদের সম্পর্কে</h1>
 </section>
 
+<!-- MAIN -->
+
 <main class="container">
 
+    <!-- HISTORY -->
+
     <section class="section">
+
         <h2>🙏 মন্দিরের ইতিহাস</h2>
 
         <p>
@@ -203,9 +326,13 @@ footer {
             সকলের সহযোগিতা ও আশীর্বাদে এই ঐতিহ্য ভবিষ্যতেও
             অটুট থাকবে—এই আমাদের আশা।
         </p>
+
     </section>
 
+    <!-- PURPOSE -->
+
     <section class="section">
+
         <h2>🌺 আমাদের উদ্দেশ্য</h2>
 
         <p>
@@ -218,9 +345,13 @@ footer {
             জাতি, ধর্ম ও সম্প্রদায় নির্বিশেষে সকল ভক্তের
             প্রতি আমাদের আন্তরিক শ্রদ্ধা ও স্বাগত রইল।
         </p>
+
     </section>
 
+    <!-- COMMITTEE -->
+
     <section class="section">
+
         <h2>🤝 মন্দির পরিচালনা কমিটি</h2>
 
         <p>
@@ -237,37 +368,102 @@ footer {
 
         <div class="committee">
 
+            <!-- PRESIDENT -->
+
             <div class="member">
+
+                <img src="../images/committee/president.jpg"
+                     alt="সভাপতি সমীরণ কুমার মালাকার">
+
                 <h3>সভাপতি</h3>
+
                 <p>SAMIRAN KUMAR MALAKAR</p>
+
             </div>
 
+            <!-- VICE PRESIDENT -->
+
             <div class="member">
+
+                <img src="../images/committee/vice-president.jpg"
+                     alt="সহ-সভাপতি">
+
+                <h3>সহ-সভাপতি</h3>
+
+                <p>NAME HERE</p>
+
+            </div>
+
+            <!-- SECRETARY -->
+
+            <div class="member">
+
+                <img src="../images/committee/secretary.jpg"
+                     alt="সম্পাদক বিষ্ণু ভূষণ মালাকার">
+
                 <h3>সম্পাদক</h3>
+
                 <p>BISHU BHUSAN MALAKAR</p>
+
             </div>
 
+            <!-- JOINT SECRETARY -->
+
             <div class="member">
+
+                <img src="../images/committee/joint-secretary.jpg"
+                     alt="সহ-সম্পাদক">
+
+                <h3>সহ-সম্পাদক</h3>
+
+                <p>NAME HERE</p>
+
+            </div>
+
+            <!-- TREASURER -->
+
+            <div class="member">
+
+                <img src="../images/committee/treasurer.jpg"
+                     alt="কোষাধ্যক্ষ অনুপম মালাকার">
+
                 <h3>কোষাধ্যক্ষ</h3>
+
                 <p>ANUPAM MALAKAR</p>
+
             </div>
 
+            <!-- JOINT TREASURER -->
+
             <div class="member">
-                <h3>কমিটির সদস্যবৃন্দ</h3>
-                <p>MALAKAR PATTY RESIDENT</p>
+
+                <img src="../images/committee/joint-treasurer.jpg"
+                     alt="সহ-কোষাধ্যক্ষ">
+
+                <h3>সহ-কোষাধ্যক্ষ</h3>
+
+                <p>NAME HERE</p>
+
             </div>
+
         </div>
+
     </section>
 
 </main>
 
+<!-- FOOTER -->
+
 <footer>
-    <p style="text-align:center;">
+
+    <p>
         © ২০২৬ শ্রী শ্রী দুর্গা মন্দির | সর্বস্বত্ব সংরক্ষিত
     </p>
-    <p style="text-align:center;">🙏 জয় মা দুর্গা 🙏</p>
+
+    <p>🙏 জয় মা দুর্গা 🙏</p>
+
 </footer>
 
 </body>
 </html>
-
+```
