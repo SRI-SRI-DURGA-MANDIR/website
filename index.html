@@ -1,17 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>শ্রী শ্রী দুর্গা বাড়ি | Official Website</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
 
 <link rel="canonical" href="https://sri-sri-durga-mandir.github.io/website/">
 
-<meta name="description" content="শ্রী শ্রী দুর্গা মন্দিরের অফিসিয়াল ওয়েবসাইট। মা দুর্গার আশীর্বাদ, মন্ত্র, দর্শন ও পূজার তথ্য।">
+<title>Under Maintenance | শ্রী শ্রী দুর্গা বাড়ি</title>
+
+<meta name="description" content="Sri Sri Durga Bari website is currently under maintenance. Please visit again shortly.">
+<meta name="theme-color" content="#E85D04">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Hind:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 * {
     margin: 0;
     padding: 0;
@@ -19,216 +26,96 @@
 }
 
 body {
-    font-family: Georgia, serif;
-    color: white;
-}
-
-.hero {
     min-height: 100vh;
-    background:
-    linear-gradient(hsla(0, 80%, 48%, 0.823),rgba(196, 78, 78, 0.905)),
-    url("a.jpg");
-    background-size: cover;
-    background-position: center;
     display: flex;
-    flex-direction: column;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 25px 5%;
-    background: rgba(18, 3, 78, 0.649);
-}
-
-.logo {
-    color: #ffd36a;
-    font-size: 23px;
-    font-weight: bold;
-}
-
-.nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-}
-
-nav a:hover {
-    color: #ffd36a;
-}
-
-.content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
     text-align: center;
-    padding: 40px 20px;
+    padding: 30px 20px;
+    font-family: 'Hind', sans-serif;
+    color: white;
+    background:
+        linear-gradient(rgba(75, 25, 0, .55), rgba(75, 25, 0, .75)),
+        url("/website/images/durga%20maa.jpeg") center center / cover no-repeat;
+    background-color: #922D00;
+}
+
+.box {
+    width: 100%;
+    max-width: 680px;
+    background: rgba(0, 0, 0, .35);
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 16px;
+    padding: 45px 30px;
 }
 
 .om {
-    font-size: 65px;
-    color: #ffcf57;
+    font-size: 52px;
+    color: #FFBD35;
+    margin-bottom: 10px;
 }
 
 h1 {
-    font-size: clamp(35px, 6vw, 62px);
-    color: #ffda80;
-    margin: 18px 0;
-    text-shadow: 2px 3px 8px black;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 6vw, 46px);
+    margin-bottom: 20px;
 }
 
-.ceremony {
-    color: #ffd36a;
-    font-size: 23px;
-    margin: 15px 0;
-}
-
-.content p {
-    font-size: 20px;
-    line-height: 1.8;
-    max-width: 700px;
-}
-
-/* NEW WEBSITE INSTRUCTION BUTTON */
-
-.website-message {
-    margin-top: 30px;
-    padding: 18px 25px;
-    background: rgba(208, 176, 16, 0.853);
-    border: 2px solid #ffd36a;
-    border-radius: 15px;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    box-shadow: 0 0 15px rgba(255, 211, 106, 0.35);
-    animation: glow 3ms infinite alternate;
-}
-
-.website-message span {
-    display: block;
-    margin-top: 8px;
-    color: #ffffff;
-}
-
-@keyframes glow {
-    from {
-        box-shadow: 0 0 5px #ffd36a;
-    }
-    to {
-        box-shadow: 0 0 22px #ffd36a;
-    }
-}
-
-.btn {
-    margin-top: 30px;
-    padding: 14px 32px;
-    background: #e8a52b;
-    color: #251500;
-    text-decoration: none;
+.status {
+    display: inline-block;
+    background: #FFBD35;
+    color: #451600;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 6px 18px;
     border-radius: 30px;
-    font-weight: bold;
+    margin-bottom: 22px;
 }
 
-.btn:hover {
-    background: #ffdc83;
+p {
+    font-size: 18px;
+    line-height: 1.9;
+    margin-bottom: 12px;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background: rgba(0,0,0,0.75);
-    font-size: 14px;
+.small {
+    font-size: 15px;
+    opacity: .9;
+    margin-top: 22px;
 }
 
-@media(max-width:750px) {
-    nav {
-        flex-direction: column;
-        gap: 18px;
-    }
-
-    .nav-links {
-        justify-content: center;
-        gap: 14px;
-    }
-
-    nav a {
-        font-size: 14px;
-    }
-
-    .content p {
-        font-size: 17px;
-    }
-
-    .website-message {
-        font-size: 15px;
-    }
+@media (max-width: 650px) {
+    .box { padding: 35px 20px; }
+    p { font-size: 16px; }
 }
+
 </style>
 </head>
 
 <body>
 
-<div class="hero">
-
-<nav>
-
-    <div class="logo">🕉 শ্রী শ্রী দুর্গা মন্দির</div>
-
-    <div class="nav-links">
-        <a href="/website/">HOME</a>
-        <a href="/website/mantra/">MANTRA</a>
-        <a href="/website/gallery/">GALLERY</a>
-        <a href="/website/about/">ABOUT US</a>
-        <a href="/website/video/">VIDEO</a>
-        <a href="/website/tribute/">TRIBUTE</a>
-        <a href="/website/contact/">CONTACT</a>
-    </div>
-
-</nav>
-
-<section class="content">
+<div class="box">
 
     <div class="om">ॐ</div>
 
-    <div class="ceremony">
-        ❁ ❖ ❁ ❖ ❁
-    </div>
-
     <h1>শ্রী শ্রী দুর্গা বাড়ি</h1>
 
-    <div class="ceremony">
-        •১৩৩৭ বঙ্গাব্দে প্রতিষ্ঠিত | জয় মা দুর্গা
-    </div>
+    <div class="status">Under Maintenance</div>
 
     <p>
-        ভক্তি, শান্তি ও আধ্যাত্মিকতার পবিত্র প্রাঙ্গণে
-        আপনাকে স্বাগতম। মা দুর্গা সকলের জীবনে সুখ,
-        সমৃদ্ধি, শক্তি ও শান্তি বর্ষণ করুন।
+        ওয়েবসাইটটি বর্তমানে রক্ষণাবেক্ষণের কাজে রয়েছে।<br>
+        অনুগ্রহ করে কিছুক্ষণ পরে আবার দেখুন।
     </p>
 
-    <!-- NEW MESSAGE ADDED -->
+    <p>
+        Our website is currently under maintenance.<br>
+        Please visit again shortly.
+    </p>
 
-    <div class="website-message"class='btn'>
-        <span>
-    ওয়েবসাইট দেখতে উপরে  ক্লিক করুন।
-        </span>
-    </div>
-
-</section>
-
-<footer>
-    © 2026 শ্রী শ্রী দুর্গা মন্দির | Created by Binit Malakar
-</footer>
+    <p class="small">
+        মালাকার পট্টি, শিলচর, অসম<br>
+        জয় মা দুর্গা 🙏
+    </p>
 
 </div>
 
