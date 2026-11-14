@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="bn">
 
@@ -35,6 +36,8 @@ body {
     background-attachment: fixed;
 }
 
+/* NAVIGATION */
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -64,6 +67,8 @@ nav a {
 nav a:hover {
     color: #ffd36a;
 }
+
+/* HEADER */
 
 .header {
     text-align: center;
@@ -101,29 +106,36 @@ h1 {
     overflow: hidden;
     border: 2px solid #d99a36;
     border-radius: 16px;
-    background: rgba(0,0,0,.75);
+    background: #000;
 }
 
 .gallery-track {
     display: flex;
+    align-items: flex-start;
     transition: transform 0.6s ease-in-out;
 }
 
 .gallery-item {
     min-width: 100%;
     flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     overflow: hidden;
+    background: #000;
 }
 
-/* FULL SIZE GALLERY IMAGES */
+/* AUTOMATIC IMAGE SIZE */
 
 .gallery-item img {
     width: 100%;
-    height: 650px;
+    height: auto;
+    max-height: 85vh;
     object-fit: contain;
     display: block;
     cursor: pointer;
     background: #000;
+    margin: auto;
 }
 
 .gallery-item h3 {
@@ -208,10 +220,10 @@ h1 {
 }
 
 .lightbox img {
-    width: 98%;
-    height: 95vh;
-    max-width: 1600px;
+    max-width: 98%;
     max-height: 95vh;
+    width: auto;
+    height: auto;
     object-fit: contain;
     border: 2px solid #ffd36a;
     border-radius: 8px;
@@ -227,6 +239,8 @@ h1 {
     z-index: 10000;
 }
 
+/* FOOTER */
+
 footer {
     text-align: center;
     padding: 25px;
@@ -239,7 +253,7 @@ footer {
 @media(max-width:850px) {
 
     .gallery-item img {
-        height: 500px;
+        max-height: 80vh;
     }
 
 }
@@ -267,7 +281,7 @@ footer {
     }
 
     .gallery-item img {
-        height: 400px;
+        max-height: 75vh;
     }
 
     .gallery-item h3 {
@@ -289,8 +303,7 @@ footer {
     }
 
     .lightbox img {
-        width: 100%;
-        height: 90vh;
+        max-width: 100%;
         max-height: 90vh;
     }
 
