@@ -89,8 +89,8 @@ h1 {
 /* SLIDING GALLERY */
 
 .gallery-container {
-    width: 90%;
-    max-width: 1100px;
+    width: 95%;
+    max-width: 1500px;
     margin: auto;
     padding: 25px 0 70px;
 }
@@ -115,13 +115,15 @@ h1 {
     overflow: hidden;
 }
 
+/* FULL SIZE GALLERY IMAGES */
+
 .gallery-item img {
     width: 100%;
-    height: 480px;
+    height: 650px;
     object-fit: contain;
     display: block;
     cursor: pointer;
-    background: #150605;
+    background: #000;
 }
 
 .gallery-item h3 {
@@ -192,22 +194,24 @@ h1 {
     transform: scale(1.3);
 }
 
-/* IMAGE POPUP */
+/* FULL SCREEN IMAGE POPUP */
 
 .lightbox {
     display: none;
     position: fixed;
-    z-index: 999;
+    z-index: 9999;
     inset: 0;
-    background: rgba(0,0,0,.95);
+    background: rgba(0,0,0,.97);
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 .lightbox img {
-    max-width: 95%;
-    max-height: 85vh;
+    width: 98%;
+    height: 95vh;
+    max-width: 1600px;
+    max-height: 95vh;
     object-fit: contain;
     border: 2px solid #ffd36a;
     border-radius: 8px;
@@ -215,11 +219,12 @@ h1 {
 
 .close {
     position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 40px;
+    top: 15px;
+    right: 25px;
+    font-size: 45px;
     color: white;
     cursor: pointer;
+    z-index: 10000;
 }
 
 footer {
@@ -229,15 +234,17 @@ footer {
     color: #ffd36a;
 }
 
-/* RESPONSIVE DESIGN */
+/* TABLET */
 
 @media(max-width:850px) {
 
     .gallery-item img {
-        height: 380px;
+        height: 500px;
     }
 
 }
+
+/* MOBILE */
 
 @media(max-width:550px) {
 
@@ -255,8 +262,12 @@ footer {
         font-size: 13px;
     }
 
+    .gallery-container {
+        width: 96%;
+    }
+
     .gallery-item img {
-        height: 280px;
+        height: 400px;
     }
 
     .gallery-item h3 {
@@ -277,7 +288,20 @@ footer {
         right: 7px;
     }
 
+    .lightbox img {
+        width: 100%;
+        height: 90vh;
+        max-height: 90vh;
+    }
+
+    .close {
+        top: 8px;
+        right: 15px;
+    }
+
 }
+
+/* REDUCED MOTION */
 
 @media(prefers-reduced-motion: reduce) {
     .gallery-track {
@@ -322,7 +346,8 @@ footer {
         পবিত্র মুহূর্তগুলির কিছু স্মৃতি।
         <br>
         🙏 জয় মা দুর্গা 🙏
-        **সম্পূর্ণ ছবি দেখতে ছবিতে ক্লিক করুন** 🙏
+        <br>
+        সম্পূর্ণ ছবি দেখতে ছবিতে ক্লিক করুন।
     </p>
 
 </header>
@@ -339,8 +364,8 @@ footer {
             <img src="/website/images/temple.jpg"
             alt="দুর্গা মন্দির"
             onclick="openImage(this.src)">
-            <h3>মায়ের বোরন</h3>
-            <p>**সম্পূর্ণ ছবি দেখতে ছবিতে ক্লিক করুন** 🙏</p>
+            <h3>মায়ের বরণ</h3>
+            <p>সম্পূর্ণ ছবি দেখতে ছবিতে ক্লিক করুন 🙏</p>
         </div>
 
         <div class="gallery-item">
@@ -356,28 +381,25 @@ footer {
             alt="দুর্গাপূজা"
             onclick="openImage(this.src)">
             <h3>দুর্গাপূজা</h3>
-            <p>**সম্পূর্ণ ছবি দেখতে ছবিতে ক্লিক করুন** 🙏</p>
+            <p>সম্পূর্ণ ছবি দেখতে ছবিতে ক্লিক করুন 🙏</p>
         </div>
 
         <div class="gallery-item">
             <img src="/website/images/arti.jpg"
             alt="মায়ের আরতি"
             onclick="openImage(this.src)">
-            <p>**সম্পূর্ণ ছবি দেখতে ছবিতে ক্লিক করুন** 🙏</p>
         </div>
 
         <div class="gallery-item">
             <img src="/website/images/festival.jpg"
             alt="উৎসব"
             onclick="openImage(this.src)">
-            <p>**সম্পূর্ণ ছবি দেখতে ছবিতে ক্লিক করুন** 🙏</p>
         </div>
 
         <div class="gallery-item">
             <img src="/website/images/mandir.jpg"
             alt="মন্দিরের দৃশ্য"
             onclick="openImage(this.src)">
-            <p>**সম্পূর্ণ ছবি দেখতে ছবিতে ক্লিক করুন** 🙏</p>
         </div>
 
     </div>
@@ -406,9 +428,10 @@ footer {
 
 <div class="lightbox" id="lightbox" onclick="closeImage()">
 
-    <span class="close">&times;</span>
+    <span class="close" onclick="closeImage()">&times;</span>
 
-    <img id="lightboxImage" src="" alt="বড় ছবি">
+    <img id="lightboxImage" src="" alt="বড় ছবি"
+    onclick="event.stopPropagation()">
 
 </div>
 
@@ -446,10 +469,20 @@ for (let i = 0; i < totalSlides; i++) {
 
     const dot = document.createElement("span");
 
+    dot.setAttribute("role", "button");
+    dot.setAttribute("tabindex", "0");
     dot.setAttribute("aria-label", "Slide " + (i + 1));
 
     dot.addEventListener("click", function() {
         showSlide(i);
+        restartAutoSlide();
+    });
+
+    dot.addEventListener("keydown", function(event) {
+        if (event.key === "Enter" || event.key === " ") {
+            showSlide(i);
+            restartAutoSlide();
+        }
     });
 
     dotsContainer.appendChild(dot);
@@ -524,6 +557,22 @@ function closeImage() {
     restartAutoSlide();
 
 }
+
+/* KEYBOARD SUPPORT */
+
+document.addEventListener("keydown", function(event) {
+
+    const lightbox = document.getElementById("lightbox");
+
+    if (lightbox.style.display === "flex") {
+
+        if (event.key === "Escape") {
+            closeImage();
+        }
+
+    }
+
+});
 
 /* INITIALIZE */
 
