@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,55 +86,113 @@ h1 {
     line-height: 1.8;
 }
 
+/* SLIDING GALLERY */
+
 .gallery-container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: auto;
     padding: 25px 0 70px;
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border: 2px solid #d99a36;
+    border-radius: 16px;
+    background: rgba(0,0,0,.75);
+}
+
+.gallery-track {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
 }
 
 .gallery-item {
-    background: rgba(0,0,0,.65);
-    border: 1px solid #d99a36;
-    border-radius: 13px;
+    min-width: 100%;
+    flex: 0 0 100%;
     overflow: hidden;
-    transition: .3s;
-}
-
-.gallery-item:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 25px #d99a3655;
 }
 
 .gallery-item img {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
+    height: 480px;
+    object-fit: contain;
     display: block;
     cursor: pointer;
+    background: #150605;
 }
 
 .gallery-item h3 {
     text-align: center;
     color: #ffd36a;
     padding: 15px;
-    font-size: 19px;
+    font-size: 21px;
 }
 
 .gallery-item p {
     text-align: center;
-    padding: 0 12px 15px;
+    padding: 0 12px 18px;
     color: #eee;
     font-size: 14px;
 }
 
-/* Image popup */
+/* SLIDE BUTTONS */
+
+.slide-btn {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,.75);
+    color: #ffd36a;
+    border: 1px solid #ffd36a;
+    font-size: 28px;
+    width: 48px;
+    height: 55px;
+    cursor: pointer;
+    border-radius: 8px;
+    z-index: 5;
+    transition: .3s;
+}
+
+.slide-btn:hover {
+    background: #ffd36a;
+    color: #250b08;
+}
+
+.prev {
+    left: 12px;
+}
+
+.next {
+    right: 12px;
+}
+
+/* DOT NAVIGATION */
+
+.gallery-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding: 22px;
+}
+
+.gallery-dots span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #888;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.gallery-dots span.active {
+    background: #ffd36a;
+    transform: scale(1.3);
+}
+
+/* IMAGE POPUP */
 
 .lightbox {
     display: none;
@@ -171,13 +229,18 @@ footer {
     color: #ffd36a;
 }
 
+/* RESPONSIVE DESIGN */
+
 @media(max-width:850px) {
-    .gallery {
-        grid-template-columns: repeat(2,1fr);
+
+    .gallery-item img {
+        height: 380px;
     }
+
 }
 
 @media(max-width:550px) {
+
     nav {
         flex-direction: column;
         gap: 18px;
@@ -192,12 +255,33 @@ footer {
         font-size: 13px;
     }
 
-    .gallery {
-        grid-template-columns: 1fr;
+    .gallery-item img {
+        height: 280px;
     }
 
-    .gallery-item img {
-        height: 230px;
+    .gallery-item h3 {
+        font-size: 18px;
+    }
+
+    .slide-btn {
+        width: 36px;
+        height: 45px;
+        font-size: 23px;
+    }
+
+    .prev {
+        left: 7px;
+    }
+
+    .next {
+        right: 7px;
+    }
+
+}
+
+@media(prefers-reduced-motion: reduce) {
+    .gallery-track {
+        transition: none;
     }
 }
 
@@ -207,6 +291,8 @@ footer {
 <body>
 
 <div class="hero">
+
+<!-- NAVIGATION -->
 
 <nav>
 
@@ -224,11 +310,13 @@ footer {
 
 </nav>
 
+<!-- HEADER -->
+
 <header class="header">
 
     <div class="om">ॐ</div>
 
-    <h1> গ্যালারি</h1>
+    <h1>গ্যালারি</h1>
 
     <p>
         পবিত্র মুহূর্তগুলির কিছু স্মৃতি।
@@ -238,86 +326,211 @@ footer {
 
 </header>
 
+<!-- SLIDING GALLERY -->
+
 <main class="gallery-container">
 
 <div class="gallery">
 
-    <div class="gallery-item">
-        <img src="/website/images/temple.jpg"
-        alt="দুর্গা মন্দির"
-        onclick="openImage(this.src)">
-        <h3>আমাদের মৃতি </h3>
-        <p>CLICK ON THE PHOTO</p>
+    <div class="gallery-track" id="galleryTrack">
+
+        <div class="gallery-item">
+            <img src="/website/images/temple.jpg"
+            alt="দুর্গা মন্দির"
+            onclick="openImage(this.src)">
+            <h3>আমাদের মন্দির</h3>
+            <p>CLICK ON THE PHOTO</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="/website/images/maa-durga.jpg"
+            alt="মা দুর্গার প্রতিমা"
+            onclick="openImage(this.src)">
+            <h3>মা দুর্গার প্রতিমা</h3>
+            <p>জগজ্জননী মা দুর্গার অপরূপ রূপ</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="/website/images/puja.jpg"
+            alt="দুর্গাপূজা"
+            onclick="openImage(this.src)">
+            <h3>দুর্গাপূজা</h3>
+            <p>পূজার পবিত্র মুহূর্ত</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="/website/images/arti.jpg"
+            alt="মায়ের আরতি"
+            onclick="openImage(this.src)">
+            <h3>মায়ের আরতি</h3>
+            <p>ভক্তি ও প্রার্থনার মুহূর্ত</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="/website/images/festival.jpg"
+            alt="উৎসব"
+            onclick="openImage(this.src)">
+            <h3>উৎসবের মুহূর্ত</h3>
+            <p>আনন্দ ও ভক্তির উৎসব</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="/website/images/mandir.jpg"
+            alt="মন্দিরের দৃশ্য"
+            onclick="openImage(this.src)">
+            <h3>মন্দিরের সৌন্দর্য</h3>
+            <p>আমাদের পবিত্র মন্দির প্রাঙ্গণ</p>
+        </div>
+
     </div>
 
-    <div class="gallery-item">
-        <img src="/website/images/maa-durga.jpg"
-        alt="মা দুর্গার প্রতিমা"
-        onclick="openImage(this.src)">
-        <h3>মা দুর্গার প্রতিমা</h3>
-        <p>জগজ্জননী মা দুর্গার অপরূপ রূপ</p>
-        <br>
-        CLICK ON THE PHOTO
-    </div>
+    <!-- PREVIOUS BUTTON -->
 
-    <div class="gallery-item">
-        <img src="/website/images/puja.jpg"
-        alt="দুর্গাপূজা"
-        onclick="openImage(this.src)">
-        <h3>দুর্গাপূজা</h3>
-        <p>পূজার পবিত্র মুহূর্ত</p>
-    </div>
+    <button class="slide-btn prev"
+    onclick="moveSlide(-1)"
+    aria-label="Previous image">❮</button>
 
-    <div class="gallery-item">
-        <img src="/website/images/arti.jpg"
-        alt="মায়ের আরতি"
-        onclick="openImage(this.src)">
-        <h3>মায়ের আরতি</h3>
-        <p>ভক্তি ও প্রার্থনার মুহূর্ত</p>
-    </div>
+    <!-- NEXT BUTTON -->
 
-    <div class="gallery-item">
-        <img src="/website/images/festival.jpg"
-        alt="উৎসব"
-        onclick="openImage(this.src)">
-        <h3>উৎসবের মুহূর্ত</h3>
-        <p>আনন্দ ও ভক্তির উৎসব</p>
-    </div>
-
-    <div class="gallery-item">
-        <img src="/website/images/mandir.jpg"
-        alt="মন্দিরের দৃশ্য"
-        onclick="openImage(this.src)">
-        <h3>মন্দিরের সৌন্দর্য</h3>
-        <p>আমাদের পবিত্র মন্দির প্রাঙ্গণ</p>
-    </div>
+    <button class="slide-btn next"
+    onclick="moveSlide(1)"
+    aria-label="Next image">❯</button>
 
 </div>
+
+<!-- DOTS -->
+
+<div class="gallery-dots" id="galleryDots"></div>
 
 </main>
 
+<!-- LIGHTBOX -->
+
 <div class="lightbox" id="lightbox" onclick="closeImage()">
+
     <span class="close">&times;</span>
+
     <img id="lightboxImage" src="" alt="বড় ছবি">
+
 </div>
 
+<!-- FOOTER -->
+
 <footer>
+
     © ২০২৬ শ্রী শ্রী দুর্গা মন্দির
+
     <br><br>
+
     🙏 জয় মা দুর্গা | জয় মাতাদি 🙏
+
 </footer>
 
 </div>
 
+<!-- JAVASCRIPT -->
+
 <script>
+
+let currentSlide = 0;
+
+const track = document.getElementById("galleryTrack");
+
+const slides = document.querySelectorAll(".gallery-item");
+
+const dotsContainer = document.getElementById("galleryDots");
+
+const totalSlides = slides.length;
+
+/* CREATE DOTS */
+
+for (let i = 0; i < totalSlides; i++) {
+
+    const dot = document.createElement("span");
+
+    dot.setAttribute("aria-label", "Slide " + (i + 1));
+
+    dot.addEventListener("click", function() {
+        showSlide(i);
+    });
+
+    dotsContainer.appendChild(dot);
+
+}
+
+const dots = dotsContainer.querySelectorAll("span");
+
+/* SHOW SLIDE */
+
+function showSlide(index) {
+
+    currentSlide = (index + totalSlides) % totalSlides;
+
+    track.style.transform =
+        `translateX(-${currentSlide * 100}%)`;
+
+    dots.forEach(dot => dot.classList.remove("active"));
+
+    dots[currentSlide].classList.add("active");
+
+}
+
+/* NEXT / PREVIOUS */
+
+function moveSlide(direction) {
+
+    showSlide(currentSlide + direction);
+
+    restartAutoSlide();
+
+}
+
+/* AUTO SLIDE */
+
+let autoSlide = setInterval(function() {
+
+    moveSlide(1);
+
+}, 4000);
+
+/* RESET AUTO SLIDE */
+
+function restartAutoSlide() {
+
+    clearInterval(autoSlide);
+
+    autoSlide = setInterval(function() {
+
+        moveSlide(1);
+
+    }, 4000);
+
+}
+
+/* LIGHTBOX */
+
 function openImage(src) {
+
+    clearInterval(autoSlide);
+
     document.getElementById("lightbox").style.display = "flex";
+
     document.getElementById("lightboxImage").src = src;
+
 }
 
 function closeImage() {
+
     document.getElementById("lightbox").style.display = "none";
+
+    restartAutoSlide();
+
 }
+
+/* INITIALIZE */
+
+showSlide(0);
+
 </script>
 
 </body>
