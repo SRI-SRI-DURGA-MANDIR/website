@@ -1,7 +1,5 @@
-
 <!DOCTYPE html>
 <html lang="bn">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +8,11 @@
 
 <link rel="canonical" href="https://sri-sri-durga-mandir.github.io/website/gallery/">
 
-<meta name="description" content="শ্রী শ্রী দুর্গা মন্দিরের ছবি, মা দুর্গার প্রতিমা, পূজা, আরতি ও উৎসবের স্মৃতি।">
+<meta name="description" content="শ্রী শ্রী দুর্গা মন্দিরের পবিত্র মুহূর্ত, দুর্গাপূজা এবং মায়ের অপরূপ প্রতিমার ছবির গ্যালারি।">
+
+<meta name="theme-color" content="#2b0808">
 
 <style>
-
 * {
     margin: 0;
     padding: 0;
@@ -21,98 +20,88 @@
 }
 
 body {
-    font-family: Georgia, serif;
-    background: #250b08;
-    color: white;
+    font-family: "Noto Sans Bengali", Arial, sans-serif;
+    background: #2b0808;
+    color: #fff;
+    text-align: center;
 }
 
-.hero {
-    min-height: 100vh;
-    background:
-    linear-gradient(rgba(25,0,0,.85),rgba(20,0,0,.92)),
-    url("../images/temple.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+/* HEADER */
+
+header {
+    padding: 30px 15px 20px;
+    background: linear-gradient(135deg, #4a0c0c, #210505);
+    border-bottom: 2px solid #d4af37;
+}
+
+header h1 {
+    color: #ffd700;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #f5deb3;
+    font-size: 16px;
+    line-height: 1.8;
 }
 
 /* NAVIGATION */
 
 nav {
+    background: #3b0909;
+    padding: 13px 8px;
+    border-bottom: 1px solid #8b6b20;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 22px 5%;
-    background: rgba(0,0,0,.65);
-}
-
-.logo {
-    color: #ffd36a;
-    font-size: 23px;
-    font-weight: bold;
-}
-
-.nav-links {
-    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 18px;
 }
 
 nav a {
-    color: white;
+    color: #ffd700;
     text-decoration: none;
     font-size: 15px;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    color: #ffd36a;
+    color: #fff;
 }
 
-/* HEADER */
-
-.header {
-    text-align: center;
-    padding: 65px 20px 35px;
-}
-
-.om {
-    font-size: 60px;
-    color: #ffd36a;
-}
-
-h1 {
-    color: #ffda80;
-    font-size: clamp(32px,5vw,50px);
-    margin: 15px 0;
-}
-
-.header p {
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-/* SLIDING GALLERY */
+/* GALLERY */
 
 .gallery-container {
-    width: 95%;
-    max-width: 1500px;
-    margin: auto;
-    padding: 25px 0 70px;
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 15px 0 35px;
 }
 
-.gallery {
-    position: relative;
+.gallery-title {
+    color: #ffd700;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.gallery-subtitle {
+    color: #f5deb3;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.slider {
     width: 100%;
     overflow: hidden;
-    border: 2px solid #d99a36;
-    border-radius: 16px;
     background: #000;
+    border: 2px solid #c9a227;
+    border-radius: 10px;
 }
 
-.gallery-track {
+.slider-track {
     display: flex;
     align-items: flex-start;
-    transition: transform 0.6s ease-in-out;
+    transition: transform 0.5s ease;
 }
 
 .gallery-item {
@@ -120,156 +109,164 @@ h1 {
     flex: 0 0 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
     overflow: hidden;
     background: #000;
+    padding: 10px;
 }
 
-/* AUTOMATIC IMAGE SIZE */
-
 .gallery-item img {
-    width: 100%;
+    width: auto;
+    max-width: 100%;
     height: auto;
-    max-height: 85vh;
+    max-height: 380px;
     object-fit: contain;
     display: block;
     cursor: pointer;
     background: #000;
     margin: auto;
+    border-radius: 5px;
 }
 
 .gallery-item h3 {
-    text-align: center;
-    color: #ffd36a;
-    padding: 15px;
-    font-size: 21px;
+    color: #ffd700;
+    font-size: 20px;
+    margin-top: 12px;
 }
 
 .gallery-item p {
-    text-align: center;
-    padding: 0 12px 18px;
-    color: #eee;
+    color: #f5deb3;
     font-size: 14px;
+    margin-top: 6px;
+    line-height: 1.7;
 }
 
-/* SLIDE BUTTONS */
+/* SLIDER BUTTONS */
 
-.slide-btn {
-    position: absolute;
-    top: 40%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,.75);
-    color: #ffd36a;
-    border: 1px solid #ffd36a;
-    font-size: 28px;
-    width: 48px;
-    height: 55px;
-    cursor: pointer;
-    border-radius: 8px;
-    z-index: 5;
-    transition: .3s;
-}
-
-.slide-btn:hover {
-    background: #ffd36a;
-    color: #250b08;
-}
-
-.prev {
-    left: 12px;
-}
-
-.next {
-    right: 12px;
-}
-
-/* DOT NAVIGATION */
-
-.gallery-dots {
+.slider-controls {
     display: flex;
     justify-content: center;
-    gap: 12px;
-    padding: 22px;
+    align-items: center;
+    gap: 25px;
+    margin-top: 18px;
 }
 
-.gallery-dots span {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #888;
+.slider-controls button {
+    background: #d4af37;
+    color: #2b0808;
+    border: none;
+    padding: 9px 18px;
+    border-radius: 5px;
+    font-size: 20px;
     cursor: pointer;
-    transition: .3s;
+    font-weight: bold;
 }
 
-.gallery-dots span.active {
-    background: #ffd36a;
-    transform: scale(1.3);
+.slider-controls button:hover {
+    background: #fff;
 }
 
-/* FULL SCREEN IMAGE POPUP */
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 9px;
+    margin-top: 18px;
+}
+
+.dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #9b7777;
+    border: none;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #ffd700;
+}
+
+/* SMALL LIGHTBOX */
 
 .lightbox {
     display: none;
     position: fixed;
     z-index: 9999;
     inset: 0;
-    background: rgba(0,0,0,.97);
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.88);
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
+}
+
+.lightbox.active {
+    display: flex;
 }
 
 .lightbox img {
-    max-width: 98%;
-    max-height: 95vh;
     width: auto;
     height: auto;
+    max-width: 75%;
+    max-height: 70vh;
     object-fit: contain;
-    border: 2px solid #ffd36a;
+    cursor: default;
+    border: 2px solid #d4af37;
     border-radius: 8px;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.25);
 }
 
-.close {
+.lightbox-close {
     position: absolute;
     top: 15px;
     right: 25px;
-    font-size: 45px;
-    color: white;
+    color: #fff;
+    font-size: 35px;
     cursor: pointer;
+    background: transparent;
+    border: none;
     z-index: 10000;
 }
 
 /* FOOTER */
 
 footer {
-    text-align: center;
-    padding: 25px;
-    background: rgba(0,0,0,.8);
-    color: #ffd36a;
+    background: #1b0404;
+    color: #f5deb3;
+    padding: 22px 10px;
+    margin-top: 25px;
+    border-top: 1px solid #c9a227;
+    font-size: 14px;
+    line-height: 2;
 }
 
 /* TABLET */
 
-@media(max-width:850px) {
-
+@media (max-width: 850px) {
     .gallery-item img {
-        max-height: 80vh;
+        max-height: 350px;
     }
 
+    .gallery-container {
+        width: 94%;
+    }
 }
 
 /* MOBILE */
 
-@media(max-width:550px) {
-
-    nav {
-        flex-direction: column;
-        gap: 18px;
+@media (max-width: 550px) {
+    header h1 {
+        font-size: 25px;
     }
 
-    .nav-links {
-        justify-content: center;
-        gap: 13px;
+    header p {
+        font-size: 14px;
+    }
+
+    nav {
+        gap: 12px;
     }
 
     nav a {
@@ -278,319 +275,260 @@ footer {
 
     .gallery-container {
         width: 96%;
+        margin: 20px auto;
+    }
+
+    .gallery-item {
+        padding: 7px;
     }
 
     .gallery-item img {
-        max-height: 75vh;
+        max-height: 300px;
+        max-width: 100%;
     }
 
     .gallery-item h3 {
         font-size: 18px;
     }
 
-    .slide-btn {
-        width: 36px;
-        height: 45px;
-        font-size: 23px;
-    }
-
-    .prev {
-        left: 7px;
-    }
-
-    .next {
-        right: 7px;
+    .gallery-item p {
+        font-size: 13px;
     }
 
     .lightbox img {
-        max-width: 100%;
-        max-height: 90vh;
+        max-width: 92%;
+        max-height: 60vh;
     }
 
-    .close {
-        top: 8px;
+    .lightbox-close {
+        top: 10px;
         right: 15px;
-    }
-
-}
-
-/* REDUCED MOTION */
-
-@media(prefers-reduced-motion: reduce) {
-    .gallery-track {
-        transition: none;
+        font-size: 32px;
     }
 }
-
 </style>
 </head>
 
 <body>
 
-<div class="hero">
-
-<!-- NAVIGATION -->
-
-<nav>
-
-    <div class="logo">🕉 শ্রী শ্রী দুর্গা মন্দির</div>
-
-    <div class="nav-links">
-        <a href="/website/">HOME</a>
-        <a href="/website/mantra/">MANTRA</a>
-        <a href="/website/gallery/">GALLERY</a>
-        <a href="/website/about/">ABOUT</a>
-        <a href="/website/video/">VIDEO</a>
-        <a href="/website/tribute/">TRIBUTE</a>
-        <a href="/website/contact/">CONTACT</a>
-    </div>
-
-</nav>
-
-<!-- HEADER -->
-
-<header class="header">
-
-    <div class="om">ॐ</div>
-
+<header>
     <h1>গ্যালারি</h1>
-
-    <p>
-        পবিত্র মুহূর্তগুলির কিছু স্মৃতি।
-        <br>
-        🙏 জয় মা দুর্গা 🙏
-        <br>
-        সম্পূর্ণ ছবি দেখতে ছবিতে ক্লিক করুন।
-    </p>
-
+    <p>পবিত্র মুহূর্তগুলির কিছু স্মৃতি।</p>
+    <p>🙏 জয় মা দুর্গা 🙏</p>
 </header>
 
-<!-- SLIDING GALLERY -->
+<nav>
+    <a href="/website/">হোম</a>
+    <a href="/website/mantra/">মন্ত্র</a>
+    <a href="/website/gallery/">গ্যালারি</a>
+    <a href="/website/about/">আমাদের সম্পর্কে</a>
+    <a href="/website/video/">ভিডিও</a>
+    <a href="/website/tribute/">শ্রদ্ধাঞ্জলি</a>
+    <a href="/website/contact/">যোগাযোগ</a>
+</nav>
 
 <main class="gallery-container">
 
-<div class="gallery">
+    <h2 class="gallery-title">🙏 মায়ের স্মৃতিচারণ 🙏</h2>
 
-    <div class="gallery-track" id="galleryTrack">
+    <p class="gallery-subtitle">
+        সম্পূর্ণ ছবি দেখতে ছবিতে ক্লিক করুন।
+    </p>
 
-        <div class="gallery-item">
-            <img src="/website/images/temple.jpg"
-            alt="দুর্গা মন্দির"
-            onclick="openImage(this.src)">
-            <h3>মায়ের বরণ</h3>
-            <p>সম্পূর্ণ ছবি দেখতে ছবিতে ক্লিক করুন 🙏</p>
+    <div class="slider">
+        <div class="slider-track" id="sliderTrack">
+
+            <!-- IMAGE 1 -->
+            <div class="gallery-item">
+                <img src="/website/images/temple.jpg"
+                     alt="শ্রী শ্রী দুর্গা মন্দির"
+                     onclick="openLightbox(this)">
+                <h3>মায়ের বরণ</h3>
+                <p>সম্পূর্ণ ছবি দেখতে ছবিতে ক্লিক করুন 🙏</p>
+            </div>
+
+            <!-- IMAGE 2 -->
+            <div class="gallery-item">
+                <img src="/website/images/maa-durga.jpg"
+                     alt="মা দুর্গার প্রতিমা"
+                     onclick="openLightbox(this)">
+                <h3>মা দুর্গার প্রতিমা</h3>
+                <p>জগজ্জননী মা দুর্গার অপরূপ রূপ</p>
+            </div>
+
+            <!-- IMAGE 3 -->
+            <div class="gallery-item">
+                <img src="/website/images/puja.jpg"
+                     alt="দুর্গাপূজা"
+                     onclick="openLightbox(this)">
+                <h3>দুর্গাপূজা</h3>
+                <p>সম্পূর্ণ ছবি দেখতে ছবিতে ক্লিক করুন 🙏</p>
+            </div>
+
+            <!-- IMAGE 4 -->
+            <div class="gallery-item">
+                <img src="/website/images/arti.jpg"
+                     alt="মন্দিরের আরতি"
+                     onclick="openLightbox(this)">
+            </div>
+
+            <!-- IMAGE 5 -->
+            <div class="gallery-item">
+                <img src="/website/images/festival.jpg"
+                     alt="মন্দিরের উৎসব"
+                     onclick="openLightbox(this)">
+            </div>
+
+            <!-- IMAGE 6 -->
+            <div class="gallery-item">
+                <img src="/website/images/mandir.jpg"
+                     alt="দুর্গা মন্দির"
+                     onclick="openLightbox(this)">
+            </div>
+
         </div>
-
-        <div class="gallery-item">
-            <img src="/website/images/maa-durga.jpg"
-            alt="মা দুর্গার প্রতিমা"
-            onclick="openImage(this.src)">
-            <h3>মা দুর্গার প্রতিমা</h3>
-            <p>জগজ্জননী মা দুর্গার অপরূপ রূপ</p>
-        </div>
-
-        <div class="gallery-item">
-            <img src="/website/images/puja.jpg"
-            alt="দুর্গাপূজা"
-            onclick="openImage(this.src)">
-            <h3>দুর্গাপূজা</h3>
-            <p>সম্পূর্ণ ছবি দেখতে ছবিতে ক্লিক করুন 🙏</p>
-        </div>
-
-        <div class="gallery-item">
-            <img src="/website/images/arti.jpg"
-            alt="মায়ের আরতি"
-            onclick="openImage(this.src)">
-        </div>
-
-        <div class="gallery-item">
-            <img src="/website/images/festival.jpg"
-            alt="উৎসব"
-            onclick="openImage(this.src)">
-        </div>
-
-        <div class="gallery-item">
-            <img src="/website/images/mandir.jpg"
-            alt="মন্দিরের দৃশ্য"
-            onclick="openImage(this.src)">
-        </div>
-
     </div>
 
-    <!-- PREVIOUS BUTTON -->
+    <div class="slider-controls">
+        <button onclick="moveSlide(-1)" aria-label="আগের ছবি">❮</button>
+        <button onclick="moveSlide(1)" aria-label="পরের ছবি">❯</button>
+    </div>
 
-    <button class="slide-btn prev"
-    onclick="moveSlide(-1)"
-    aria-label="Previous image">❮</button>
-
-    <!-- NEXT BUTTON -->
-
-    <button class="slide-btn next"
-    onclick="moveSlide(1)"
-    aria-label="Next image">❯</button>
-
-</div>
-
-<!-- DOTS -->
-
-<div class="gallery-dots" id="galleryDots"></div>
+    <div class="dots" id="dots"></div>
 
 </main>
 
 <!-- LIGHTBOX -->
 
-<div class="lightbox" id="lightbox" onclick="closeImage()">
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
 
-    <span class="close" onclick="closeImage()">&times;</span>
+    <button class="lightbox-close"
+            onclick="closeLightbox(event)"
+            aria-label="বন্ধ করুন">×</button>
 
-    <img id="lightboxImage" src="" alt="বড় ছবি"
-    onclick="event.stopPropagation()">
+    <img id="lightboxImage" src="" alt="বড় ছবি">
 
 </div>
-
-<!-- FOOTER -->
 
 <footer>
-
-    © ২০২৬ শ্রী শ্রী দুর্গা মন্দির
-
-    <br><br>
-
-    🙏 জয় মা দুর্গা | জয় মাতাদি 🙏
-
+    <p>© ২০২৬ শ্রী শ্রী দুর্গা মন্দির</p>
+    <p>🙏 জয় মা দুর্গা | জয় মাতাদি 🙏</p>
 </footer>
 
-</div>
-
-<!-- JAVASCRIPT -->
-
 <script>
+const track = document.getElementById("sliderTrack");
+const slides = document.querySelectorAll(".gallery-item");
+const dotsContainer = document.getElementById("dots");
 
 let currentSlide = 0;
-
-const track = document.getElementById("galleryTrack");
-
-const slides = document.querySelectorAll(".gallery-item");
-
-const dotsContainer = document.getElementById("galleryDots");
-
-const totalSlides = slides.length;
+let autoSlide;
 
 /* CREATE DOTS */
 
-for (let i = 0; i < totalSlides; i++) {
+slides.forEach((slide, index) => {
+    const dot = document.createElement("button");
 
-    const dot = document.createElement("span");
+    dot.className = "dot";
+    dot.setAttribute("aria-label", "ছবি " + (index + 1));
 
-    dot.setAttribute("role", "button");
-    dot.setAttribute("tabindex", "0");
-    dot.setAttribute("aria-label", "Slide " + (i + 1));
-
-    dot.addEventListener("click", function() {
-        showSlide(i);
+    dot.addEventListener("click", () => {
+        showSlide(index);
         restartAutoSlide();
     });
 
-    dot.addEventListener("keydown", function(event) {
-        if (event.key === "Enter" || event.key === " ") {
-            showSlide(i);
-            restartAutoSlide();
-        }
-    });
-
     dotsContainer.appendChild(dot);
+});
 
-}
-
-const dots = dotsContainer.querySelectorAll("span");
+const dots = document.querySelectorAll(".dot");
 
 /* SHOW SLIDE */
 
 function showSlide(index) {
-
-    currentSlide = (index + totalSlides) % totalSlides;
+    currentSlide = (index + slides.length) % slides.length;
 
     track.style.transform =
-        `translateX(-${currentSlide * 100}%)`;
+        "translateX(-" + (currentSlide * 100) + "%)";
 
-    dots.forEach(dot => dot.classList.remove("active"));
-
-    dots[currentSlide].classList.add("active");
-
+    dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === currentSlide);
+    });
 }
 
 /* NEXT / PREVIOUS */
 
 function moveSlide(direction) {
-
     showSlide(currentSlide + direction);
-
     restartAutoSlide();
-
 }
 
 /* AUTO SLIDE */
 
-let autoSlide = setInterval(function() {
+function startAutoSlide() {
+    clearInterval(autoSlide);
 
-    moveSlide(1);
-
-}, 4000);
-
-/* RESET AUTO SLIDE */
+    autoSlide = setInterval(() => {
+        showSlide(currentSlide + 1);
+    }, 4000);
+}
 
 function restartAutoSlide() {
+    startAutoSlide();
+}
+
+/* OPEN LIGHTBOX */
+
+function openLightbox(image) {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+
+    lightboxImage.src = image.src;
+    lightboxImage.alt = image.alt;
+
+    lightbox.classList.add("active");
+    document.body.style.overflow = "hidden";
 
     clearInterval(autoSlide);
-
-    autoSlide = setInterval(function() {
-
-        moveSlide(1);
-
-    }, 4000);
-
 }
 
-/* LIGHTBOX */
+/* CLOSE LIGHTBOX */
 
-function openImage(src) {
+function closeLightbox(event) {
+    if (
+        event.target.id === "lightbox" ||
+        event.target.classList.contains("lightbox-close")
+    ) {
+        document.getElementById("lightbox").classList.remove("active");
 
-    clearInterval(autoSlide);
+        document.getElementById("lightboxImage").src = "";
 
-    document.getElementById("lightbox").style.display = "flex";
+        document.body.style.overflow = "";
 
-    document.getElementById("lightboxImage").src = src;
-
+        startAutoSlide();
+    }
 }
 
-function closeImage() {
-
-    document.getElementById("lightbox").style.display = "none";
-
-    restartAutoSlide();
-
-}
-
-/* KEYBOARD SUPPORT */
+/* ESCAPE KEY */
 
 document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        const lightbox = document.getElementById("lightbox");
 
-    const lightbox = document.getElementById("lightbox");
+        if (lightbox.classList.contains("active")) {
+            lightbox.classList.remove("active");
 
-    if (lightbox.style.display === "flex") {
+            document.getElementById("lightboxImage").src = "";
 
-        if (event.key === "Escape") {
-            closeImage();
+            document.body.style.overflow = "";
+
+            startAutoSlide();
         }
-
     }
-
 });
 
 /* INITIALIZE */
 
 showSlide(0);
-
+startAutoSlide();
 </script>
 
 </body>
