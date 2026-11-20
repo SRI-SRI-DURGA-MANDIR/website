@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="bn">
 <head>
@@ -11,6 +12,10 @@
 <meta name="description" content="শ্রী শ্রী দুর্গা মন্দিরের পবিত্র মুহূর্ত, দুর্গাপূজা এবং মায়ের অপরূপ প্রতিমার ছবির গ্যালারি।">
 
 <meta name="theme-color" content="#2b0808">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 * {
@@ -56,6 +61,9 @@ nav {
     justify-content: center;
     flex-wrap: wrap;
     gap: 18px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav a {
@@ -72,8 +80,8 @@ nav a:hover {
 /* GALLERY */
 
 .gallery-container {
-    width: 90%;
-    max-width: 1000px;
+    width: 94%;
+    max-width: 1250px;
     margin: 30px auto;
     padding: 15px 0 35px;
 }
@@ -87,52 +95,54 @@ nav a:hover {
 .gallery-subtitle {
     color: #f5deb3;
     font-size: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
+/* IMAGE SLIDER */
+
 .slider {
-    width: 10%;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     overflow: hidden;
     background: #000;
     border: 2px solid #c9a227;
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.45);
 }
 
 .slider-track {
     display: flex;
-    align-items: flex-start;
-    transition: transform 1.0s ease;
+    align-items: stretch;
+    transition: transform 0.7s ease-in-out;
 }
 
 .gallery-item {
     min-width: 100%;
     flex: 0 0 100%;
     display: flex;
-    flex-direction: square;
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     overflow: hidden;
     background: #000;
-    padding: 10px;
+    padding: 15px;
 }
 
 .gallery-item img {
-    width: auto;
-    max-width: 100%;
-    height: auto;
-    max-height: 380px;
+    width: 100%;
+    height: 550px;
     object-fit: contain;
     display: block;
     cursor: pointer;
     background: #000;
-    margin: auto;
     border-radius: 5px;
 }
 
 .gallery-item h3 {
     color: #ffd700;
     font-size: 20px;
-    margin-top: 12px;
+    margin-top: 15px;
 }
 
 .gallery-item p {
@@ -149,28 +159,32 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     gap: 25px;
-    margin-top: 18px;
+    margin-top: 20px;
 }
 
 .slider-controls button {
     background: #d4af37;
     color: #2b0808;
     border: none;
-    padding: 9px 18px;
+    padding: 10px 22px;
     border-radius: 5px;
     font-size: 20px;
     cursor: pointer;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 .slider-controls button:hover {
     background: #fff;
+    transform: scale(1.05);
 }
+
+/* DOTS */
 
 .dots {
     display: flex;
     justify-content: center;
-    gap: 9px;
+    gap: 10px;
     margin-top: 18px;
 }
 
@@ -181,13 +195,15 @@ nav a:hover {
     background: #9b7777;
     border: none;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .dot.active {
     background: #ffd700;
+    transform: scale(1.2);
 }
 
-/* SMALL LIGHTBOX */
+/* FULL SCREEN LIGHTBOX */
 
 .lightbox {
     display: none;
@@ -196,7 +212,7 @@ nav a:hover {
     inset: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.88);
+    background: rgba(0, 0, 0, 0.95);
     justify-content: center;
     align-items: center;
     padding: 20px;
@@ -207,15 +223,15 @@ nav a:hover {
 }
 
 .lightbox img {
+    max-width: 95vw;
+    max-height: 90vh;
     width: auto;
     height: auto;
-    max-width: 200%;
-    max-height: 8700vh;
     object-fit: contain;
     cursor: default;
     border: 2px solid #d4af37;
     border-radius: 8px;
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.25);
+    box-shadow: 0 0 25px rgba(212,175,55,0.25);
 }
 
 .lightbox-close {
@@ -223,7 +239,7 @@ nav a:hover {
     top: 15px;
     right: 25px;
     color: #fff;
-    font-size: 35px;
+    font-size: 40px;
     cursor: pointer;
     background: transparent;
     border: none;
@@ -245,18 +261,19 @@ footer {
 /* TABLET */
 
 @media (max-width: 850px) {
-    .gallery-item img {
-        max-height: 350px;
+    .gallery-container {
+        width: 96%;
     }
 
-    .gallery-container {
-        width: 94%;
+    .gallery-item img {
+        height: 450px;
     }
 }
 
 /* MOBILE */
 
 @media (max-width: 550px) {
+
     header h1 {
         font-size: 25px;
     }
@@ -267,6 +284,7 @@ footer {
 
     nav {
         gap: 12px;
+        padding: 12px 6px;
     }
 
     nav a {
@@ -278,12 +296,16 @@ footer {
         margin: 20px auto;
     }
 
+    .gallery-title {
+        font-size: 21px;
+    }
+
     .gallery-item {
-        padding: 7px;
+        padding: 8px;
     }
 
     .gallery-item img {
-        max-height: 300px;
+        height: 350px;
         max-width: 100%;
     }
 
@@ -295,15 +317,27 @@ footer {
         font-size: 13px;
     }
 
+    .slider-controls {
+        gap: 18px;
+    }
+
+    .slider-controls button {
+        padding: 9px 17px;
+    }
+
+    .lightbox {
+        padding: 10px;
+    }
+
     .lightbox img {
-        max-width: 92%;
-        max-height: 60vh;
+        max-width: 96vw;
+        max-height: 85vh;
     }
 
     .lightbox-close {
-        top: 10px;
+        top: 8px;
         right: 15px;
-        font-size: 32px;
+        font-size: 35px;
     }
 }
 </style>
@@ -311,11 +345,15 @@ footer {
 
 <body>
 
+<!-- HEADER -->
+
 <header>
     <h1>গ্যালারি</h1>
     <p>পবিত্র মুহূর্তগুলির কিছু স্মৃতি।</p>
     <p>🙏 জয় মা দুর্গা 🙏</p>
 </header>
+
+<!-- NAVIGATION -->
 
 <nav>
     <a href="/website/">হোম</a>
@@ -327,6 +365,8 @@ footer {
     <a href="/website/contact/">যোগাযোগ</a>
 </nav>
 
+<!-- GALLERY -->
+
 <main class="gallery-container">
 
     <h2 class="gallery-title">🙏 মায়ের স্মৃতিচারণ 🙏</h2>
@@ -336,63 +376,91 @@ footer {
     </p>
 
     <div class="slider">
+
         <div class="slider-track" id="sliderTrack">
 
             <!-- IMAGE 1 -->
+
             <div class="gallery-item">
                 <img src="/website/images/temple.jpg"
                      alt="শ্রী শ্রী দুর্গা মন্দির"
                      onclick="openLightbox(this)">
+
                 <h3>মায়ের বরণ</h3>
                 <p>সম্পূর্ণ ছবি দেখতে ছবিতে ক্লিক করুন 🙏</p>
             </div>
 
             <!-- IMAGE 2 -->
+
             <div class="gallery-item">
                 <img src="/website/images/maa-durga.jpg"
                      alt="মা দুর্গার প্রতিমা"
                      onclick="openLightbox(this)">
+
                 <h3>মা দুর্গার প্রতিমা</h3>
                 <p>জগজ্জননী মা দুর্গার অপরূপ রূপ</p>
             </div>
 
             <!-- IMAGE 3 -->
+
             <div class="gallery-item">
                 <img src="/website/images/puja.jpg"
                      alt="দুর্গাপূজা"
                      onclick="openLightbox(this)">
+
                 <h3>দুর্গাপূজা</h3>
                 <p>সম্পূর্ণ ছবি দেখতে ছবিতে ক্লিক করুন 🙏</p>
             </div>
 
             <!-- IMAGE 4 -->
+
             <div class="gallery-item">
                 <img src="/website/images/arti.jpg"
                      alt="মন্দিরের আরতি"
                      onclick="openLightbox(this)">
+
+                <h3>মন্দিরের আরতি</h3>
+                <p>মায়ের আরতির পবিত্র মুহূর্ত</p>
             </div>
 
             <!-- IMAGE 5 -->
+
             <div class="gallery-item">
                 <img src="/website/images/festival.jpg"
                      alt="মন্দিরের উৎসব"
                      onclick="openLightbox(this)">
+
+                <h3>মন্দিরের উৎসব</h3>
+                <p>উৎসবের আনন্দঘন মুহূর্ত</p>
             </div>
 
             <!-- IMAGE 6 -->
+
             <div class="gallery-item">
                 <img src="/website/images/mandir.jpg"
                      alt="দুর্গা মন্দির"
                      onclick="openLightbox(this)">
+
+                <h3>আমাদের মন্দির</h3>
+                <p>শ্রী শ্রী দুর্গা বাড়ি 🙏</p>
             </div>
 
         </div>
     </div>
 
+    <!-- SLIDER CONTROLS -->
+
     <div class="slider-controls">
-        <button onclick="moveSlide(-1)" aria-label="আগের ছবি">❮</button>
-        <button onclick="moveSlide(1)" aria-label="পরের ছবি">❯</button>
+
+        <button onclick="moveSlide(-1)"
+                aria-label="আগের ছবি">❮</button>
+
+        <button onclick="moveSlide(1)"
+                aria-label="পরের ছবি">❯</button>
+
     </div>
+
+    <!-- DOTS -->
 
     <div class="dots" id="dots"></div>
 
@@ -400,7 +468,9 @@ footer {
 
 <!-- LIGHTBOX -->
 
-<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+<div class="lightbox"
+     id="lightbox"
+     onclick="closeLightbox(event)">
 
     <button class="lightbox-close"
             onclick="closeLightbox(event)"
@@ -410,15 +480,21 @@ footer {
 
 </div>
 
+<!-- FOOTER -->
+
 <footer>
     <p>© ২০২৬ শ্রী শ্রী দুর্গা মন্দির</p>
     <p>🙏 জয় মা দুর্গা | জয় মাতাদি 🙏</p>
 </footer>
 
+<!-- JAVASCRIPT -->
+
 <script>
+
 const track = document.getElementById("sliderTrack");
 const slides = document.querySelectorAll(".gallery-item");
 const dotsContainer = document.getElementById("dots");
+const lightbox = document.getElementById("lightbox");
 
 let currentSlide = 0;
 let autoSlide;
@@ -426,6 +502,7 @@ let autoSlide;
 /* CREATE DOTS */
 
 slides.forEach((slide, index) => {
+
     const dot = document.createElement("button");
 
     dot.className = "dot";
@@ -437,6 +514,7 @@ slides.forEach((slide, index) => {
     });
 
     dotsContainer.appendChild(dot);
+
 });
 
 const dots = document.querySelectorAll(".dot");
@@ -444,6 +522,7 @@ const dots = document.querySelectorAll(".dot");
 /* SHOW SLIDE */
 
 function showSlide(index) {
+
     currentSlide = (index + slides.length) % slides.length;
 
     track.style.transform =
@@ -452,23 +531,32 @@ function showSlide(index) {
     dots.forEach((dot, i) => {
         dot.classList.toggle("active", i === currentSlide);
     });
+
 }
 
 /* NEXT / PREVIOUS */
 
 function moveSlide(direction) {
+
     showSlide(currentSlide + direction);
     restartAutoSlide();
+
 }
 
 /* AUTO SLIDE */
 
 function startAutoSlide() {
+
     clearInterval(autoSlide);
 
     autoSlide = setInterval(() => {
-        showSlide(currentSlide + 1);
+
+        if (!lightbox.classList.contains("active")) {
+            showSlide(currentSlide + 1);
+        }
+
     }, 4000);
+
 }
 
 function restartAutoSlide() {
@@ -478,57 +566,82 @@ function restartAutoSlide() {
 /* OPEN LIGHTBOX */
 
 function openLightbox(image) {
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImage = document.getElementById("lightboxImage");
+
+    const lightboxImage =
+        document.getElementById("lightboxImage");
 
     lightboxImage.src = image.src;
     lightboxImage.alt = image.alt;
 
     lightbox.classList.add("active");
+
     document.body.style.overflow = "hidden";
 
     clearInterval(autoSlide);
+
 }
 
 /* CLOSE LIGHTBOX */
 
 function closeLightbox(event) {
+
     if (
         event.target.id === "lightbox" ||
         event.target.classList.contains("lightbox-close")
     ) {
-        document.getElementById("lightbox").classList.remove("active");
+
+        lightbox.classList.remove("active");
 
         document.getElementById("lightboxImage").src = "";
 
         document.body.style.overflow = "";
 
         startAutoSlide();
+
     }
+
 }
 
 /* ESCAPE KEY */
 
 document.addEventListener("keydown", function(event) {
-    if (event.key === "Escape") {
-        const lightbox = document.getElementById("lightbox");
 
-        if (lightbox.classList.contains("active")) {
-            lightbox.classList.remove("active");
+    if (event.key === "Escape" &&
+        lightbox.classList.contains("active")) {
 
-            document.getElementById("lightboxImage").src = "";
+        lightbox.classList.remove("active");
 
-            document.body.style.overflow = "";
+        document.getElementById("lightboxImage").src = "";
 
-            startAutoSlide();
-        }
+        document.body.style.overflow = "";
+
+        startAutoSlide();
+
     }
+
+});
+
+/* PAUSE WHEN MOUSE HOVERS */
+
+const slider = document.querySelector(".slider");
+
+slider.addEventListener("mouseenter", () => {
+    clearInterval(autoSlide);
+});
+
+slider.addEventListener("mouseleave", () => {
+
+    if (!lightbox.classList.contains("active")) {
+        startAutoSlide();
+    }
+
 });
 
 /* INITIALIZE */
 
 showSlide(0);
 startAutoSlide();
+
 </script>
 
 </body>
