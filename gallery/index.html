@@ -5,11 +5,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>A to Z | শ্রী শ্রী দুর্গা মন্দির</title>
+<title>গ্যালারি | শ্রী শ্রী দুর্গা মন্দির</title>
 
 <link rel="canonical" href="https://sri-sri-durga-mandir.github.io/website/gallery/">
 
-<meta name="description" content="শ্রী শ্রী দুর্গা মন্দিরের ছবির A to Z গ্যালারি।">
+<meta name="description" content="শ্রী শ্রী দুর্গা মন্দিরের ছবির গ্যালারি।">
 
 <meta name="theme-color" content="#2b0808">
 
@@ -92,7 +92,7 @@ nav a:hover {
     margin-bottom: 25px;
 }
 
-/* IMAGE SLIDER */
+/* SLIDER */
 
 .slider {
     width: 100%;
@@ -164,6 +164,7 @@ nav a:hover {
 .dots {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 10px;
     margin-top: 18px;
 }
@@ -183,7 +184,7 @@ nav a:hover {
     transform: scale(1.2);
 }
 
-/* FULL SCREEN LIGHTBOX */
+/* LIGHTBOX */
 
 .lightbox {
     display: none;
@@ -208,7 +209,6 @@ nav a:hover {
     width: auto;
     height: auto;
     object-fit: contain;
-    cursor: default;
     border: 2px solid #d4af37;
     border-radius: 8px;
     box-shadow: 0 0 25px rgba(212,175,55,0.25);
@@ -253,7 +253,6 @@ footer {
 /* MOBILE */
 
 @media (max-width: 550px) {
-
     header h1 {
         font-size: 25px;
     }
@@ -341,61 +340,31 @@ footer {
 
 <main class="gallery-container">
 
-    <h2 class="gallery-title">A to Z</h2>
+    <h2 class="gallery-title">ছবিতে ক্লিক করুন</h2>
 
     <div class="slider">
 
         <div class="slider-track" id="sliderTrack">
 
-            <div class="gallery-item">
-                <img src="/website/images/temple.jpg"
-                     alt="শ্রী শ্রী দুর্গা মন্দির"
-                     onclick="openLightbox(this)">
-            </div>
-
-            <div class="gallery-item">
-                <img src="/website/images/maa-durga.jpg"
-                     alt="মা দুর্গার প্রতিমা"
-                     onclick="openLightbox(this)">
-            </div>
-
-            <div class="gallery-item">
-                <img src="/website/images/puja.jpg"
-                     alt="দুর্গাপূজা"
-                     onclick="openLightbox(this)">
-            </div>
-
-            <div class="gallery-item">
-                <img src="/website/images/arti.jpg"
-                     alt="মন্দিরের আরতি"
-                     onclick="openLightbox(this)">
-            </div>
-
-            <div class="gallery-item">
-                <img src="/website/images/festival.jpg"
-                     alt="মন্দিরের উৎসব"
-                     onclick="openLightbox(this)">
-            </div>
-
-            <div class="gallery-item">
-                <img src="/website/images/mandir.jpg"
-                     alt="দুর্গা মন্দির"
-                     onclick="openLightbox(this)">
-            </div>
-
+            <div class="gallery-item"><img src="/website/images/a.jpg" alt="শ্রী শ্রী দুর্গা মন্দির" onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="/website/images/b.jpg" alt="মা দুর্গার প্রতিমা" onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="/website/images/c.jpg" alt="দুর্গাপূজা" onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="/website/images/d.jpg" alt="মন্দিরের আরতি" onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="/website/images/e.jpg" alt="মন্দিরের উৎসব" onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="/website/images/f.jpg" alt="দুর্গা মন্দির" onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="/website/images/g.jpg" alt="মন্দিরের ছবি" onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="/website/images/h.jpg" alt="মন্দিরের ছবি" onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="/website/images/i.jpg" alt="মন্দিরের ছবি" onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="/website/images/j.jpg" alt="মন্দিরের ছবি" onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="/website/images/k.jpg" alt="মন্দিরের ছবি" onclick="openLightbox(this)"></div>
         </div>
     </div>
 
     <!-- SLIDER CONTROLS -->
 
     <div class="slider-controls">
-
-        <button onclick="moveSlide(-1)"
-                aria-label="আগের ছবি">❮</button>
-
-        <button onclick="moveSlide(1)"
-                aria-label="পরের ছবি">❯</button>
-
+        <button onclick="moveSlide(-1)" aria-label="আগের ছবি">❮</button>
+        <button onclick="moveSlide(1)" aria-label="পরের ছবি">❯</button>
     </div>
 
     <!-- DOTS -->
@@ -406,9 +375,7 @@ footer {
 
 <!-- LIGHTBOX -->
 
-<div class="lightbox"
-     id="lightbox"
-     onclick="closeLightbox(event)">
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
 
     <button class="lightbox-close"
             onclick="closeLightbox(event)"
