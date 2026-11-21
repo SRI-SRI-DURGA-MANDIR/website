@@ -1,16 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>গ্যালারি | শ্রী শ্রী দুর্গা মন্দির</title>
 
-<link rel="canonical" href="https://sri-sri-durga-mandir.github.io/website/gallery/">
-
 <meta name="description" content="শ্রী শ্রী দুর্গা মন্দিরের ছবির গ্যালারি।">
-
 <meta name="theme-color" content="#2b0808">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,8 +28,6 @@ body {
     text-align: center;
 }
 
-/* HEADER */
-
 header {
     padding: 30px 15px 20px;
     background: linear-gradient(135deg, #4a0c0c, #210505);
@@ -50,8 +45,6 @@ header p {
     font-size: 16px;
     line-height: 1.8;
 }
-
-/* NAVIGATION */
 
 nav {
     background: #3b0909;
@@ -77,8 +70,6 @@ nav a:hover {
     color: #fff;
 }
 
-/* GALLERY */
-
 .gallery-container {
     width: 94%;
     max-width: 1250px;
@@ -91,8 +82,6 @@ nav a:hover {
     font-size: 28px;
     margin-bottom: 25px;
 }
-
-/* SLIDER */
 
 .slider {
     width: 100%;
@@ -107,7 +96,6 @@ nav a:hover {
 
 .slider-track {
     display: flex;
-    align-items: stretch;
     transition: transform 0.7s ease-in-out;
 }
 
@@ -131,8 +119,6 @@ nav a:hover {
     background: #000;
     border-radius: 5px;
 }
-
-/* SLIDER BUTTONS */
 
 .slider-controls {
     display: flex;
@@ -159,8 +145,6 @@ nav a:hover {
     transform: scale(1.05);
 }
 
-/* DOTS */
-
 .dots {
     display: flex;
     justify-content: center;
@@ -183,8 +167,6 @@ nav a:hover {
     background: #ffd700;
     transform: scale(1.2);
 }
-
-/* LIGHTBOX */
 
 .lightbox {
     display: none;
@@ -211,7 +193,6 @@ nav a:hover {
     object-fit: contain;
     border: 2px solid #d4af37;
     border-radius: 8px;
-    box-shadow: 0 0 25px rgba(212,175,55,0.25);
 }
 
 .lightbox-close {
@@ -226,8 +207,6 @@ nav a:hover {
     z-index: 10000;
 }
 
-/* FOOTER */
-
 footer {
     background: #1b0404;
     color: #f5deb3;
@@ -238,8 +217,6 @@ footer {
     line-height: 2;
 }
 
-/* TABLET */
-
 @media (max-width: 850px) {
     .gallery-container {
         width: 96%;
@@ -249,8 +226,6 @@ footer {
         height: 450px;
     }
 }
-
-/* MOBILE */
 
 @media (max-width: 550px) {
     header h1 {
@@ -316,15 +291,11 @@ footer {
 
 <body>
 
-<!-- HEADER -->
-
 <header>
     <h1>গ্যালারি</h1>
     <p>পবিত্র মুহূর্তগুলির কিছু স্মৃতি।</p>
     <p>🙏 জয় মা দুর্গা 🙏</p>
 </header>
-
-<!-- NAVIGATION -->
 
 <nav>
     <a href="/website/">হোম</a>
@@ -336,48 +307,40 @@ footer {
     <a href="/website/contact/">যোগাযোগ</a>
 </nav>
 
-<!-- A TO Z GALLERY -->
-
 <main class="gallery-container">
 
     <h2 class="gallery-title">ছবিতে ক্লিক করুন</h2>
 
     <div class="slider">
-
         <div class="slider-track" id="sliderTrack">
 
-            <div class="gallery-item"><img src="a.jpg" alt="শ্রী শ্রী দুর্গা মন্দির" onclick="openLightbox(this)"></div>
-            <div class="gallery-item"><img src="b.jpeg" alt="মা দুর্গার প্রতিমা" onclick="openLightbox(this)"></div>
-            <div class="gallery-item"><img src="c.jpeg" alt="দুর্গাপূজা" onclick="openLightbox(this)"></div>
-            <div class="gallery-item"><img src="d.jpeg" alt="মন্দিরের আরতি" onclick="openLightbox(this)"></div>
-            <div class="gallery-item"><img src="e.jpeg" alt="মন্দিরের উৎসব" onclick="openLightbox(this)"></div>
-            <div class="gallery-item"><img src="f.jpeg" alt="দুর্গা মন্দির" onclick="openLightbox(this)"></div>
-            <div class="gallery-item"><img src="g.jpeg" alt="মন্দিরের ছবি" onclick="openLightbox(this)"></div>
-            <div class="gallery-item"><img src="h.jpeg" alt="মন্দিরের ছবি" onclick="openLightbox(this)"></div>
-            <div class="gallery-item"><img src="i.jpeg" alt="মন্দিরের ছবি" onclick="openLightbox(this)"></div>
-            <div class="gallery-item"><img src="j.jpeg" alt="মন্দিরের ছবি" onclick="openLightbox(this)"></div>
-            <div class="gallery-item"><img src="k.jpeg" alt="মন্দিরের ছবি" onclick="openLightbox(this)"></div>
-            <div class="gallery-item"><img src="m.jpeg" alt="মন্দিরের ছবি" onclick="openLightbox(this)"></div>
-            <div class="gallery-item"><img src="n.jpeg" alt="মন্দিরের ছবি" onclick="openLightbox(this)"></div>
-            <div class="gallery-item"><img src="o.jpeg" alt="মন্দিরের ছবি" onclick="openLightbox(this)"></div>
->
+            <div class="gallery-item"><img src="../images/a.jpg" alt="মন্দিরের ছবি" onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="../images/b.jpeg" alt="মন্দিরের ছবি" onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="../images/c.jpeg" alt="মন্দিরের ছবি" onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="../images/d.jpeg" alt="মন্দিরের ছবি" onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="../images/e.jpeg" alt="মন্দিরের ছবি" onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="../images/f.jpeg" alt="মন্দিরের ছবি" onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="../images/g.jpeg" alt="মন্দিরের ছবি" onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="../images/h.jpeg" alt="মন্দিরের ছবি" onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="../images/i.jpeg" alt="মন্দিরের ছবি" onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="../images/j.jpeg" alt="মন্দিরের ছবি" onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="../images/k.jpeg" alt="মন্দিরের ছবি" onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="../images/l.jpeg" alt="মন্দিরের ছবি" onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="../images/m.jpeg" alt="মন্দিরের ছবি" onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="../images/n.jpeg" alt="মন্দিরের ছবি" onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="../images/o.jpeg" alt="মন্দিরের ছবি" onclick="openLightbox(this)"></div>
+
         </div>
     </div>
-
-    <!-- SLIDER CONTROLS -->
 
     <div class="slider-controls">
         <button onclick="moveSlide(-1)" aria-label="আগের ছবি">❮</button>
         <button onclick="moveSlide(1)" aria-label="পরের ছবি">❯</button>
     </div>
 
-    <!-- DOTS -->
-
     <div class="dots" id="dots"></div>
 
 </main>
-
-<!-- LIGHTBOX -->
 
 <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
 
@@ -389,17 +352,12 @@ footer {
 
 </div>
 
-<!-- FOOTER -->
-
 <footer>
     <p>© ২০২৬ শ্রী শ্রী দুর্গা মন্দির</p>
     <p>🙏 জয় মা দুর্গা | জয় মাতাদি 🙏</p>
 </footer>
 
-<!-- JAVASCRIPT -->
-
 <script>
-
 const track = document.getElementById("sliderTrack");
 const slides = document.querySelectorAll(".gallery-item");
 const dotsContainer = document.getElementById("dots");
@@ -408,10 +366,7 @@ const lightbox = document.getElementById("lightbox");
 let currentSlide = 0;
 let autoSlide;
 
-/* CREATE DOTS */
-
 slides.forEach((slide, index) => {
-
     const dot = document.createElement("button");
 
     dot.className = "dot";
@@ -423,15 +378,11 @@ slides.forEach((slide, index) => {
     });
 
     dotsContainer.appendChild(dot);
-
 });
 
 const dots = document.querySelectorAll(".dot");
 
-/* SHOW SLIDE */
-
 function showSlide(index) {
-
     currentSlide = (index + slides.length) % slides.length;
 
     track.style.transform =
@@ -440,97 +391,62 @@ function showSlide(index) {
     dots.forEach((dot, i) => {
         dot.classList.toggle("active", i === currentSlide);
     });
-
 }
-
-/* NEXT / PREVIOUS */
 
 function moveSlide(direction) {
-
     showSlide(currentSlide + direction);
     restartAutoSlide();
-
 }
 
-/* AUTO SLIDE */
-
 function startAutoSlide() {
-
     clearInterval(autoSlide);
 
     autoSlide = setInterval(() => {
-
         if (!lightbox.classList.contains("active")) {
             showSlide(currentSlide + 1);
         }
-
     }, 4000);
-
 }
 
 function restartAutoSlide() {
     startAutoSlide();
 }
 
-/* OPEN LIGHTBOX */
-
 function openLightbox(image) {
-
-    const lightboxImage =
-        document.getElementById("lightboxImage");
+    const lightboxImage = document.getElementById("lightboxImage");
 
     lightboxImage.src = image.src;
     lightboxImage.alt = image.alt;
 
     lightbox.classList.add("active");
-
     document.body.style.overflow = "hidden";
 
     clearInterval(autoSlide);
-
 }
 
-/* CLOSE LIGHTBOX */
-
 function closeLightbox(event) {
-
     if (
         event.target.id === "lightbox" ||
         event.target.classList.contains("lightbox-close")
     ) {
-
         lightbox.classList.remove("active");
-
         document.getElementById("lightboxImage").src = "";
-
         document.body.style.overflow = "";
-
         startAutoSlide();
-
     }
-
 }
 
-/* ESCAPE KEY */
-
 document.addEventListener("keydown", function(event) {
-
-    if (event.key === "Escape" &&
-        lightbox.classList.contains("active")) {
-
+    if (
+        event.key === "Escape" &&
+        lightbox.classList.contains("active")
+    ) {
         lightbox.classList.remove("active");
-
         document.getElementById("lightboxImage").src = "";
-
         document.body.style.overflow = "";
-
         startAutoSlide();
-
     }
-
 });
-
-/* PAUSE WHEN MOUSE HOVERS */
 
 const slider = document.querySelector(".slider");
 
@@ -539,18 +455,13 @@ slider.addEventListener("mouseenter", () => {
 });
 
 slider.addEventListener("mouseleave", () => {
-
     if (!lightbox.classList.contains("active")) {
         startAutoSlide();
     }
-
 });
-
-/* INITIALIZE */
 
 showSlide(0);
 startAutoSlide();
-
 </script>
 
 </body>
